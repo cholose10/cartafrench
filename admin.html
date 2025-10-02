@@ -8,12 +8,13 @@
     body { font-family: Arial, sans-serif; margin:20px; background:#f7f3f0; color:#333;}
     h1 { text-align: center; color:#806250; }
     form { background:#fff; padding:15px; border-radius:10px; margin-bottom:20px;}
-    input,textarea { width:100%; padding:8px; margin:6px 0; border:1px solid #ccc; border-radius:6px;}
+    input,textarea,select { width:100%; padding:8px; margin:6px 0; border:1px solid #ccc; border-radius:6px;}
     table { width:100%; border-collapse:collapse; background:#fff;}
     th,td { border:1px solid #ddd; padding:8px; text-align:left;}
     th { background:#806250; color:white; }
     img { max-width:60px; }
     button { cursor:pointer; margin:2px; }
+    #search { width: 100%; padding:10px; margin-bottom:15px; border:2px solid #806250; border-radius:8px;}
   </style>
 </head>
 <body>
@@ -40,9 +41,19 @@
     <label>Imagen (ej: img/foto.jpg)</label>
     <input type="text" id="imagen" required>
     <label>Categoría</label>
-    <input type="text" id="categoria" required>
+    <select id="categoria" required>
+      <option value="">-- Selecciona una categoría --</option>
+      <option value="CAFETERÍA">CAFETERÍA</option>
+      <option value="COMIDAS">COMIDAS</option>
+      <option value="POSTRES">POSTRES</option>
+      <option value="REFRESCOS">REFRESCOS</option>
+      <option value="VINOS Y TRAGOS">VINOS Y TRAGOS</option>
+    </select>
     <button type="submit">Guardar</button>
   </form>
+
+  <!-- Buscador -->
+  <input type="text" id="search" placeholder="🔍 Buscar por nombre, descripción o categoría...">
 
   <!-- Tabla de productos -->
   <h2>Productos</h2>
@@ -59,6 +70,7 @@
     const FILE_PATH = "productos.json";
 
     let productos=[];
+    let productosFiltrados=[];
 
     // Guardar / borrar token en localStorage
     function saveToken(){
@@ -80,13 +92,14 @@
       const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
       const res=await fetch(url);
       productos=await res.json();
+      productosFiltrados=[...productos];
       render();
     }
 
     // Renderizar tabla
     function render(){
       const tb=document.getElementById('tbody'); tb.innerHTML='';
-      productos.forEach((p,i)=>{
+      productosFiltrados.forEach((p,i)=>{
         tb.innerHTML+=`
           <tr>
             <td><img src="${p.imagen}" alt=""></td>
@@ -141,6 +154,7 @@
       };
       if(idx===''){ productos.push(prod);} 
       else { productos[idx]=prod; document.getElementById('editIndex').value='';}
+      productosFiltrados=[...productos];
       render();
       this.reset();
       saveToGitHub(JSON.stringify(productos,null,2));
@@ -148,13 +162,14 @@
 
     // Editar producto
     function edit(i){
-      const p=productos[i];
+      const p=productosFiltrados[i];
+      const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
       document.getElementById('nombre').value=p.nombre;
       document.getElementById('descripcion').value=p.descripcion;
       document.getElementById('precio').value=p.precio;
       document.getElementById('imagen').value=p.imagen;
       document.getElementById('categoria').value=p.categoria;
-      document.getElementById('editIndex').value=i;
+      document.getElementById('editIndex').value=indexReal;
 
       // 🔥 Subir el formulario arriba
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -162,11 +177,26 @@
 
     // Eliminar producto
     function del(i){
+      const p=productosFiltrados[i];
+      const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
       if(confirm('¿Eliminar producto?')){
-        productos.splice(i,1); render();
+        productos.splice(indexReal,1);
+        productosFiltrados=[...productos];
+        render();
         saveToGitHub(JSON.stringify(productos,null,2));
       }
     }
+
+    // Buscador
+    document.getElementById('search').addEventListener('input',function(){
+      const term=this.value.toLowerCase();
+      productosFiltrados=productos.filter(p=>
+        p.nombre.toLowerCase().includes(term) ||
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+      render();
+    });
 
     // Iniciar
     loadProducts();
