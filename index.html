@@ -104,15 +104,14 @@
   <h1>Menú</h1>
 
   <!-- Categorías -->
-  <nav>
-    <button onclick="renderProducts('Todos')">Todos</button>
-    <button onclick="renderProducts('CAFETERÍA')">Cafetería</button>
-    <button onclick="renderProducts('COMIDAS')">Comidas</button>
-    <button onclick="renderProducts('POSTRES')">Postres</button>
-    <button onclick="renderProducts('REFRESCOS')">Refrescos</button>
-    <button onclick="renderProducts('VINOS Y TRAGOS')">Vinos y Tragos</button>
-  </nav>
-
+    <div class="categories">
+    <div class="category-card" onclick="renderProducts('Todos')"><span>📋</span>Todos</div>
+    <div class="category-card" onclick="renderProducts('CAFETERÍA')"><span>☕</span>Cafetería</div>
+    <div class="category-card" onclick="renderProducts('COMIDAS')"><span>🍽️</span>Comidas</div>
+    <div class="category-card" onclick="renderProducts('POSTRES')"><span>🍰</span>Postres</div>
+    <div class="category-card" onclick="renderProducts('REFRESCOS')"><span>🥤</span>Refrescos</div>
+    <div class="category-card" onclick="renderProducts('VINOS Y TRAGOS')"><span>🍷</span>Vinos & Tragos</div>
+  </div>
   <!-- Lista de productos -->
   <div id="product-list"></div>
 
