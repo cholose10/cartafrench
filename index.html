@@ -17,8 +17,8 @@
     }
     header img {
       width: 100%;
-      height: 250px;      /* Ajustá la altura a tu gusto */
-      object-fit: cover;  /* Para que no se deforme la imagen */
+      height: 250px;      /* Ajustá la altura del banner */
+      object-fit: cover;  /* Para que no se deforme */
       display: block;
     }
     .banner {
@@ -106,7 +106,7 @@
     <img src="img/french99.jpg" alt="Tilo Café" />
   </header>
 
-  <div class="banner">¡Bienvenidos a Tilo Café!</div>
+  <div class="banner">¡Bienvenidos a Tilo Café Fench 3700!</div>
 
   <!-- Buscador -->
   <div class="search-box">
@@ -128,6 +128,7 @@
 
   <script>
     let productos = [];
+    let categoriaActual = 'Todos'; // categoría activa
 
     // Cargar productos
     fetch('productos.json')
@@ -137,11 +138,33 @@
         renderProducts('Todos');
       });
 
-    // Renderizar productos por categoría
-    function renderProducts(categoria) {
+    // Renderizar productos
+    function renderProducts(categoria, terminoBusqueda = '') {
+      categoriaActual = categoria;
       const container = document.getElementById('product-list');
       container.innerHTML = '';
-      const filtrados = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
+
+      // Filtrar por categoría
+      let filtrados = categoria === 'Todos' 
+        ? productos 
+        : productos.filter(p => p.categoria === categoria);
+
+      // Filtrar por búsqueda
+      if (terminoBusqueda.trim() !== '') {
+        const term = terminoBusqueda.toLowerCase();
+        filtrados = filtrados.filter(p => 
+          p.nombre.toLowerCase().includes(term) || 
+          p.descripcion.toLowerCase().includes(term)
+        );
+      }
+
+      // Si no hay resultados
+      if (filtrados.length === 0) {
+        container.innerHTML = `<p style="text-align:center; font-size:1.2rem;">😕 No se encontraron productos</p>`;
+        return;
+      }
+
+      // Mostrar productos
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
@@ -158,29 +181,9 @@
       });
     }
 
-    // Buscador
+    // Buscador en tiempo real
     document.getElementById('searchInput').addEventListener('input', function() {
-      const term = this.value.toLowerCase();
-      const filtrados = productos.filter(p => 
-        p.nombre.toLowerCase().includes(term) || 
-        p.descripcion.toLowerCase().includes(term)
-      );
-      const container = document.getElementById('product-list');
-      container.innerHTML = '';
-      filtrados.forEach(p => {
-        const item = document.createElement('div');
-        item.className = 'item';
-        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
-          ? String(p.precio).trim()
-          : ('$' + (p.precio ?? ''));
-        item.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion}</p>
-          <span class="price">${priceDisplay}</span>
-        `;
-        container.appendChild(item);
-      });
+      renderProducts(categoriaActual, this.value);
     });
   </script>
 </body>
