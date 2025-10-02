@@ -6,23 +6,100 @@
   <title>Carta - Tilo Café</title>
   <style>
     body { font-family: Arial, sans-serif; margin:0; background:#f7f3f0; color:#333;}
-    header img { width: 100%; height: 250px; object-fit: cover; display: block; }
-    h1 { text-align:center; padding:20px; color:#806250; }
-    nav { text-align:center; margin-bottom:20px; }
-    nav button { margin:5px; padding:10px 15px; border:none; border-radius:8px; background:#806250; color:#fff; cursor:pointer; }
+    header img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    h1 { text-align:center; padding:15px; color:#806250; margin-top:60px; }
+
+    /* Buscador fijo arriba */
+    #searchBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background:#fff;
+      padding:10px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      z-index:1000;
+    }
+    #searchInput {
+      width:100%;
+      padding:12px;
+      border:2px solid #806250;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    /* Categorías */
+    nav { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+      gap:10px; 
+      padding:15px; 
+      margin-top:10px;
+    }
+    nav button { 
+      padding:15px; 
+      border:none; 
+      border-radius:12px; 
+      background:#806250; 
+      color:#fff; 
+      cursor:pointer; 
+      font-size:16px; 
+      font-weight:bold;
+      transition:0.2s;
+    }
     nav button:hover { background:#a67c52; }
-    #searchInput { width:80%; max-width:400px; display:block; margin:0 auto 20px; padding:10px; border:2px solid #806250; border-radius:8px; }
-    #product-list { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:15px; padding:20px; }
-    .item { background:#fff; padding:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
-    .item img { width:100%; height:150px; object-fit:cover; border-radius:8px; }
-    .price { display:block; margin-top:10px; font-weight:bold; color:#806250; }
-    .no-results { grid-column:1/-1; text-align:center; font-size:1.2rem; color:#806250; padding:20px; }
+
+    /* Productos */
+    #product-list { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); 
+      gap:15px; 
+      padding:20px; 
+    }
+    .item { 
+      background:#fff; 
+      padding:15px; 
+      border-radius:10px; 
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+      text-align:center; 
+    }
+    .item img { 
+      width:100%; 
+      height:150px; 
+      object-fit:cover; 
+      border-radius:8px; 
+    }
+    .price { 
+      display:block; 
+      margin-top:10px; 
+      font-weight:bold; 
+      color:#806250; 
+      font-size:18px;
+    }
+    .no-results { 
+      grid-column:1/-1; 
+      text-align:center; 
+      font-size:1.2rem; 
+      color:#806250; 
+      padding:20px; 
+    }
+
+    /* Responsivo */
+    @media (max-width:600px){
+      nav { grid-template-columns: 1fr; }
+      nav button { font-size:18px; padding:18px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="img/french99.jpg" alt="Tilo Café" />
   </header>
+
+  <!-- Buscador fijo -->
+  <div id="searchBar">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar productos...">
+  </div>
 
   <h1>Menú</h1>
 
@@ -35,9 +112,6 @@
     <button onclick="renderProducts('REFRESCOS')">Refrescos</button>
     <button onclick="renderProducts('VINOS Y TRAGOS')">Vinos y Tragos</button>
   </nav>
-
-  <!-- Buscador -->
-  <input type="text" id="searchInput" placeholder="🔍 Buscar productos...">
 
   <!-- Lista de productos -->
   <div id="product-list"></div>
@@ -54,7 +128,7 @@
         renderProducts('Todos');
       });
 
-    // Renderizar productos por categoría + búsqueda
+    // Renderizar productos
     function renderProducts(categoria, terminoBusqueda = '') {
       categoriaActual = categoria;
       const container = document.getElementById('product-list');
@@ -97,7 +171,7 @@
       });
     }
 
-    // Buscador
+    // Buscador en vivo
     document.getElementById('searchInput').addEventListener('input', function() {
       renderProducts(categoriaActual, this.value);
     });
