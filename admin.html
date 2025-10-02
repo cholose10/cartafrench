@@ -13,7 +13,7 @@
     th,td { border:1px solid #ddd; padding:8px; text-align:left;}
     th { background:#806250; color:white; }
     img { max-width:60px; }
-    button { cursor:pointer; }
+    button { cursor:pointer; margin:2px; }
   </style>
 </head>
 <body>
@@ -54,7 +54,6 @@
   </table>
 
   <script>
-    // ⚡ CONFIGURACIÓN: ahora apunta a tu repo real en GitHub
     const USERNAME = "frenchtilo-boop";   // <-- tu usuario de GitHub
     const REPO = "cartatilo";             // <-- tu repo de GitHub
     const FILE_PATH = "productos.json";
@@ -156,6 +155,9 @@
       document.getElementById('imagen').value=p.imagen;
       document.getElementById('categoria').value=p.categoria;
       document.getElementById('editIndex').value=i;
+
+      // 🔥 Subir el formulario arriba
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Eliminar producto
