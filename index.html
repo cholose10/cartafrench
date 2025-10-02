@@ -12,14 +12,14 @@
       color: #45270a;
     }
     header {
-      background: #fff;
-      text-align: center;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+      overflow: hidden;
     }
     header img {
-      max-width: 250px;
-      height: auto;
+      width: 100%;
+      height: 250px;      /* Ajustá la altura a tu gusto */
+      object-fit: cover;  /* Para que no se deforme la imagen */
+      display: block;
     }
     .banner {
       text-align: center;
@@ -101,7 +101,7 @@
   </style>
 </head>
 <body>
-  <!-- Logo -->
+  <!-- Banner grande arriba -->
   <header>
     <img src="img/french99.jpg" alt="Tilo Café" />
   </header>
