@@ -1,5 +1,5 @@
 [
- {
+  {
     "nombre": "Café Espresso",
     "descripcion": "Café intenso preparado con granos seleccionados.",
     "precio": 500,
@@ -9,16 +9,16 @@
   {
     "nombre": "Café expresso jarrito",
     "descripcion": "Café americano",
+    "precio": 3500,
     "imagen": "img/Americano.jpg",
-    "categoria": "Cafetería",
-    "precio": "3500"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café descafeinado",
     "descripcion": "Café descafeinado",
-    "precio": "3700",
+    "precio": 3700,
     "imagen": "img/20250813_094842.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café con leche tradicional",
