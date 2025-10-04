@@ -2,7 +2,7 @@
   {
     "nombre": "Café Espresso",
     "descripcion": "Café intenso preparado con granos seleccionados.",
-    "precio": 500,
+    "precio": 3200,
     "imagen": "img/20250813_094842.jpg",
     "categoria": "CAFETERÍA"
   },
