@@ -37,9 +37,9 @@
   {
     "nombre": "Capuccino",
     "descripcion": "Café, leche, canela y cacao",
-    "precio": "5000",
+    "precio": 5000,
     "imagen": "img/Capuchino.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Capuccino italiana",
