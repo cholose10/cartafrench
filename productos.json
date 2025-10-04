@@ -44,9 +44,9 @@
   {
     "nombre": "Capuccino italiana",
     "descripcion": "Capuccino italiana",
-    "precio": "5100",
+    "precio": 5100,
     "imagen": "img/Capuchino.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café MOKA",
