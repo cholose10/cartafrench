@@ -23,9 +23,9 @@
   {
     "nombre": "Café con leche tradicional",
     "descripcion": "Café con leche tradicional",
-    "precio": "4100",
+    "precio": 4100,
     "imagen": "img/Cafechechu.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café expresso Doble",
