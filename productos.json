@@ -156,9 +156,9 @@
   {
     "nombre": "PROTEICO",
     "descripcion": "Pancake 100% harina de almendras, queso crema y fruta de estación más dip de miel",
-    "precio": "15000",
+    "precio": 15000,
     "imagen": "img/20250815_132946.jpg",
-    "categoria": "☕ 🥐Desayunos y meriendas (Todos incluyen infusión y vasito de jugo o limonada)"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "FRENCH TOAST DULCE",
