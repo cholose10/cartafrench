@@ -79,9 +79,9 @@
   {
     "nombre": "Leche caliente o fría",
     "descripcion": "leche descremada",
-    "precio": "2800",
+    "precio": 2800,
     "imagen": "img/20250818_101037.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "CAFE TILO",
