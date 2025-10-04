@@ -163,9 +163,9 @@
   {
     "nombre": "FRENCH TOAST DULCE",
     "descripcion": "Tostadas marinadas en huevo, con canela y azúcar, queso crema, frutas de estación y dip de miel",
-    "precio": "14400",
+    "precio": 14400,
     "imagen": "img/20250819_113846.jpg",
-    "categoria": "☕ 🥐Desayunos y meriendas (Todos incluyen infusión y vasito de jugo o limonada)"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "FRENCH TOAST SALADO",
