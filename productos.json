@@ -184,9 +184,9 @@
   {
     "nombre": "Leche de almendras",
     "descripcion": "Leche de almendras chico$350-grande$450",
-    "precio": "350-450",
+    "precio": 350,
     "imagen": "img/medialunas.jpg",
-    "categoria": "➕ Adicionales de café"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Saborizante vainilla o avellanas",
