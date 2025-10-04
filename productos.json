@@ -191,9 +191,9 @@
   {
     "nombre": "Saborizante vainilla o avellanas",
     "descripcion": "Saborizante vainilla o avellanas",
-    "precio": "350",
+    "precio": 350,
     "imagen": "img/medialunas.jpg",
-    "categoria": "➕ Adicionales de café"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Medialunas",
