@@ -975,9 +975,9 @@
   {
     "nombre": "Trumpeter Cabernet",
     "descripcion": "Trumpeter Cabernet (750cc)",
-    "precio": "25000",
+    "precio": 25000,
     "imagen": "img/20250903_112534.jpg",
-    "categoria": "🍷VINOS BODEGA RUTINI - LA RURAL"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Rutini Malbec-Cabernet Franc",
