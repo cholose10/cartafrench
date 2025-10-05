@@ -296,9 +296,9 @@
   {
     "nombre": "Plato con frutas de estación",
     "descripcion": "Plato con frutas de estación",
-    "precio": "8200",
+    "precio": 8200,
     "imagen": "img/Platofrutas.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Yogurt ",
