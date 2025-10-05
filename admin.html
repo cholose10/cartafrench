@@ -41,9 +41,8 @@
     <label>Categoría</label>
     <select id="categoria" required>
       <option value="">-- Selecciona una categoría --</option>
-      <option value="TODOS">TODOS</option>
       <option value="CAFETERÍA">CAFETERÍA</option>
-      <option value="PICADAS">PICADAS (Entradas)</option>
+      <option value="PICADAS">PICADAS</option>
       <option value="COMIDAS">COMIDAS</option>
       <option value="POSTRES">POSTRES</option>
       <option value="REFRESCOS Y VINOS">REFRESCOS Y VINOS</option>
@@ -86,7 +85,7 @@
     function getToken(){ return localStorage.getItem('github_token'); }
 
     async function loadProducts(){
-      const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
+      const url=`https://frenchtilo-boop.github.io/cartatilo/productos.json`;
       const res=await fetch(url);
       productos=await res.json();
       productosFiltrados=[...productos];
