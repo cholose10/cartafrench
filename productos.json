@@ -933,9 +933,9 @@
   {
     "nombre": "Fernet con Coca-Cola",
     "descripcion": "Fernet con Coca-Cola",
-    "precio": "12000",
+    "precio": 9000,
     "imagen": "img/Ferne.jpg",
-    "categoria": "🍹TRAGOS"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Gin Tonic Beefeater",
