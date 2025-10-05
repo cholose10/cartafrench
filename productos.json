@@ -665,11 +665,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "porcion de faina",
-    "descripcion": "recomendada para acompañar una pizza",
-    "categoria": "🍕PIZZAS (Estilo napolitano)",
-    "precio": "5000",
-    "imagen": "img/Faina.jpg"
+    "nombre": "TORTILLA MADRILEÑA",
+    "descripcion": "TORTILLA DE PAPA, CEBOLLA, CORONADO CON JAMON CRUDO TOMATE Y CRUTONES ",
+    "precio": 24000,
+    "imagen": "img/Faina.jpg",
+    "categoria": "PICADAS"
   },
   {
     "nombre": "Spaghetti",
