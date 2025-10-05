@@ -527,9 +527,9 @@
   {
     "nombre": "CAESAR CON POLLO",
     "descripcion": "Mix de verdes, croutones, pollo, parmesano y aderezo Caesar",
+    "precio": 16000,
     "imagen": "img/20250819_121751.jpg",
-    "categoria": "🥗 ENSALADAS",
-    "precio": "16000"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "CAESAR CON POLLO CRUJIENTE",
