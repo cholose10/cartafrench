@@ -800,9 +800,9 @@
   {
     "nombre": "Pollo al CHAMPI",
     "descripcion": "En salsa de hongos con papas fritas",
-    "precio": "24500",
+    "precio": 22500,
     "imagen": "img/Pechuchapi.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Pollo TERIYAKI",
