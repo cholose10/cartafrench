@@ -709,9 +709,9 @@
   {
     "nombre": "Alfredo Pollo",
     "descripcion": "salsa blanca con Pollo",
+    "precio": 7000,
     "imagen": "img/Frepollo.jpg",
-    "categoria": "🥫SALSAS",
-    "precio": "7500"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Alfredo langostinos",
