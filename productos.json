@@ -387,9 +387,9 @@
   {
     "nombre": "Milkshake OREO",
     "descripcion": "helado de crema, con oreos y crema batida",
-    "precio": "8800",
+    "precio": 8800,
     "imagen": "img/Mioreo.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Licuadas",
