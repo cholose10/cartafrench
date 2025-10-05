@@ -8,7 +8,7 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #faf7f5;
+      background: #89ac76;
       color: #45270a;
     }
     header {
@@ -27,7 +27,6 @@
       font-weight: bold;
       margin: 15px;
     }
-    /* Buscador */
     .search-box {
       text-align: center;
       margin: 15px;
@@ -40,7 +39,6 @@
       border-radius: 8px;
       font-size: 1rem;
     }
-    /* Categorías */
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -70,7 +68,6 @@
     .icon {
       font-size: 1.8rem;
     }
-    /* Productos */
     .item-list {
       display: flex;
       flex-wrap: wrap;
@@ -100,22 +97,39 @@
       margin: 0 10px 10px;
       display: block;
     }
+    /* Botón subir */
+    #btnSubir {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #8c6954;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+    #btnSubir:hover {
+      background: #6b4e3d;
+    }
   </style>
 </head>
 <body>
-  <!-- Logo -->
   <header>
     <img src="img/french99.jpg" alt="Tilo Café" /> 
   </header>
 
   <div class="banner">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
-  <!-- Buscador -->
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presione Enter)">
   </div>
 
-  <!-- Categorías -->
   <nav>
     <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
     <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
@@ -127,24 +141,21 @@
     <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS Y NOVEDADES</button>
   </nav>
 
-  <!-- Lista de productos -->
   <div class="item-list" id="product-list"></div>
+
+  <!-- Botón para subir -->
+  <button id="btnSubir" title="Subir">⬆️</button>
 
   <script>
     let productos = [];
 
-    // Cargar productos
     fetch('productos.json')
       .then(response => response.json())
       .then(data => {
         productos = data;
         renderProducts('Todos');
-      })
-      .catch(err => {
-        console.error("Error al cargar productos.json:", err);
       });
 
-    // Renderizar productos por categoría
     function renderProducts(categoria) {
       const container = document.getElementById('product-list');
       container.innerHTML = '';
@@ -156,23 +167,18 @@
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
-        const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
-          ? String(p.precio).trim()
-          : ('$' + (p.precio ?? ''));
         item.innerHTML = `
           <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
           <p>${p.descripcion}</p>
-          <span class="price">${priceDisplay}</span>
+          <span class="price">$${p.precio}</span>
         `;
         container.appendChild(item);
       });
 
-      // 🔥 Desplazar suavemente hacia los productos
       container.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Buscador con ENTER
     const input = document.getElementById('searchInput');
     input.addEventListener('keydown', function(e) {
       if (e.key === 'Enter') {
@@ -190,21 +196,25 @@
         filtrados.forEach(p => {
           const item = document.createElement('div');
           item.className = 'item';
-          const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
-            ? String(p.precio).trim()
-            : ('$' + (p.precio ?? ''));
           item.innerHTML = `
             <img src="${p.imagen}" alt="${p.nombre}">
             <h3>${p.nombre}</h3>
             <p>${p.descripcion}</p>
-            <span class="price">${priceDisplay}</span>
+            <span class="price">$${p.precio}</span>
           `;
           container.appendChild(item);
         });
-
-        // 🔥 Desplaza hacia los resultados
         container.scrollIntoView({ behavior: 'smooth' });
       }
+    });
+
+    // Mostrar y usar botón subir
+    const btnSubir = document.getElementById('btnSubir');
+    window.addEventListener('scroll', () => {
+      btnSubir.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btnSubir.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
