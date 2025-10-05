@@ -597,9 +597,9 @@
   {
     "nombre": "Filet de Merluza a la romana",
     "descripcion": "con puré mixto",
-    "precio": "18000",
+    "precio": 18000,
     "imagen": "img/20250816_135027.jpg",
-    "categoria": "🍽️Otros platos"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Revuelto de Gramajo",
