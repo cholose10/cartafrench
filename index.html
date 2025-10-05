@@ -1,211 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tilo Café - Carta Digital</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta Tilo Café</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f5f2;
       margin: 0;
-      padding: 0;
-      color: #4a3a2c;
-      text-align: center;
+      background: #faf7f5;
+      color: #45270a;
     }
-
+    header {
+      background: #fff;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
     header img {
       width: 100%;
       max-height: 280px;
       object-fit: cover;
     }
-
-    h1 {
-      margin-top: 15px;
-      font-size: 1.3rem;
-      color: #4a3a2c;
+    .banner {
+      text-align: center;
+      font-size: 1.2rem;
       font-weight: bold;
+      margin: 15px;
     }
 
-    #search-container {
-      margin: 15px auto;
-      max-width: 500px;
+    /* Buscador */
+    .search-box {
+      text-align: center;
+      margin: 15px;
+    }
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      border: 2px solid #8c6954;
+      border-radius: 8px;
+      font-size: 1rem;
     }
 
-    #search {
-      width: 100%;
-      padding: 10px 15px;
-      border: 2px solid #a77b5a;
-      border-radius: 10px;
-      font-size: 16px;
-      outline: none;
-    }
-
+    /* Categorías */
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin: 20px auto;
+      gap: 15px;
       padding: 10px;
-      max-width: 1000px;
     }
-
     nav button {
-      background-color: #8b5e3c;
-      color: white;
+      background: #8c6954;
+      color: #fff;
       border: none;
-      padding: 10px 18px;
-      border-radius: 12px;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: transform 0.1s, background-color 0.2s;
-    }
-
-    nav button:hover {
-      background-color: #a06c47;
-      transform: scale(1.05);
-    }
-
-    nav button.active {
-      background-color: #c49368;
-    }
-
-    #productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .producto {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      padding: 15px;
+      border-radius: 14px;
+      padding: 20px 25px;
+      width: 140px;
       text-align: center;
-      transition: transform 0.2s;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: all 0.25s ease;
+    }
+    nav button:hover {
+      background: #6b4e3d;
+      transform: translateY(-4px);
+    }
+    nav .icon {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 5px;
     }
 
-    .producto:hover {
-      transform: scale(1.03);
+    /* Productos */
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
     }
-
-    .producto img {
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.2s ease;
+    }
+    .item:hover { transform: scale(1.02); }
+    .item img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-radius: 10px;
     }
-
-    .producto h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-      color: #4a3a2c;
-    }
-
-    .producto p {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 8px;
-    }
-
-    .producto span {
+    .item h3 { margin: 10px; }
+    .item p { margin: 0 10px 10px; color: #5a4635; }
+    .item .price {
       font-weight: bold;
-      color: #8b5e3c;
-    }
-
-    @media (max-width: 600px) {
-      nav button {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
-
-      #search {
-        font-size: 14px;
-      }
+      color: #000;
+      margin: 0 10px 10px;
+      display: block;
     }
   </style>
 </head>
 <body>
+  <!-- Logo -->
   <header>
-    <img src="img/banner.jpg" alt="Banner Tilo Café">
+    <img src="img/french99.jpg" alt="Tilo Café" /> 
   </header>
 
-  <h1>¡Bienvenidos a Tilo Café Agüero 2298!</h1>
+  <div class="banner">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
-  <div id="search-container">
-    <input type="text" id="search" placeholder="🔍 Buscar producto o categoría...">
+  <!-- Buscador -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto, postre o bebida...">
   </div>
 
+  <!-- Botones de categorías -->
   <nav>
-    <button onclick="renderProducts('TODOS')">📋 Todos</button>
-    <button onclick="renderProducts('CAFETERÍA')">☕ Cafetería</button>
-    <button onclick="renderProducts('PICADAS (ENTRADAS)')">🥟 Picadas (Entradas)</button>
-    <button onclick="renderProducts('COMIDAS')">🍽️ Comidas</button>
-    <button onclick="renderProducts('POSTRES')">🍰 Postres</button>
-    <button onclick="renderProducts('REFRESCOS Y VINOS')">🍷 Refrescos y Vinos</button>
-    <button onclick="renderProducts('TRAGOS Y HAPPY HOUR')">🍹 Tragos y Happy Hour</button>
-    <button onclick="renderProducts('EVENTOS Y NOVEDADES')">⭐ Eventos y Novedades</button>
+    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
+    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
+    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
+    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
+    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
+    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
+    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos & Happy Hour</button>
+    <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>Eventos y Novedades</button>
   </nav>
 
-  <div id="productos"></div>
+  <!-- Lista de productos -->
+  <div class="item-list" id="product-list"></div>
 
   <script>
-    const URL = "https://frenchtilo-boop.github.io/cartatilo/productos.json";
     let productos = [];
-    let productosFiltrados = [];
 
-    async function loadProducts() {
-      const res = await fetch(URL);
-      productos = await res.json();
-      productosFiltrados = [...productos];
-      renderProducts("TODOS");
-    }
+    // Cargar productos
+    fetch('productos.json')
+      .then(response => response.json())
+      .then(data => {
+        productos = data;
+        renderProducts('Todos');
+      });
 
+    // Renderizar productos por categoría
     function renderProducts(categoria) {
-      const botones = document.querySelectorAll("nav button");
-      botones.forEach(b => b.classList.remove("active"));
-      const activo = [...botones].find(b => b.textContent.toUpperCase().includes(categoria));
-      if (activo) activo.classList.add("active");
-
-      if (categoria === "TODOS") {
-        productosFiltrados = [...productos];
-      } else {
-        productosFiltrados = productos.filter(p => p.categoria.toUpperCase() === categoria.toUpperCase());
-      }
-      mostrarProductos();
-    }
-
-    function mostrarProductos() {
-      const cont = document.getElementById("productos");
-      cont.innerHTML = productosFiltrados.map(p => `
-        <div class="producto">
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+      const filtrados = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
+      filtrados.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+          ? String(p.precio).trim()
+          : ('$' + (p.precio ?? ''));
+        item.innerHTML = `
           <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
           <p>${p.descripcion}</p>
-          <span>$${p.precio}</span>
-        </div>
-      `).join('');
+          <span class="price">${priceDisplay}</span>
+        `;
+        container.appendChild(item);
+      });
     }
 
-    document.getElementById("search").addEventListener("input", e => {
-      const term = e.target.value.toLowerCase();
-      productosFiltrados = productos.filter(p =>
-        p.nombre.toLowerCase().includes(term) ||
-        p.descripcion.toLowerCase().includes(term) ||
-        p.categoria.toLowerCase().includes(term)
+    // Buscador: busca en todo el texto (nombre, descripción, categoría)
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const term = this.value.toLowerCase();
+      const filtrados = productos.filter(p =>
+        (p.nombre + p.descripcion + p.categoria)
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .includes(term.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
       );
-      mostrarProductos();
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+      filtrados.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+          ? String(p.precio).trim()
+          : ('$' + (p.precio ?? ''));
+        item.innerHTML = `
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span class="price">${priceDisplay}</span>
+        `;
+        container.appendChild(item);
+      });
     });
-
-    loadProducts();
   </script>
 </body>
 </html>
