@@ -212,9 +212,9 @@
   {
     "nombre": "Cinamon Roll(rol de canela)",
     "descripcion": "roll de canela",
-    "precio": "4500",
+    "precio": 4500,
     "imagen": "img/Rolcanela.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Pan de chocolate",
