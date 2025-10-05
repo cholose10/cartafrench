@@ -240,9 +240,9 @@
   {
     "nombre": "Chipá relleno",
     "descripcion": "Chipá relleno de queso",
-    "precio": "3700",
+    "precio": 3700,
     "imagen": "img/Chipa.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Scon de queso",
