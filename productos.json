@@ -9,9 +9,9 @@
   {
     "nombre": "Café expresso jarrito",
     "descripcion": "Café americano",
+    "precio": 3500,
     "imagen": "img/Americano.jpg",
-    "categoria": "Cafetería☕️",
-    "precio": "3500"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café descafeinado",
