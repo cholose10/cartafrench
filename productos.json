@@ -1024,9 +1024,9 @@
   {
     "nombre": "Champagne Chandon",
     "descripcion": "Champagne Chandon (187cc)",
-    "precio": "15000",
+    "precio": 15000,
     "imagen": "img/20250903_113545.jpg",
-    "categoria": "🥂ESPUMANTES"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Champagne Salentein Brut Nature",
@@ -1034,13 +1034,6 @@
     "precio": 30000,
     "imagen": "img/20250903_104921.jpg",
     "categoria": "TRAGOS Y HAPPY HOUR"
-  },
-  {
-    "nombre": "Champagne Blanc de Blancs(Salentein)",
-    "descripcion": "Champagne Blanc de Blancs(Salentein)",
-    "precio": "40000",
-    "imagen": "img/20250903_105019.jpg",
-    "categoria": "🥂ESPUMANTES"
   },
   {
     "nombre": "MENU del DIA o SUGERENCIAS",
