@@ -373,9 +373,9 @@
   {
     "nombre": "Adicional con limón",
     "descripcion": "Adicional con limón",
-    "precio": "400",
+    "precio": 400,
     "imagen": "img/20250903_093625.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Jugo exprimido de naranja",
