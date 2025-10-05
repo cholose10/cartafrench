@@ -644,13 +644,6 @@
     "categoria": "PICADAS"
   },
   {
-    "nombre": "MARGARITA",
-    "descripcion": "Salsa de tomate, stracciatella, hojas de albahaca.",
-    "precio": "23500",
-    "imagen": "img/20250819_125331.jpg",
-    "categoria": "🍕PIZZAS (Estilo napolitano)"
-  },
-  {
     "nombre": "Champi",
     "descripcion": "Salsa de tomate, stracciatella, hongos ycebollas salteadas.",
     "precio": "28000",
