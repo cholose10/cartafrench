@@ -777,13 +777,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Matambre de cerdo",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "25500",
-    "imagen": "img/Matavergrill.jpg",
-    "categoria": "🔥GRILL Especiales"
-  },
-  {
     "nombre": "Bife de chorizo",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
     "precio": "31500",
