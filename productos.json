@@ -464,9 +464,9 @@
   {
     "nombre": "Sandwiches Lomito BACON",
     "descripcion": "BACON (queso cheddar, panceta y tomate)",
-    "precio": "26000",
+    "precio": 26000,
     "imagen": "img//Lomitobac.jpg",
-    "categoria": "🥩🥪Lomitos (fritas)"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Burgers SIMPLE (solo queso)",
