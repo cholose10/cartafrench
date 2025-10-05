@@ -604,9 +604,9 @@
   {
     "nombre": "Revuelto de Gramajo",
     "descripcion": "Papas fritas, panceta, cebolla morrón, arvejas y huevo frito",
-    "precio": "17500",
+    "precio": 17500,
     "imagen": "img/Rebuelto.jpg",
-    "categoria": "🍽️Otros platos"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Empanadas",
