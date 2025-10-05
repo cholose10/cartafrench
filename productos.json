@@ -749,13 +749,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Matambre de cerdo",
-    "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": "23500",
-    "imagen": "img/Matam.jpg",
-    "categoria": "🔥GRILL"
-  },
-  {
     "nombre": "Bife de chorizo",
     "descripcion": "Con frita, pure, ensalada o arroz",
     "precio": "29500",
