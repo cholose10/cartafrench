@@ -611,9 +611,9 @@
   {
     "nombre": "Empanadas",
     "descripcion": "carne o jamón y queso",
-    "precio": "2500",
+    "precio": 2500,
     "imagen": "img/Empa.jpg",
-    "categoria": "🥟ENTRADITAS"
+    "categoria": "PICADAS"
   },
   {
     "nombre": "Rabas a la romana",
