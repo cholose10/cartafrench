@@ -968,9 +968,9 @@
   {
     "nombre": "Trumpeter Malbec",
     "descripcion": "Trumpeter Malbec (750cc) ",
-    "precio": "25000",
+    "precio": 25000,
     "imagen": "img/20250903_112612.jpg",
-    "categoria": "🍷VINOS BODEGA RUTINI - LA RURAL"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Trumpeter Cabernet",
