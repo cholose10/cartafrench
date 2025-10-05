@@ -324,9 +324,9 @@
   {
     "nombre": "Tarta de calabaza",
     "descripcion": "Brócoli, queso sardo, muzarella, cebolla, masa integral",
-    "precio": "18000",
+    "precio": 18000,
     "imagen": "img/Brócoli .jpg",
-    "categoria": "🥧 Tartas (con ensaladita)"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Tarta de POLLO",
