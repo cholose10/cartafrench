@@ -982,9 +982,9 @@
   {
     "nombre": "Portillo Malbec",
     "descripcion": "Portillo Malbec (750cc)",
-    "precio": "19000",
+    "precio": 17000,
     "imagen": "img/20250903_111015.jpg",
-    "categoria": "🍷VINOS BODEGA SALENTEIN"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Salentein Reserva Cabernet Sauvignon",
