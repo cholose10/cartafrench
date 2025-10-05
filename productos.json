@@ -716,9 +716,9 @@
   {
     "nombre": "Boloñesa",
     "descripcion": "salsa con carne",
-    "categoria": "🥫SALSAS",
-    "precio": "7700",
-    "imagen": "img/Bolo.jpg"
+    "precio": 7500,
+    "imagen": "img/Bolo.jpg",
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Pesto con nuez",
