@@ -1059,8 +1059,8 @@
   {
     "nombre": "tortas nuevas",
     "descripcion": "sugerencia nueva  ",
-    "precio": "9200",
+    "precio": 9200,
     "imagen": "img//Tortasnueva.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "EVENTOS Y NOVEDADES"
   }
 ]
