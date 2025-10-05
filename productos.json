@@ -317,9 +317,9 @@
   {
     "nombre": "Porción de mermelada",
     "descripcion": "Porción de mermelada, manteca, queso blanco, miel or aderezo",
-    "precio": "2500",
+    "precio": 2500,
     "imagen": "img/Dip.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Tarta de calabaza",
