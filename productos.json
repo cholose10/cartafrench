@@ -415,9 +415,9 @@
   {
     "nombre": "Jamón cocido, queso y tomate ",
     "descripcion": "ciabatta, árabe",
-    "precio": "13000",
+    "precio": 13000,
     "imagen": "img//Jqyt.jpg",
-    "categoria": "🥪 Sandwiches"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "tostado mixto",
