@@ -681,9 +681,9 @@
   {
     "nombre": "ñoquis al huevo",
     "descripcion": "ñoquis al huevo ",
-    "precio": "11000",
+    "precio": 12000,
     "imagen": "img/Ñoquis.jpg",
-    "categoria": "🍝 PASTAS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Ravioles de verdura,pollo y jamon",
