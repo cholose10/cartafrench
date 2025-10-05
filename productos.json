@@ -870,9 +870,9 @@
   {
     "nombre": "Helado",
     "descripcion": "(bochas): $8.500 (sabores: dulce de leche, chocolate, americano)",
-    "precio": "8500",
+    "precio": 8000,
     "imagen": "img/Helado.jpg",
-    "categoria": "🍮POSTRES"
+    "categoria": "POSTRES"
   },
   {
     "nombre": "APPLE HOT",
