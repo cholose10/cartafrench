@@ -896,11 +896,11 @@
     "categoria": "REFRESCOS Y VINOS"
   },
   {
-    "n,ombre": "CORONA (Porrón)",
+    "nombre": "CORONA",
     "descripcion": "porron",
-    "precio": "7500",
+    "precio": 7500,
     "imagen": "img/Estelar.jpg",
-    "categoria": "🍺 CERVEZAS"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "n,ombre": "STELLA 1LITRO",
