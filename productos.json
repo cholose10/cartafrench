@@ -590,9 +590,9 @@
   {
     "nombre": "SMOKE",
     "descripcion": "Salsa de tomate, mermelada de bacon, cheddar Acompañadas con puré, fideos, ensalada o papas fritas",
+    "precio": 22500,
     "imagen": "img/Smuk.jpg",
-    "categoria": "MILANESAS Ternera o Pollo - Pechuga",
-    "precio": "22500"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Filet de Merluza a la romana",
