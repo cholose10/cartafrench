@@ -905,9 +905,9 @@
   {
     "nombre": "Jack Daniel's",
     "descripcion": "Jack Daniel's",
+    "precio": 13500,
     "imagen": "img/Daniel’s.jpg",
-    "categoria": "🍹TRAGOS",
-    "precio": "15000"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Johnny Walker Black",
