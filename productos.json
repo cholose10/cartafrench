@@ -1017,9 +1017,9 @@
   {
     "nombre": "Portillo Rosé Malbec",
     "descripcion": "Portillo Rosé Malbec (Vino fresco y fácil de beber)",
-    "precio": "19000",
+    "precio": 17000,
     "imagen": "img/20250903_110955.jpg",
-    "categoria": "🍷ROSÉ vino"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Champagne Chandon",
