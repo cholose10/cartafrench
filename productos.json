@@ -233,9 +233,9 @@
   {
     "nombre": "Brownie con nueces blancas",
     "descripcion": "Brownie sin TACC",
-    "precio": "6700",
+    "precio": 6700,
     "imagen": "img/Brownie.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Chipá relleno",
