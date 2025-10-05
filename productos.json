@@ -408,9 +408,9 @@
   {
     "nombre": "Limonada ",
     "descripcion": "Limonada simple",
-    "precio": "6200",
+    "precio": 6200,
     "imagen": "img/Limosim.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Jamón cocido, queso y tomate ",
