@@ -644,13 +644,6 @@
     "categoria": "PICADAS"
   },
   {
-    "nombre": "NAPOLITANA",
-    "descripcion": "Salsa de tomate, stracciatella, jamón y rodajas de tomate.",
-    "precio": 26000,
-    "imagen": "img/20250906_150935.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
     "nombre": "PARMA",
     "descripcion": "Salsa de tomate, stracciatella, burrata, jamón crudo, albahaca.",
     "precio": "32000",
