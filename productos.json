@@ -562,9 +562,9 @@
   {
     "nombre": "SOLA de POLLO o CARNE",
     "descripcion": "Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "19500",
+    "precio": 19500,
     "imagen": "img/20250816_144204.jpg",
-    "categoria": "MILANESAS Ternera o Pollo - Pechuga"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "ESPINACA carne o pollo",
