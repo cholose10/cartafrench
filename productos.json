@@ -777,13 +777,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Bife de lomo",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "34500",
-    "imagen": "img/Lomoesp.jpg",
-    "categoria": "🔥GRILL Especiales"
-  },
-  {
     "nombre": "Salmón rosado",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
     "precio": "36500",
