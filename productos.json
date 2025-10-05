@@ -247,9 +247,9 @@
   {
     "nombre": "Scon de queso",
     "descripcion": "Scon de queso",
+    "precio": 4200,
     "imagen": "img/Sconquso.jpg",
-    "categoria": "🍰 Pastelería",
-    "precio": "4200"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Budín",
