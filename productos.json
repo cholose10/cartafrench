@@ -877,9 +877,9 @@
   {
     "nombre": "APPLE HOT",
     "descripcion": "Apple crumble tibio con helado de vainilla y almendras tostadas",
-    "precio": "14700",
+    "precio": 14500,
     "imagen": "img/Apeljot.jpg",
-    "categoria": "🍮POSTRES"
+    "categoria": "POSTRES"
   },
   {
     "nombre": "BROWNIE TIBIO",
