@@ -345,9 +345,9 @@
   {
     "nombre": "Burritos de CESAR de POLLO ",
     "descripcion": " (fría): Tortilla de trigo, mix de lechugas, clásico aderezo cesar, pechuga, queso parmesano y croutons",
-    "precio": "18000",
+    "precio": 18000,
     "imagen": "img/20250817_135558.jpg",
-    "categoria": "🌯 Burritos (con papas fritas)"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Burritos COMO MEXICANO ",
