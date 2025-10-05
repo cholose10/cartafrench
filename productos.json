@@ -630,13 +630,6 @@
     "categoria": "PICADAS"
   },
   {
-    "nombre": "Farinata recomendado",
-    "descripcion": "Fainá con stracciatella, jamón crudo, tomates y albahaca.",
-    "precio": 20000,
-    "imagen": "img/Farinata.jpg",
-    "categoria": "PICADAS"
-  },
-  {
     "nombre": "RISOTTOS de pollo!",
     "descripcion": "con pollo, calabaza y verduras.",
     "precio": 23000,
