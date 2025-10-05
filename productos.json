@@ -735,13 +735,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "caccio e pepe",
-    "descripcion": "manteca, pimienta y parmesano",
-    "precio": "28000",
-    "imagen": "img/204218.jpg",
-    "categoria": "🥫SALSAS"
-  },
-  {
     "nombre": "SALSA VARIAS",
     "descripcion": "MANTECA,OLIVA AJO Y PARMESANO",
     "precio": "6000",
