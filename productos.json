@@ -805,11 +805,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Pollo TERIYAKI",
-    "descripcion": "Pechuga en salsa dulce con arroz salteado y verduras",
-    "precio": "23500",
+    "nombre": "BIFE DE CHORISO A CABALLO",
+    "descripcion": "CON DOS HUEVOS FRITOS, PAPAS FREITAS",
+    "precio": 32000,
     "imagen": "img/Tari.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Salmón AZUL",
