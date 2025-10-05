@@ -20,7 +20,6 @@
 <body>
   <h1>Panel de Administración - Tilo Café</h1>
 
-  <!-- Caja para guardar el token -->
   <div style="margin-bottom:15px; background:#eee; padding:10px; border-radius:8px;">
     <label for="token">Token de GitHub:</label><br>
     <input type="password" id="token" placeholder="Pega tu token aquí" style="width:70%; padding:8px;">
@@ -29,7 +28,6 @@
     <p id="tokenStatus"></p>
   </div>
 
-  <!-- Formulario de producto -->
   <form id="form">
     <input type="hidden" id="editIndex">
     <label>Nombre</label>
@@ -43,19 +41,20 @@
     <label>Categoría</label>
     <select id="categoria" required>
       <option value="">-- Selecciona una categoría --</option>
+      <option value="TODOS">TODOS</option>
       <option value="CAFETERÍA">CAFETERÍA</option>
+      <option value="PICADAS">PICADAS (Entradas)</option>
       <option value="COMIDAS">COMIDAS</option>
       <option value="POSTRES">POSTRES</option>
-      <option value="REFRESCOS">REFRESCOS</option>
-      <option value="VINOS Y TRAGOS">VINOS Y TRAGOS</option>
+      <option value="REFRESCOS Y VINOS">REFRESCOS Y VINOS</option>
+      <option value="TRAGOS Y HAPPY HOUR">TRAGOS Y HAPPY HOUR</option>
+      <option value="EVENTOS Y NOVEDADES">EVENTOS Y NOVEDADES</option>
     </select>
     <button type="submit">Guardar</button>
   </form>
 
-  <!-- Buscador -->
   <input type="text" id="search" placeholder="🔍 Buscar por nombre, descripción o categoría...">
 
-  <!-- Tabla de productos -->
   <h2>Productos</h2>
   <table>
     <thead>
@@ -65,14 +64,13 @@
   </table>
 
   <script>
-    const USERNAME = "frenchtilo-boop";   // <-- tu usuario de GitHub
-    const REPO = "cartatilo";             // <-- tu repo de GitHub
+    const USERNAME = "frenchtilo-boop";
+    const REPO = "cartatilo";
     const FILE_PATH = "productos.json";
 
     let productos=[];
     let productosFiltrados=[];
 
-    // Guardar / borrar token en localStorage
     function saveToken(){
       const t=document.getElementById('token').value.trim();
       if(t){ 
@@ -87,7 +85,6 @@
     }
     function getToken(){ return localStorage.getItem('github_token'); }
 
-    // Cargar productos desde GitHub
     async function loadProducts(){
       const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
       const res=await fetch(url);
@@ -96,7 +93,6 @@
       render();
     }
 
-    // Renderizar tabla
     function render(){
       const tb=document.getElementById('tbody'); tb.innerHTML='';
       productosFiltrados.forEach((p,i)=>{
@@ -115,7 +111,6 @@
       });
     }
 
-    // Guardar cambios en GitHub
     async function saveToGitHub(newContent){
       const TOKEN=getToken();
       if(!TOKEN){ alert("⚠️ Necesitas guardar tu token primero."); return; }
@@ -141,7 +136,6 @@
       else{ alert("❌ Error al guardar en GitHub."); }
     }
 
-    // Formulario: agregar/editar
     document.getElementById('form').onsubmit=function(e){
       e.preventDefault();
       const idx=document.getElementById('editIndex').value;
@@ -160,7 +154,6 @@
       saveToGitHub(JSON.stringify(productos,null,2));
     }
 
-    // Editar producto
     function edit(i){
       const p=productosFiltrados[i];
       const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
@@ -170,12 +163,9 @@
       document.getElementById('imagen').value=p.imagen;
       document.getElementById('categoria').value=p.categoria;
       document.getElementById('editIndex').value=indexReal;
-
-      // 🔥 Subir el formulario arriba
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Eliminar producto
     function del(i){
       const p=productosFiltrados[i];
       const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
@@ -187,7 +177,6 @@
       }
     }
 
-    // Buscador
     document.getElementById('search').addEventListener('input',function(){
       const term=this.value.toLowerCase();
       productosFiltrados=productos.filter(p=>
@@ -198,7 +187,6 @@
       render();
     });
 
-    // Iniciar
     loadProducts();
     if(getToken()){ document.getElementById('tokenStatus').innerText="🔐 Token cargado."; }
   </script>
