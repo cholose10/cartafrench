@@ -485,9 +485,9 @@
   {
     "nombre": "Burgers BACON",
     "descripcion": "BACON (queso cheddar, panceta y tomate)",
-    "precio": "19000",
+    "precio": 19000,
     "imagen": "img/Bacon .jpg",
-    "categoria": "🍔 Burgers (100% carne, con fritas. La burger puede ser Not Cow)"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Omelette de jamón y queso",
