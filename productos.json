@@ -688,9 +688,9 @@
   {
     "nombre": "Ravioles de verdura,pollo y jamon",
     "descripcion": "Rellenos de verdura pollo y jamón ",
-    "precio": "13000",
+    "precio": 14000,
     "imagen": "img/Ravioles.jpg",
-    "categoria": "🍝 PASTAS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Ravioles de verdura y ricota",
