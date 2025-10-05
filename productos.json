@@ -361,7 +361,7 @@
     "descripcion": "zeros y clásicas",
     "precio": 4000,
     "imagen": "img/20250830_141813.jpg",
-    "categoria": "REFRESCOS Y VINOS"
+    "categoria": "REFRESCOS"
   },
   {
     "nombre": "Agua local filtrada y mineralizada",
@@ -1047,7 +1047,7 @@
     "descripcion": "sugerencia nueva  ",
     "precio": 9200,
     "imagen": "img//Tortasnueva.jpg",
-    "categoria": "EVENTOS Y NOVEDADES"
+    "categoria": "EVENTOS"
   },
   {
     "nombre": "GRANOLA",
