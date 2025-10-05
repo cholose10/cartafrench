@@ -996,9 +996,9 @@
   {
     "nombre": "Trumpeter Sauvignon Blanc",
     "descripcion": "STrumpeter Sauvignon Blanc (750cc)",
-    "precio": "25000",
+    "precio": 25000,
     "imagen": "img/20250903_112257.jpg",
-    "categoria": "🍷VINOS BLANCOS"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Portillo Chardonnay",
