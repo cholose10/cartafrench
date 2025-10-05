@@ -695,9 +695,9 @@
   {
     "nombre": "salsa blanca",
     "descripcion": "Salsa blanca",
-    "precio": "6000",
+    "precio": 5500,
     "imagen": "img/20250905_131302.jpg",
-    "categoria": "🥫SALSAS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "fileto",
