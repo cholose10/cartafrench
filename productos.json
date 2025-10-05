@@ -947,9 +947,9 @@
   {
     "nombre": "Batido Gancia",
     "descripcion": "Batido Gancia",
-    "precio": "9500",
+    "precio": 8000,
     "imagen": "img/Gancia.jpg",
-    "categoria": "🍹TRAGOS"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Aperol con naranja",
