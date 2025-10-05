@@ -10,7 +10,6 @@
       margin: 0;
       background: #faf7f5;
       color: #45270a;
-      scroll-behavior: smooth;
     }
     header {
       background: #fff;
@@ -108,27 +107,6 @@
     .item button:hover {
       background: #c0392b;
     }
-
-    /* 🔝 Botón para subir */
-    #btnSubir {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #8c6954;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      display: none;
-      transition: opacity 0.3s ease;
-    }
-    #btnSubir:hover {
-      background: #6b4e3d;
-    }
   </style>
 </head>
 <body>
@@ -139,7 +117,7 @@
   <div class="banner">Panel de Administración - Tilo Café ☕</div>
 
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presiona Enter)">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
   </div>
 
   <div class="form-container">
@@ -166,9 +144,6 @@
 
   <div class="product-list" id="product-list"></div>
 
-  <!-- 🔝 Botón subir -->
-  <button id="btnSubir" title="Subir">⬆️</button>
-
   <script>
     let productos = [];
 
@@ -181,7 +156,7 @@
       })
       .catch(err => console.error('Error al cargar productos.json:', err));
 
-    // Renderizar productos
+    // Renderizar
     function renderProducts(lista) {
       const container = document.getElementById('product-list');
       container.innerHTML = '';
@@ -201,19 +176,15 @@
       });
     }
 
-    // 🔍 Buscador con Enter
-    document.getElementById('searchInput').addEventListener('keypress', e => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        const term = e.target.value.toLowerCase().trim();
-        const filtrados = productos.filter(p => 
-          p.nombre.toLowerCase().includes(term) ||
-          p.descripcion.toLowerCase().includes(term) ||
-          p.categoria.toLowerCase().includes(term)
-        );
-        renderProducts(filtrados);
-        document.getElementById('product-list').scrollIntoView({ behavior: 'smooth' });
-      }
+    // Buscador
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const term = e.target.value.toLowerCase();
+      const filtrados = productos.filter(p => 
+        p.nombre.toLowerCase().includes(term) ||
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+      renderProducts(filtrados);
     });
 
     // Guardar producto
@@ -259,17 +230,6 @@
         renderProducts(productos);
       }
     }
-
-    // 🔝 Mostrar/ocultar botón de subir
-    const btnSubir = document.getElementById('btnSubir');
-    window.addEventListener('scroll', () => {
-      btnSubir.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    // Acción del botón
-    btnSubir.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 </body>
-</html>
+</html> ....si cabiele
