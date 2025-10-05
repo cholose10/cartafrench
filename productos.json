@@ -289,9 +289,9 @@
   {
     "nombre": "Medialuna caliente de jamón y queso",
     "descripcion": "Medialuna caliente de jamón y queso",
-    "precio": "4600",
+    "precio": 4600,
     "imagen": "img/Lujyq.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Plato con frutas de estación",
