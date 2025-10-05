@@ -366,9 +366,9 @@
   {
     "nombre": "Agua local filtrada y mineralizada",
     "descripcion": "agua fria, natural y con gas",
-    "precio": "3700",
+    "precio": 3700,
     "imagen": "img/20250830_142147.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Adicional con limón",
