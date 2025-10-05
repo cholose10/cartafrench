@@ -1,99 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tilo Café - Carta Digital</title>
   <style>
-    body { font-family: "Arial", sans-serif; background:#f7f3f0; margin:0; padding:0; color:#333; }
-    header { text-align:center; padding:20px; background:#806250; color:white; }
-    nav { display:flex; flex-wrap:wrap; justify-content:center; background:#e5d4c0; padding:10px; gap:8px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f5f2;
+      margin: 0;
+      padding: 0;
+      color: #4a3a2c;
+      text-align: center;
+    }
+
+    header img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      color: #4a3a2c;
+      font-weight: bold;
+    }
+
+    #search-container {
+      margin: 15px auto;
+      max-width: 500px;
+    }
+
+    #search {
+      width: 100%;
+      padding: 10px 15px;
+      border: 2px solid #a77b5a;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 1000px;
+    }
+
     nav button {
-      background:#806250; color:white; border:none; border-radius:8px;
-      padding:10px 14px; font-size:16px; display:flex; align-items:center; gap:6px;
-      cursor:pointer; transition:transform 0.2s; flex:1 1 auto; min-width:120px;
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.1s, background-color 0.2s;
     }
-    nav button:hover { transform:scale(1.05); background:#5f4536; }
-    .icon { font-size:18px; }
-    #search { width:90%; margin:15px auto; display:block; padding:10px;
-      border:2px solid #806250; border-radius:8px; font-size:16px; }
-    main { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:20px; padding:20px; max-width:1200px; margin:auto; }
-    .card {
-      background:white; border-radius:12px; padding:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);
-      transition:transform 0.2s;
+
+    nav button:hover {
+      background-color: #a06c47;
+      transform: scale(1.05);
     }
-    .card:hover { transform:scale(1.02); }
-    .card img { width:100%; border-radius:12px; }
-    .card h3 { margin:10px 0 5px; color:#806250; }
-    .card p { margin:5px 0; font-size:14px; }
-    .price { font-weight:bold; color:#5f4536; font-size:16px; }
+
+    nav button.active {
+      background-color: #c49368;
+    }
+
+    #productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .producto {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .producto:hover {
+      transform: scale(1.03);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #4a3a2c;
+    }
+
+    .producto p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .producto span {
+      font-weight: bold;
+      color: #8b5e3c;
+    }
+
+    @media (max-width: 600px) {
+      nav button {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      #search {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>☕ Carta Digital - Tilo Café</h1>
+    <img src="img/banner.jpg" alt="Banner Tilo Café">
   </header>
 
+  <h1>¡Bienvenidos a Tilo Café Agüero 2298!</h1>
+
+  <div id="search-container">
+    <input type="text" id="search" placeholder="🔍 Buscar producto o categoría...">
+  </div>
+
   <nav>
-    <button onclick="renderProducts('TODOS')"><span class="icon">📋</span>Todos</button>
-    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
-    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
-    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
-    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
-    <button onclick="renderProducts('REFRESCOS Y VINOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
-    <button onclick="renderProducts('TRAGOS Y HAPPY HOUR')"><span class="icon">🍹⏰</span>Tragos y Happy Hour</button>
-    <button onclick="renderProducts('EVENTOS Y NOVEDADES')"><span class="icon">⭐</span>Eventos y Novedades</button>
+    <button onclick="renderProducts('TODOS')">📋 Todos</button>
+    <button onclick="renderProducts('CAFETERÍA')">☕ Cafetería</button>
+    <button onclick="renderProducts('PICADAS (ENTRADAS)')">🥟 Picadas (Entradas)</button>
+    <button onclick="renderProducts('COMIDAS')">🍽️ Comidas</button>
+    <button onclick="renderProducts('POSTRES')">🍰 Postres</button>
+    <button onclick="renderProducts('REFRESCOS Y VINOS')">🍷 Refrescos y Vinos</button>
+    <button onclick="renderProducts('TRAGOS Y HAPPY HOUR')">🍹 Tragos y Happy Hour</button>
+    <button onclick="renderProducts('EVENTOS Y NOVEDADES')">⭐ Eventos y Novedades</button>
   </nav>
 
-  <input id="search" type="text" placeholder="🔍 Buscar productos...">
-
-  <main id="productos"></main>
+  <div id="productos"></div>
 
   <script>
-    const FILE_URL = "https://frenchtilo-boop.github.io/cartatilo/productos.json";
+    const URL = "https://frenchtilo-boop.github.io/cartatilo/productos.json";
     let productos = [];
+    let productosFiltrados = [];
 
     async function loadProducts() {
-      const res = await fetch(FILE_URL);
+      const res = await fetch(URL);
       productos = await res.json();
+      productosFiltrados = [...productos];
       renderProducts("TODOS");
     }
 
     function renderProducts(categoria) {
-      const cont = document.getElementById("productos");
-      cont.innerHTML = "";
+      const botones = document.querySelectorAll("nav button");
+      botones.forEach(b => b.classList.remove("active"));
+      const activo = [...botones].find(b => b.textContent.toUpperCase().includes(categoria));
+      if (activo) activo.classList.add("active");
 
-      let filtrados = categoria === "TODOS"
-        ? productos
-        : productos.filter(p => p.categoria === categoria);
-
-      const term = document.getElementById("search").value.toLowerCase();
-      if (term) {
-        filtrados = filtrados.filter(p =>
-          p.nombre.toLowerCase().includes(term) ||
-          p.descripcion.toLowerCase().includes(term) ||
-          p.categoria.toLowerCase().includes(term)
-        );
+      if (categoria === "TODOS") {
+        productosFiltrados = [...productos];
+      } else {
+        productosFiltrados = productos.filter(p => p.categoria.toUpperCase() === categoria.toUpperCase());
       }
-
-      if (filtrados.length === 0) {
-        cont.innerHTML = "<p style='text-align:center;'>No se encontraron productos.</p>";
-        return;
-      }
-
-      filtrados.forEach(p => {
-        cont.innerHTML += `
-          <div class="card">
-            <img src="${p.imagen}" alt="${p.nombre}">
-            <h3>${p.nombre}</h3>
-            <p>${p.descripcion}</p>
-            <p class="price">$${p.precio}</p>
-          </div>`;
-      });
+      mostrarProductos();
     }
 
-    document.getElementById("search").addEventListener("input", () => renderProducts("TODOS"));
+    function mostrarProductos() {
+      const cont = document.getElementById("productos");
+      cont.innerHTML = productosFiltrados.map(p => `
+        <div class="producto">
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span>$${p.precio}</span>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById("search").addEventListener("input", e => {
+      const term = e.target.value.toLowerCase();
+      productosFiltrados = productos.filter(p =>
+        p.nombre.toLowerCase().includes(term) ||
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+      mostrarProductos();
+    });
+
     loadProducts();
   </script>
 </body>
