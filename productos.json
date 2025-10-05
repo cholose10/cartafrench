@@ -777,13 +777,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Salmón rosado",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "36500",
-    "imagen": "img/Blu.jpg",
-    "categoria": "🔥GRILL Especiales"
-  },
-  {
     "nombre": "NUGGETS",
     "descripcion": "DE POLLO CON PAPAS O PURE",
     "precio": "17000",
