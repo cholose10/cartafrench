@@ -177,9 +177,9 @@
   {
     "nombre": "Crema",
     "descripcion": "Crema deLeche ",
-    "precio": "300",
+    "precio": 300,
     "imagen": "img/medialunas.jpg",
-    "categoria": "➕ Adicionales de café"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Leche de almendras",
