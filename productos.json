@@ -840,13 +840,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "BROCHETTE de Pollo",
-    "descripcion": "Con papas fritas  (para 2 personas)",
-    "precio": "50000",
-    "imagen": "img/20250817_135608.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
-  },
-  {
     "nombre": "Panqueque de dulce de leche",
     "descripcion": "Panqueque de dulce de leche",
     "precio": 13500,
