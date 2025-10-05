@@ -919,9 +919,9 @@
   {
     "nombre": "Johnny Walker Red",
     "descripcion": "Johnny Walker Red",
+    "precio": 12400,
     "imagen": "img/Ret.jpg",
-    "categoria": "🍹TRAGOS",
-    "precio": "13000"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Licor Baileys",
