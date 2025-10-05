@@ -282,9 +282,9 @@
   {
     "nombre": "Mini tarta ",
     "descripcion": "Mini tarta dulces",
-    "precio": "9200",
+    "precio": 9200,
     "imagen": "img/Minitor.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Medialuna caliente de jamón y queso",
