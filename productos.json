@@ -268,9 +268,9 @@
   {
     "nombre": "Alfajor de maicena",
     "descripcion": "Alfajor de maicena (sin TACC)",
-    "precio": "4500",
+    "precio": 4500,
     "imagen": "img/Maicena.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Alfajor de almendras",
