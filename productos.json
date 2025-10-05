@@ -688,9 +688,9 @@
   {
     "nombre": "Sorrentinos de muzzarella y jamón",
     "descripcion": "Sorrentinos de muzzarella y jamón",
-    "precio": "11000",
+    "precio": 16000,
     "imagen": "img/Sonren.jpg",
-    "categoria": "🍝 PASTAS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "salsa blanca",
