@@ -644,13 +644,6 @@
     "categoria": "PICADAS"
   },
   {
-    "nombre": "PARMA",
-    "descripcion": "Salsa de tomate, stracciatella, burrata, jamón crudo, albahaca.",
-    "precio": "32000",
-    "imagen": "img/20250816_135018.jpg",
-    "categoria": "🍕PIZZAS (Estilo napolitano)"
-  },
-  {
     "nombre": "MARGARITA",
     "descripcion": "Salsa de tomate, stracciatella, hojas de albahaca.",
     "precio": "23500",
