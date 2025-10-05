@@ -763,11 +763,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Salmón rosado",
+    "nombre": "MINI BIFE DE CHORISO",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": "34500",
+    "precio": 27000,
     "imagen": "img/Salmón.jpg",
-    "categoria": "🔥GRILL"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Pollo (pechuga)",
