@@ -478,9 +478,9 @@
   {
     "nombre": "Burgers CLÁSICO",
     "descripcion": "CLÁSICO (lechuga, tomate, jamón y queso)",
-    "precio": "17000",
+    "precio": 17000,
     "imagen": "img/20250816_135012.jpg",
-    "categoria": "🍔 Burgers (100% carne, con fritas. La burger puede ser Not Cow)"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Burgers BACON",
