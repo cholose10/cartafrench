@@ -714,13 +714,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Alfredo langostinos",
-    "descripcion": "salsa blanca con langostinos",
-    "imagen": "img/Frelang.jpg",
-    "categoria": "🥫SALSAS",
-    "precio": "9500"
-  },
-  {
     "nombre": "Boloñesa",
     "descripcion": "salsa con carne",
     "categoria": "🥫SALSAS",
