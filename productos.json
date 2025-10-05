@@ -576,9 +576,9 @@
   {
     "nombre": "SUIZA",
     "descripcion": "Salsa blanca y queso gratinado Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "21500",
+    "precio": 21500,
     "imagen": "img/Mizuisa.jpg",
-    "categoria": "MILANESAS Ternera o Pollo - Pechuga"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "NAPOLITANA",
