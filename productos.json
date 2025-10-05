@@ -303,9 +303,9 @@
   {
     "nombre": "Yogurt ",
     "descripcion": "Yogurt $5000Yogurt con granola $8.000Yogurt Forte (con frutas y granola) $12.000",
-    "precio": "12000",
+    "precio": 12000,
     "imagen": "img/IMG-20250802-WA0010.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Porción de tostadas",
