@@ -254,9 +254,9 @@
   {
     "nombre": "Budín",
     "descripcion": "zanahoria y canela, limón y amapolas, chocolate y cafe",
-    "precio": "5500",
+    "precio": 5500,
     "imagen": "img/20250817_124915.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Alfajor de chocolate",
