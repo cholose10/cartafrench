@@ -499,9 +499,9 @@
   {
     "nombre": "Tortilla de papa y cebolla",
     "descripcion": "Tortilla de papa y cebolla",
-    "precio": "15500",
+    "precio": 15500,
     "imagen": "img/20250816_134538.jpg",
-    "categoria": "🍳 Omelettes/Tortillas"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Omelette de queso y champignones",
