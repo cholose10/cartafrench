@@ -401,9 +401,9 @@
   {
     "nombre": "Limonada a la menta con jengibre",
     "descripcion": "Limonada a la menta con jengibre",
-    "precio": "6500",
+    "precio": 6500,
     "imagen": "img/Limonada.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "nombre": "Limonada ",
