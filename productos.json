@@ -862,10 +862,10 @@
   },
   {
     "nombre": "Ensalada de frutas ",
-    "descripcion": "con bocha de helado. $11.000-$14.000",
-    "precio": "14000",
+    "descripcion": ". $10.000-con bocha de helado$13.500",
+    "precio": 14000,
     "imagen": "img/Ensfruta.jpg",
-    "categoria": "🍮POSTRES"
+    "categoria": "POSTRES"
   },
   {
     "nombre": "Helado",
