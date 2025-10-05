@@ -149,9 +149,9 @@
   {
     "nombre": "REVUELTO",
     "descripcion": "Huevos revueltos con jamón y queso, una tostada para acompañar",
-    "precio": "13400",
+    "precio": 13400,
     "imagen": "img/Resultado.jpg",
-    "categoria": "☕ 🥐Desayunos y meriendas (Todos incluyen infusión y vasito de jugo o limonada)"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "PROTEICO",
