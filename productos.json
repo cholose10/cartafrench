@@ -912,9 +912,9 @@
   {
     "nombre": "Johnny Walker Black",
     "descripcion": "Johnny Walker Black",
+    "precio": 14500,
     "imagen": "img/Black.jpg",
-    "categoria": "🍹TRAGOS",
-    "precio": "15000"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Johnny Walker Red",
