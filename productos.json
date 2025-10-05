@@ -1052,9 +1052,9 @@
   {
     "nombre": "MENU del DIA o SUGERENCIAS",
     "descripcion": "menú del día platón + bebida +postre o café, Sugerencia solo es plato",
-    "categoria": "📋MENU del DIA o SUGERENCIAS",
-    "precio": "0",
-    "imagen": "img/.jpg"
+    "precio": 0,
+    "imagen": "img/.jpg",
+    "categoria": "EVENTOS Y NOVEDADES"
   },
   {
     "nombre": "tortas nuevas",
