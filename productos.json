@@ -506,9 +506,9 @@
   {
     "nombre": "Omelette de queso y champignones",
     "descripcion": "Omelette de queso y champignones",
-    "precio": "17000",
+    "precio": 17000,
     "imagen": "img/Omecham.jpg",
-    "categoria": "🍳 Omelettes/Tortillas"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Tortilla de espinaca",
