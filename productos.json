@@ -784,11 +784,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Spaghetti o ñoquis",
+    "nombre": " ñoquis",
     "descripcion": "fileto o crema",
-    "precio": "17000",
+    "precio": 17000,
     "imagen": "img/Ñoquiskit.jpg",
-    "categoria": "👶MENU KIDS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Mila PESTO",
