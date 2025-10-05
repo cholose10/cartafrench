@@ -940,9 +940,9 @@
   {
     "nombre": "Gin Tonic Beefeater",
     "descripcion": "Gin Tonic Beefeater",
-    "precio": "1000",
+    "precio": 9000,
     "imagen": "img/Ginton.jpg",
-    "categoria": "🍹TRAGOS"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Batido Gancia",
