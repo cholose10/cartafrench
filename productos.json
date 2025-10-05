@@ -840,13 +840,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "BROCHETTE de Lomo",
-    "descripcion": "Con papas fritas  (para 2 personas)",
-    "precio": "70000",
-    "imagen": "img/Brochette.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
-  },
-  {
     "nombre": "BROCHETTE de Pollo",
     "descripcion": "Con papas fritas  (para 2 personas)",
     "precio": "50000",
