@@ -730,9 +730,9 @@
   {
     "nombre": "Carbonara",
     "descripcion": "Crema, panceta y verdeo",
-    "categoria": "🥫SALSAS",
-    "precio": "7700",
-    "imagen": "img/Carbonara.jpg"
+    "precio": 7500,
+    "imagen": "img/Carbonara.jpg",
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "caccio e pepe",
