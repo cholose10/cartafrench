@@ -1031,9 +1031,9 @@
   {
     "nombre": "Champagne Salentein Brut Nature",
     "descripcion": "Champagne Salentein Brut Nature",
-    "precio": "32.000",
+    "precio": 30000,
     "imagen": "img/20250903_104921.jpg",
-    "categoria": "🥂ESPUMANTES"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Champagne Blanc de Blancs(Salentein)",
