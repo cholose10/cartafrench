@@ -819,11 +819,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Matambrito a la PIZZA",
-    "descripcion": "De cerdo, muzarella, tomate y orégano con papas fritas",
-    "precio": "27500",
+    "nombre": "LOMO A LA RIOJANA",
+    "descripcion": "CON CEBOLLA, MORRONES Y HUEVO FRITOS CON FRITAS",
+    "precio": 34000,
     "imagen": "img/20250815_132057.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Matambrito a la RIOJANA",
