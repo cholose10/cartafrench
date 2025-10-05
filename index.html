@@ -112,21 +112,20 @@
 
   <!-- Buscador -->
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presione Enter)">
   </div>
 
   <!-- Categorías -->
- <nav>
-  <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
-  <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
-  <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
-  <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
-  <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
-  <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
-  <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos y HAPPY HOUR</button>
-  <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS Y NOVEDADES</button>
-</nav>
-
+  <nav>
+    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
+    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
+    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
+    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
+    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
+    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
+    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos y HAPPY HOUR</button>
+    <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS Y NOVEDADES</button>
+  </nav>
 
   <!-- Lista de productos -->
   <div class="item-list" id="product-list"></div>
@@ -173,35 +172,39 @@
       container.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Buscador
-    document.getElementById('searchInput').addEventListener('input', function() {
-      const term = this.value.toLowerCase().trim();
-      const container = document.getElementById('product-list');
-      container.innerHTML = '';
+    // Buscador con ENTER
+    const input = document.getElementById('searchInput');
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const term = this.value.toLowerCase().trim();
+        const container = document.getElementById('product-list');
+        container.innerHTML = '';
 
-      const filtrados = productos.filter(p => 
-        p.nombre.toLowerCase().includes(term) || 
-        p.descripcion.toLowerCase().includes(term) ||
-        p.categoria.toLowerCase().includes(term)
-      );
+        const filtrados = productos.filter(p => 
+          p.nombre.toLowerCase().includes(term) || 
+          p.descripcion.toLowerCase().includes(term) ||
+          p.categoria.toLowerCase().includes(term)
+        );
 
-      filtrados.forEach(p => {
-        const item = document.createElement('div');
-        item.className = 'item';
-        const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
-          ? String(p.precio).trim()
-          : ('$' + (p.precio ?? ''));
-        item.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion}</p>
-          <span class="price">${priceDisplay}</span>
-        `;
-        container.appendChild(item);
-      });
+        filtrados.forEach(p => {
+          const item = document.createElement('div');
+          item.className = 'item';
+          const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
+            ? String(p.precio).trim()
+            : ('$' + (p.precio ?? ''));
+          item.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <h3>${p.nombre}</h3>
+            <p>${p.descripcion}</p>
+            <span class="price">${priceDisplay}</span>
+          `;
+          container.appendChild(item);
+        });
 
-      // 🔥 También baja hasta los resultados
-      container.scrollIntoView({ behavior: 'smooth' });
+        // 🔥 Desplaza hacia los resultados
+        container.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   </script>
 </body>
