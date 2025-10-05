@@ -610,8 +610,8 @@
   },
   {
     "nombre": "Empanadas",
-    "descripcion": "carne o jamón y queso",
-    "precio": 2500,
+    "descripcion": "CARNE CORTADA ACUCHILLO",
+    "precio": 3000,
     "imagen": "img/Empa.jpg",
     "categoria": "PICADAS"
   },
@@ -651,11 +651,11 @@
     "categoria": "🥘RISOTTOS"
   },
   {
-    "nombre": "RISOTTOS Langostinos !",
+    "nombre": "RISOTTOS FRUTOS SECOS",
     "descripcion": "con verdura, nueces y almendras.",
+    "precio": 25000,
     "imagen": "img/Risotolangos.jpg",
-    "categoria": "🥘RISOTTOS",
-    "precio": "25000"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "RISOTTOS Lomo!",
