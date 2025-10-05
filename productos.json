@@ -798,13 +798,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Pollo N.Y",
-    "descripcion": "Pollo ahumado, mix de queso, verdeo, tomate and papas fritas",
-    "precio": "23500",
-    "imagen": "img/Ny.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
-  },
-  {
     "nombre": "Pollo al CHAMPI",
     "descripcion": "En salsa de hongos con papas fritas",
     "precio": "24500",
