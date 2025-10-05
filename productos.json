@@ -926,9 +926,9 @@
   {
     "nombre": "Licor Baileys",
     "descripcion": "Licor Baileys",
-    "precio": "12000",
+    "precio": 9500,
     "imagen": "img/20250903_111957.jpg",
-    "categoria": "🍹TRAGOS"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Fernet con Coca-Cola",
