@@ -856,9 +856,9 @@
   {
     "nombre": "Panqueque de dulce de leche",
     "descripcion": "Panqueque de dulce de leche",
-    "precio": "13500",
+    "precio": 13500,
     "imagen": "img/20250818_132532.jpg",
-    "categoria": "🍮POSTRES"
+    "categoria": "POSTRES"
   },
   {
     "nombre": "HOT BANANA",
