@@ -702,9 +702,9 @@
   {
     "nombre": "fileto",
     "descripcion": "fileto",
-    "precio": "6000",
+    "precio": 5500,
     "imagen": "img/20250903_124659.jpg",
-    "categoria": "🥫SALSAS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Alfredo Pollo",
