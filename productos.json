@@ -513,9 +513,9 @@
   {
     "nombre": "Tortilla de espinaca",
     "descripcion": "Tortilla de espinaca",
-    "precio": "15700",
+    "precio": 15700,
     "imagen": "img/20250813_131026 (1).jpg",
-    "categoria": "🍳 Omelettes/Tortillas"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "FRESCA",
