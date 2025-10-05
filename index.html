@@ -3,206 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Carta - Tilo Café</title>
+  <title>Carta - Tilo Café</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:20px; background:#f7f3f0; color:#333;}
-    h1 { text-align: center; color:#806250; }
-    form { background:#fff; padding:15px; border-radius:10px; margin-bottom:20px;}
-    input,textarea,select { width:100%; padding:8px; margin:6px 0; border:1px solid #ccc; border-radius:6px;}
-    table { width:100%; border-collapse:collapse; background:#fff;}
-    th,td { border:1px solid #ddd; padding:8px; text-align:left;}
-    th { background:#806250; color:white; }
-    img { max-width:60px; }
-    button { cursor:pointer; margin:2px; }
-    #search { width: 100%; padding:10px; margin-bottom:15px; border:2px solid #806250; border-radius:8px;}
+    body { font-family: Arial, sans-serif; margin:0; background:#f7f3f0; color:#333;}
+    header img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    h1 { text-align:center; padding:15px; color:#806250; margin:10px 0; }
+
+    /* Buscador */
+    #searchContainer {
+      text-align:center;
+      margin:10px auto 20px;
+      width:90%;
+      max-width:500px;
+    }
+    #searchInput {
+      width:100%;
+      padding:12px;
+      border:2px solid #806250;
+      border-radius:25px;
+      font-size:16px;
+      text-align:center;
+      outline:none;
+    }
+
+    /* Categorías con íconos */
+    nav { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
+      gap:10px; 
+      padding:15px; 
+    }
+    nav button { 
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      padding:15px; 
+      border:none; 
+      border-radius:15px; 
+      background:#806250; 
+      color:#fff; 
+      cursor:pointer; 
+      font-size:16px; 
+      font-weight:bold;
+      transition:0.2s;
+    }
+    nav button:hover { background:#a67c52; }
+    nav button span.icon { font-size:22px; }
+
+    /* Productos */
+    #product-list { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); 
+      gap:15px; 
+      padding:20px; 
+    }
+    .item { 
+      background:#fff; 
+      padding:15px; 
+      border-radius:10px; 
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); 
+      text-align:center; 
+    }
+    .item img { 
+      width:100%; 
+      height:150px; 
+      object-fit:cover; 
+      border-radius:8px; 
+    }
+    .price { 
+      display:block; 
+      margin-top:10px; 
+      font-weight:bold; 
+      color:#806250; 
+      font-size:18px;
+    }
+    .no-results { 
+      grid-column:1/-1; 
+      text-align:center; 
+      font-size:1.2rem; 
+      color:#806250; 
+      padding:20px; 
+    }
+
+    /* Responsivo */
+    @media (max-width:600px){
+      nav { grid-template-columns: 1fr 1fr; }
+      nav button { font-size:15px; padding:20px; }
+      nav button span.icon { font-size:26px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Panel de Administración - Tilo Café</h1>
+  <header>
+    <img src="img/french99.jpg" alt="Tilo Café" />
+  </header>
 
-  <!-- Caja para guardar el token -->
-  <div style="margin-bottom:15px; background:#eee; padding:10px; border-radius:8px;">
-    <label for="token">Token de GitHub:</label><br>
-    <input type="password" id="token" placeholder="Pega tu token aquí" style="width:70%; padding:8px;">
-    <button onclick="saveToken()">Guardar Token</button>
-    <button onclick="clearToken()">Borrar Token</button>
-    <p id="tokenStatus"></p>
-  </div>
-
-  <!-- Formulario de producto -->
-  <form id="form">
-    <input type="hidden" id="editIndex">
-    <label>Nombre</label>
-    <input type="text" id="nombre" required>
-    <label>Descripción</label>
-    <textarea id="descripcion" required></textarea>
-    <label>Precio</label>
-    <input type="number" id="precio" required>
-    <label>Imagen (ej: img/foto.jpg)</label>
-    <input type="text" id="imagen" required>
-    <label>Categoría</label>
-    <select id="categoria" required>
-      <option value="">-- Selecciona una categoría --</option>
-      <option value="CAFETERÍA">CAFETERÍA</option>
-      <option value="PICADAS">PICADAS (Entradas)</option>
-      <option value="COMIDAS">COMIDAS</option>
-      <option value="POSTRES">POSTRES</option>
-      <option value="REFRESCOS Y VINOS">REFRESCOS Y VINOS</option>
-      <option value="TRAGOS Y HAPPY HOUR">TRAGOS Y HAPPY HOUR</option>
-      <option value="EVENTOS Y NOVEDADES">EVENTOS Y NOVEDADES</option>
-    </select>
-    <button type="submit">Guardar</button>
-  </form>
+  <h1>Menú</h1>
 
   <!-- Buscador -->
-  <input type="text" id="search" placeholder="🔍 Buscar por nombre, descripción o categoría...">
+  <div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar productos...">
+  </div>
 
-  <!-- Tabla de productos -->
-  <h2>Productos</h2>
-  <table>
-    <thead>
-      <tr><th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio</th><th>Acciones</th></tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <!-- Categorías -->
+  <nav>
+    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
+    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
+    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
+    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
+    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤</span>Refrescos</button>
+    <button onclick="renderProducts('VINOS Y TRAGOS')"><span class="icon">🍷</span>Vinos y Tragos</button>
+  </nav>
+
+  <!-- Lista de productos -->
+  <div id="product-list"></div>
 
   <script>
-    const USERNAME = "frenchtilo-boop";   // <-- tu usuario de GitHub
-    const REPO = "cartatilo";             // <-- tu repo de GitHub
-    const FILE_PATH = "productos.json";
+    let productos = [];
+    let categoriaActual = 'Todos';
 
-    let productos=[];
-    let productosFiltrados=[];
+    // Cargar productos desde JSON
+    fetch('productos.json')
+      .then(response => response.json())
+      .then(data => {
+        productos = data;
+        renderProducts('Todos');
+      });
 
-    // Guardar / borrar token en localStorage
-    function saveToken(){
-      const t=document.getElementById('token').value.trim();
-      if(t){ 
-        localStorage.setItem('github_token',t); 
-        document.getElementById('token').value=''; 
-        document.getElementById('tokenStatus').innerText="✅ Token guardado."; 
+    // Renderizar productos
+    function renderProducts(categoria, terminoBusqueda = '') {
+      categoriaActual = categoria;
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+
+      // Filtrar por categoría
+      let filtrados = categoria === 'Todos' 
+        ? productos 
+        : productos.filter(p => p.categoria === categoria);
+
+      // Filtrar por búsqueda
+      if (terminoBusqueda.trim() !== '') {
+        const palabras = terminoBusqueda.toLowerCase().split(/\s+/);
+        filtrados = filtrados.filter(p => {
+          const texto = (p.nombre + " " + p.descripcion + " " + p.categoria).toLowerCase();
+          return palabras.every(pal => texto.includes(pal));
+        });
       }
-    }
-    function clearToken(){ 
-      localStorage.removeItem('github_token'); 
-      document.getElementById('tokenStatus').innerText="⚠️ Token borrado."; 
-    }
-    function getToken(){ return localStorage.getItem('github_token'); }
 
-    // Cargar productos desde GitHub
-    async function loadProducts(){
-      const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
-      const res=await fetch(url);
-      productos=await res.json();
-      productosFiltrados=[...productos];
-      render();
-    }
+      // Si no hay resultados
+      if (filtrados.length === 0) {
+        container.innerHTML = `<div class="no-results">⚠️ No se encontraron productos</div>`;
+        return;
+      }
 
-    // Renderizar tabla
-    function render(){
-      const tb=document.getElementById('tbody'); tb.innerHTML='';
-      productosFiltrados.forEach((p,i)=>{
-        tb.innerHTML+=`
-          <tr>
-            <td><img src="${p.imagen}" alt=""></td>
-            <td>${p.nombre}</td>
-            <td>${p.descripcion}</td>
-            <td>${p.categoria}</td>
-            <td>$${p.precio}</td>
-            <td>
-              <button onclick="edit(${i})">Editar</button>
-              <button onclick="del(${i})">Eliminar</button>
-            </td>
-          </tr>`;
+      // Mostrar productos filtrados
+      filtrados.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+          ? String(p.precio).trim()
+          : ('$' + (p.precio ?? ''));
+        item.innerHTML = `
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span class="price">${priceDisplay}</span>
+        `;
+        container.appendChild(item);
       });
     }
 
-    // Guardar cambios en GitHub
-    async function saveToGitHub(newContent){
-      const TOKEN=getToken();
-      if(!TOKEN){ alert("⚠️ Necesitas guardar tu token primero."); return; }
-
-      const apiUrl=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`;
-      const getRes=await fetch(apiUrl,{ headers:{Authorization:`token ${TOKEN}`} });
-      const data=await getRes.json();
-
-      const updateRes=await fetch(apiUrl,{
-        method:"PUT",
-        headers:{
-          "Authorization":`token ${TOKEN}`,
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          message:"Actualización desde admin.html",
-          content:btoa(unescape(encodeURIComponent(newContent))),
-          sha:data.sha
-        })
-      });
-
-      if(updateRes.ok){ alert("✅ Cambios guardados en GitHub."); }
-      else{ alert("❌ Error al guardar en GitHub."); }
-    }
-
-    // Formulario: agregar/editar
-    document.getElementById('form').onsubmit=function(e){
-      e.preventDefault();
-      const idx=document.getElementById('editIndex').value;
-      const prod={
-        nombre:document.getElementById('nombre').value,
-        descripcion:document.getElementById('descripcion').value,
-        precio:parseFloat(document.getElementById('precio').value),
-        imagen:document.getElementById('imagen').value,
-        categoria:document.getElementById('categoria').value
-      };
-      if(idx===''){ productos.push(prod);} 
-      else { productos[idx]=prod; document.getElementById('editIndex').value='';}
-      productosFiltrados=[...productos];
-      render();
-      this.reset();
-      saveToGitHub(JSON.stringify(productos,null,2));
-    }
-
-    // Editar producto
-    function edit(i){
-      const p=productosFiltrados[i];
-      const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
-      document.getElementById('nombre').value=p.nombre;
-      document.getElementById('descripcion').value=p.descripcion;
-      document.getElementById('precio').value=p.precio;
-      document.getElementById('imagen').value=p.imagen;
-      document.getElementById('categoria').value=p.categoria;
-      document.getElementById('editIndex').value=indexReal;
-
-      // 🔥 Subir el formulario arriba
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Eliminar producto
-    function del(i){
-      const p=productosFiltrados[i];
-      const indexReal = productos.findIndex(x=>x.nombre===p.nombre && x.descripcion===p.descripcion); 
-      if(confirm('¿Eliminar producto?')){
-        productos.splice(indexReal,1);
-        productosFiltrados=[...productos];
-        render();
-        saveToGitHub(JSON.stringify(productos,null,2));
-      }
-    }
-
-    // Buscador
-    document.getElementById('search').addEventListener('input',function(){
-      const term=this.value.toLowerCase();
-      productosFiltrados=productos.filter(p=>
-        p.nombre.toLowerCase().includes(term) ||
-        p.descripcion.toLowerCase().includes(term) ||
-        p.categoria.toLowerCase().includes(term)
-      );
-      render();
+    // Buscador en vivo
+    document.getElementById('searchInput').addEventListener('input', function() {
+      renderProducts(categoriaActual, this.value);
     });
-
-    // Iniciar
-    loadProducts();
-    if(getToken()){ document.getElementById('tokenStatus').innerText="🔐 Token cargado."; }
   </script>
 </body>
 </html>
