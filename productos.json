@@ -778,10 +778,10 @@
   },
   {
     "nombre": "NUGGETS",
-    "descripcion": "DE POLLO CON PAPAS O PURE",
-    "precio": "17000",
+    "descripcion": "DE POLLO CON FRITAS O PURE",
+    "precio": 17000,
     "imagen": "img/Nages.jpg",
-    "categoria": "👶MENU KIDS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Spaghetti o ñoquis",
