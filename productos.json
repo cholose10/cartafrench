@@ -65,9 +65,9 @@
   {
     "nombre": "Té con leche",
     "descripcion": "te inti zen",
-    "precio": "4100",
+    "precio": 4100,
     "imagen": "img/te.jpg",
-    "categoria": "Cafetería☕️"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Submarino",
