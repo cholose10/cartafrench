@@ -436,9 +436,9 @@
   {
     "nombre": "Pavita, queso y tomate",
     "descripcion": "ciabatta o arabe",
-    "precio": "16000",
+    "precio": 16000,
     "imagen": "img/Pabita.jpg",
-    "categoria": "🥪 Sandwiches"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Chipa tostado ",
