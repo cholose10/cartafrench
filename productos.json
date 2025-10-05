@@ -960,10 +960,10 @@
   },
   {
     "nombre": "HAPPY HOUR",
-    "descripcion": "Aperol Spritz o naranja todos los dias de 18 a20:30",
-    "precio": "0",
+    "descripcion": "Aperol naranja O CERVEZA todos los dias de 18 a 20:30",
+    "precio": 0,
     "imagen": "img/Api.jpg",
-    "categoria": "⏰HAPPY HOUR"
+    "categoria": "TRAGOS Y HAPPY HOUR"
   },
   {
     "nombre": "Trumpeter Malbec",
