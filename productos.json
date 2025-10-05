@@ -891,9 +891,9 @@
   {
     "nombre": "STELLA ARTOIS (410cc - Porrón)",
     "descripcion": "porron",
-    "precio": "7200",
+    "precio": 7000,
     "imagen": "img/Coroa.jpg",
-    "categoria": "🍺 CERVEZAS"
+    "categoria": "REFRESCOS Y VINOS"
   },
   {
     "n,ombre": "CORONA (Porrón)",
