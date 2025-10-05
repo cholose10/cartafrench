@@ -117,7 +117,7 @@
   <div class="banner">Panel de Administración - Tilo Café ☕</div>
 
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presione Enter)">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
   </div>
 
   <div class="form-container">
@@ -176,22 +176,15 @@
       });
     }
 
-    // 🔍 Buscador con Enter
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        const term = searchInput.value.toLowerCase().trim();
-        const filtrados = productos.filter(p => 
-          p.nombre.toLowerCase().includes(term) ||
-          p.descripcion.toLowerCase().includes(term) ||
-          p.categoria.toLowerCase().includes(term)
-        );
-        renderProducts(filtrados);
-
-        // 🔥 Desplazar suavemente hacia los resultados
-        document.getElementById('product-list').scrollIntoView({ behavior: 'smooth' });
-      }
+    // Buscador
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const term = e.target.value.toLowerCase();
+      const filtrados = productos.filter(p => 
+        p.nombre.toLowerCase().includes(term) ||
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+      renderProducts(filtrados);
     });
 
     // Guardar producto
@@ -239,4 +232,4 @@
     }
   </script>
 </body>
-</html>
+</html> ....si cabiele
