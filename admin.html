@@ -45,9 +45,9 @@
       <option value="PICADAS">PICADAS</option>
       <option value="COMIDAS">COMIDAS</option>
       <option value="POSTRES">POSTRES</option>
-      <option value="REFRESCOS Y VINOS">REFRESCOS Y VINOS</option>
-      <option value="TRAGOS Y HAPPY HOUR">TRAGOS Y HAPPY HOUR</option>
-      <option value="EVENTOS Y NOVEDADES">EVENTOS Y NOVEDADES</option>
+      <option value="REFRESCOS">REFRESCOS</option>
+      <option value="TRAGOS">TRAGOS</option>
+      <option value="EVENTOS">EVENTOS</option>
     </select>
     <button type="submit">Guardar</button>
   </form>
@@ -85,7 +85,7 @@
     function getToken(){ return localStorage.getItem('github_token'); }
 
     async function loadProducts(){
-      const url=`https://frenchtilo-boop.github.io/cartatilo/productos.json`;
+      const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
       const res=await fetch(url);
       productos=await res.json();
       productosFiltrados=[...productos];
@@ -113,11 +113,9 @@
     async function saveToGitHub(newContent){
       const TOKEN=getToken();
       if(!TOKEN){ alert("⚠️ Necesitas guardar tu token primero."); return; }
-
       const apiUrl=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`;
       const getRes=await fetch(apiUrl,{ headers:{Authorization:`token ${TOKEN}`} });
       const data=await getRes.json();
-
       const updateRes=await fetch(apiUrl,{
         method:"PUT",
         headers:{
@@ -130,7 +128,6 @@
           sha:data.sha
         })
       });
-
       if(updateRes.ok){ alert("✅ Cambios guardados en GitHub."); }
       else{ alert("❌ Error al guardar en GitHub."); }
     }
@@ -179,9 +176,10 @@
     document.getElementById('search').addEventListener('input',function(){
       const term=this.value.toLowerCase();
       productosFiltrados=productos.filter(p=>
-        p.nombre.toLowerCase().includes(term) ||
-        p.descripcion.toLowerCase().includes(term) ||
-        p.categoria.toLowerCase().includes(term)
+        (p.nombre + p.descripcion + p.categoria)
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .includes(term.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
       );
       render();
     });
