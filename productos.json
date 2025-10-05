@@ -541,9 +541,9 @@
   {
     "nombre": "CAESAR Con Langostinos rebozados",
     "descripcion": "Mix de verdes, croutons, Con langostinos rebozados, parmesano y aderezo Caesar.",
+    "precio": 18500,
     "imagen": "img/Caesarlangis.jpg",
-    "categoria": "🥗 ENSALADAS",
-    "precio": "18500"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "STRACCIATELLA mozzarella italiana",
