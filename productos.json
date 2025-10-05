@@ -1001,13 +1001,6 @@
     "categoria": "REFRESCOS Y VINOS"
   },
   {
-    "nombre": "Portillo Chardonnay",
-    "descripcion": "Portillo Chardonnay (750cc)",
-    "precio": "19000",
-    "imagen": "img/20250903_110934.jpg",
-    "categoria": "🍷VINOS BLANCOS"
-  },
-  {
     "nombre": "copa de vino",
     "descripcion": "BLANCOS o TINTO",
     "precio": 7000,
