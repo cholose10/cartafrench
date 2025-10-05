@@ -751,9 +751,9 @@
   {
     "nombre": "Bife de chorizo",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": "29500",
+    "precio": 27000,
     "imagen": "img/20250815_151841.jpg",
-    "categoria": "🔥GRILL"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Bife de lomo",
