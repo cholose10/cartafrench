@@ -569,9 +569,9 @@
   {
     "nombre": "ESPINACA carne o pollo",
     "descripcion": "Crema de espinaca y queso gratinado Acompañadas con puré, fideos, ensalada o papas fritas",
+    "precio": 21500,
     "imagen": "img/Esp.jpg",
-    "categoria": "MILANESAS Ternera o Pollo - Pechuga",
-    "precio": "21500"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "SUIZA",
