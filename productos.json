@@ -226,9 +226,9 @@
   {
     "nombre": "Cookies🍪",
     "descripcion": "cookies vainilla con chocolate, chocolate+chocolate",
-    "precio": "4800",
+    "precio": 4800,
     "imagen": "img/20250902_085341.jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Brownie con nueces blancas",
