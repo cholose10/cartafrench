@@ -520,9 +520,9 @@
   {
     "nombre": "FRESCA",
     "descripcion": "Rúcula, manzana verde, pepino, tomates cherries, nueces, regianito",
+    "precio": 18200,
     "imagen": "img/Fresca.jpg",
-    "categoria": "🥗 ENSALADAS",
-    "precio": "18200"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "CAESAR CON POLLO",
