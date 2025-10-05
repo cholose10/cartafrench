@@ -954,9 +954,9 @@
   {
     "nombre": "Aperol con naranja",
     "descripcion": "Aperol con naranja",
-    "precio": "9500",
+    "precio": 8500,
     "imagen": "img/Campati.jpg",
-    "categoria": "🍹TRAGOS"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Aperol Spritz",
