@@ -18,9 +18,8 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     header img {
-      width: 100%;
-      max-height: 280px;
-      object-fit: cover;
+      max-width: 100%;
+      height: auto;
     }
     .banner {
       text-align: center;
@@ -28,7 +27,6 @@
       font-weight: bold;
       margin: 15px;
     }
-
     /* Buscador */
     .search-box {
       text-align: center;
@@ -42,7 +40,6 @@
       border-radius: 8px;
       font-size: 1rem;
     }
-
     /* Categorías */
     nav {
       display: flex;
@@ -55,26 +52,24 @@
       background: #8c6954;
       color: #fff;
       border: none;
-      border-radius: 14px;
+      border-radius: 12px;
       padding: 20px 25px;
-      width: 140px;
-      text-align: center;
       font-size: 1rem;
-      font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      transition: all 0.25s ease;
+      transition: transform 0.2s, background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: 150px;
     }
     nav button:hover {
       background: #6b4e3d;
-      transform: translateY(-4px);
+      transform: translateY(-3px);
     }
-    nav .icon {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 5px;
+    .icon {
+      font-size: 1.8rem;
     }
-
     /* Productos */
     .item-list {
       display: flex;
@@ -98,7 +93,7 @@
       object-fit: cover;
     }
     .item h3 { margin: 10px; }
-    .item p { margin: 0 10px 10px; color: #5a4635; }
+    .item p { margin: 0 10px 10px; }
     .item .price {
       font-weight: bold;
       color: #000;
@@ -117,10 +112,10 @@
 
   <!-- Buscador -->
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar producto, postre o bebida...">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
   </div>
 
-  <!-- Botones de categorías -->
+  <!-- Categorías -->
   <nav>
     <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
     <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
@@ -128,7 +123,7 @@
     <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
     <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
     <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
-    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos & Happy Hour</button>
+    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos y Happy Hour</button>
     <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>Eventos y Novedades</button>
   </nav>
 
@@ -144,17 +139,24 @@
       .then(data => {
         productos = data;
         renderProducts('Todos');
+      })
+      .catch(err => {
+        console.error("Error al cargar productos.json:", err);
       });
 
     // Renderizar productos por categoría
     function renderProducts(categoria) {
       const container = document.getElementById('product-list');
       container.innerHTML = '';
-      const filtrados = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
+
+      const filtrados = categoria === 'Todos'
+        ? productos
+        : productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
+
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
-        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+        const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
           ? String(p.precio).trim()
           : ('$' + (p.precio ?? ''));
         item.innerHTML = `
@@ -165,23 +167,27 @@
         `;
         container.appendChild(item);
       });
+
+      // 🔥 Desplazar suavemente hacia los productos
+      container.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Buscador: busca en todo el texto (nombre, descripción, categoría)
+    // Buscador
     document.getElementById('searchInput').addEventListener('input', function() {
-      const term = this.value.toLowerCase();
-      const filtrados = productos.filter(p =>
-        (p.nombre + p.descripcion + p.categoria)
-          .toLowerCase()
-          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-          .includes(term.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
-      );
+      const term = this.value.toLowerCase().trim();
       const container = document.getElementById('product-list');
       container.innerHTML = '';
+
+      const filtrados = productos.filter(p => 
+        p.nombre.toLowerCase().includes(term) || 
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
-        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+        const priceDisplay = (String(p.precio || '').trim().startsWith('$'))
           ? String(p.precio).trim()
           : ('$' + (p.precio ?? ''));
         item.innerHTML = `
@@ -192,6 +198,9 @@
         `;
         container.appendChild(item);
       });
+
+      // 🔥 También baja hasta los resultados
+      container.scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 </body>
