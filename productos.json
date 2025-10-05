@@ -205,9 +205,9 @@
   {
     "nombre": "factura",
     "descripcion": "Pasteleras o membrillo",
-    "precio": "2300",
+    "precio": 2300,
     "imagen": "img/20250902_085539(1).jpg",
-    "categoria": "🍰 Pastelería"
+    "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Cinamon Roll(rol de canela)",
