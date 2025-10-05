@@ -826,13 +826,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Matambrito a la RIOJANA",
-    "descripcion": "De cerdo, cebollitas, morrones, arvejas y huevo frito, con papas fritas",
-    "precio": "28000",
-    "imagen": "img/Matrio.jpg",
-    "categoria": "🍽️PLATOS PRINCIPALES"
-  },
-  {
     "nombre": "AMIGOS Y FAMILLAS PASTA",
     "descripcion": "FUENTE DE ÑOQUIES O TALLARINES(BOLOGNESA, CREMA, FILETO ORISA. PODESCONBINAR)",
     "precio": "48000",
