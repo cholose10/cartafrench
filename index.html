@@ -3,164 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta - Tilo Café</title>
+  <title>Carta Tilo Café</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#f7f3f0; color:#333;}
-    header img { width: 100%; height: 220px; object-fit: cover; display: block; }
-    h1 { text-align:center; padding:15px; color:#806250; margin:10px 0; }
-
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #faf7f5;
+      color: #45270a;
+    }
+    header {
+      background: #fff;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
+    .banner {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 15px;
+    }
     /* Buscador */
-    #searchContainer {
-      text-align:center;
-      margin:10px auto 20px;
-      width:90%;
-      max-width:500px;
+    .search-box {
+      text-align: center;
+      margin: 15px;
     }
-    #searchInput {
-      width:100%;
-      padding:12px;
-      border:2px solid #806250;
-      border-radius:25px;
-      font-size:16px;
-      text-align:center;
-      outline:none;
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      border: 2px solid #8c6954;
+      border-radius: 8px;
+      font-size: 1rem;
     }
-
-    /* Categorías con íconos */
-    nav { 
-      display:grid; 
-      grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); 
-      gap:10px; 
-      padding:15px; 
+    /* Categorías */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
     }
-    nav button { 
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:5px;
-      padding:15px; 
-      border:none; 
-      border-radius:15px; 
-      background:#806250; 
-      color:#fff; 
-      cursor:pointer; 
-      font-size:16px; 
-      font-weight:bold;
-      transition:0.2s;
+    nav button {
+      background: #8c6954;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 15px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
-    nav button:hover { background:#a67c52; }
-    nav button span.icon { font-size:22px; }
-
+    nav button:hover {
+      background: #6b4e3d;
+      transform: translateY(-3px);
+    }
+    .icon {
+      font-size: 1.5rem;
+    }
     /* Productos */
-    #product-list { 
-      display:grid; 
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); 
-      gap:15px; 
-      padding:20px; 
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
     }
-    .item { 
-      background:#fff; 
-      padding:15px; 
-      border-radius:10px; 
-      box-shadow:0 2px 5px rgba(0,0,0,0.1); 
-      text-align:center; 
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.2s ease;
     }
-    .item img { 
-      width:100%; 
-      height:150px; 
-      object-fit:cover; 
-      border-radius:8px; 
+    .item:hover { transform: scale(1.02); }
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-    .price { 
-      display:block; 
-      margin-top:10px; 
-      font-weight:bold; 
-      color:#806250; 
-      font-size:18px;
-    }
-    .no-results { 
-      grid-column:1/-1; 
-      text-align:center; 
-      font-size:1.2rem; 
-      color:#806250; 
-      padding:20px; 
-    }
-
-    /* Responsivo */
-    @media (max-width:600px){
-      nav { grid-template-columns: 1fr 1fr; }
-      nav button { font-size:15px; padding:20px; }
-      nav button span.icon { font-size:26px; }
+    .item h3 { margin: 10px; }
+    .item p { margin: 0 10px 10px; }
+    .item .price {
+      font-weight: bold;
+      color: #000;
+      margin: 0 10px 10px;
+      display: block;
     }
   </style>
 </head>
 <body>
+  <!-- Logo -->
   <header>
     <img src="img/french99.jpg" alt="Tilo Café" />
   </header>
 
-  <h1>Menú</h1>
+  <div class="banner">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
   <!-- Buscador -->
-  <div id="searchContainer">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar productos...">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto o categoría...">
   </div>
 
-  <!-- Categorías -->
+  <!-- Botones de categorías -->
   <nav>
-    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
+    <button onclick="renderProducts('TODOS')"><span class="icon">📋</span>Todos</button>
     <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
-    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>ENTRADAS</button>
+    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Picadas (Entradas)</button>
     <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
     <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
-    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
-    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹</span>Tragos Y HAPPY HOUR</button>
-    <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS Y NOVEDADES</button>
+    <button onclick="renderProducts('REFRESCOS Y VINOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
+    <button onclick="renderProducts('TRAGOS Y HAPPY HOUR')"><span class="icon">🍹⏰</span>Tragos y Happy Hour</button>
+    <button onclick="renderProducts('EVENTOS Y NOVEDADES')"><span class="icon">⭐</span>Eventos y Novedades</button>
   </nav>
 
   <!-- Lista de productos -->
-  <div id="product-list"></div>
+  <div class="item-list" id="product-list"></div>
 
   <script>
     let productos = [];
-    let categoriaActual = 'Todos';
 
-    // Cargar productos desde JSON
+    // Cargar productos
     fetch('productos.json')
       .then(response => response.json())
       .then(data => {
         productos = data;
-        renderProducts('Todos');
+        renderProducts('TODOS');
       });
 
-    // Renderizar productos
-    function renderProducts(categoria, terminoBusqueda = '') {
-      categoriaActual = categoria;
+    // Renderizar productos por categoría
+    function renderProducts(categoria) {
       const container = document.getElementById('product-list');
       container.innerHTML = '';
-
-      // Filtrar por categoría
-      let filtrados = categoria === 'Todos' 
-        ? productos 
-        : productos.filter(p => p.categoria === categoria);
-
-      // Filtrar por búsqueda
-      if (terminoBusqueda.trim() !== '') {
-        const palabras = terminoBusqueda.toLowerCase().split(/\s+/);
-        filtrados = filtrados.filter(p => {
-          const texto = (p.nombre + " " + p.descripcion + " " + p.categoria).toLowerCase();
-          return palabras.every(pal => texto.includes(pal));
-        });
-      }
-
-      // Si no hay resultados
-      if (filtrados.length === 0) {
-        container.innerHTML = `<div class="no-results">⚠️ No se encontraron productos</div>`;
-        return;
-      }
-
-      // Mostrar productos filtrados
+      const filtrados = categoria === 'TODOS' ? productos : productos.filter(p => p.categoria === categoria);
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
@@ -177,9 +162,30 @@
       });
     }
 
-    // Buscador en vivo
+    // Buscador general (nombre, descripción o categoría)
     document.getElementById('searchInput').addEventListener('input', function() {
-      renderProducts(categoriaActual, this.value);
+      const term = this.value.toLowerCase();
+      const filtrados = productos.filter(p => 
+        p.nombre.toLowerCase().includes(term) || 
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
+      );
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+      filtrados.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+          ? String(p.precio).trim()
+          : ('$' + (p.precio ?? ''));
+        item.innerHTML = `
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span class="price">${priceDisplay}</span>
+        `;
+        container.appendChild(item);
+      });
     });
   </script>
 </body>
