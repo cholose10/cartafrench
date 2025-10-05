@@ -492,9 +492,9 @@
   {
     "nombre": "Omelette de jamón y queso",
     "descripcion": "Omelette de jamón y queso",
-    "precio": "15000",
+    "precio": 15000,
     "imagen": "img/20250804_132736.jpg",
-    "categoria": "🍳 Omelettes/Tortillas"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Tortilla de papa y cebolla",
