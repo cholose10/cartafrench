@@ -625,9 +625,9 @@
   {
     "nombre": "Mozzarellas rebozadas",
     "descripcion": "Mozzarellas rebozadas",
-    "precio": "16000",
+    "precio": 16000,
     "imagen": "img/20250817_131412.jpg",
-    "categoria": "🥟ENTRADITAS"
+    "categoria": "PICADAS"
   },
   {
     "nombre": "Nachos",
