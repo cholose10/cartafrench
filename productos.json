@@ -368,49 +368,49 @@
     "descripcion": "agua fria, natural y con gas",
     "precio": "3700",
     "imagen": "img/20250830_142147.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS"
   },
   {
     "nombre": "Adicional con limón",
     "descripcion": "Adicional con limón",
     "precio": "400",
     "imagen": "img/20250903_093625.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria":  "REFRESCOS"
   },
   {
     "nombre": "Jugo exprimido de naranja",
     "descripcion": "exprimido de naranja",
     "precio": "6500",
     "imagen": "img/Exprimido.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria":  "REFRESCOS"
   },
   {
     "nombre": "Milkshake OREO",
     "descripcion": "helado de crema, con oreos y crema batida",
     "precio": "8800",
     "imagen": "img/Mioreo.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria": "REFRESCOS"
   },
   {
     "nombre": "Licuadas",
     "descripcion": "con frutas de estacion(base de agua, leche o exprimido",
     "precio": "7000",
     "imagen": "img/20250903_110035.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria":  "REFRESCOS"
   },
   {
     "nombre": "Limonada a la menta con jengibre",
     "descripcion": "Limonada a la menta con jengibre",
     "precio": "6500",
     "imagen": "img/Limonada.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria":  "REFRESCOS"
   },
   {
     "nombre": "Limonada ",
     "descripcion": "Limonada simple",
     "precio": "6200",
     "imagen": "img/Limosim.jpg",
-    "categoria": "🥤 Refrescos"
+    "categoria":  "REFRESCOS"
   },
   {
     "nombre": "Jamón cocido, queso y tomate ",
