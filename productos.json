@@ -618,9 +618,9 @@
   {
     "nombre": "Rabas a la romana",
     "descripcion": "Rabas a la romana",
-    "precio": "23000",
+    "precio": 23000,
     "imagen": "img/Rabas.jpg",
-    "categoria": "🥟ENTRADITAS"
+    "categoria": "PICADAS"
   },
   {
     "nombre": "Mozzarellas rebozadas",
