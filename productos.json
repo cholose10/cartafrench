@@ -770,11 +770,11 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Pollo (pechuga)",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
+    "nombre": "POR POCION",
+    "descripcion": "PURÉ, ARROZ, ENSALADA OFRITA",
+    "precio": 12000,
     "imagen": "img/Espepollo.jpg",
-    "categoria": "🔥GRILL Especiales",
-    "precio": "22000"
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "Matambre de cerdo",
