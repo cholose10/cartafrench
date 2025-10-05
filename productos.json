@@ -644,13 +644,6 @@
     "categoria": "PICADAS"
   },
   {
-    "nombre": "Champi",
-    "descripcion": "Salsa de tomate, stracciatella, hongos ycebollas salteadas.",
-    "precio": "28000",
-    "imagen": "img/Pizachampi.jpg",
-    "categoria": "🍕PIZZAS (Estilo napolitano)"
-  },
-  {
     "nombre": "RISOTTOS de pollo!",
     "descripcion": "con pollo, calabaza y verduras.",
     "precio": "23000",
