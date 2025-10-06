@@ -413,11 +413,11 @@
     "categoria": "REFRESCOS"
   },
   {
-    "nombre": "Jamón cocido, queso y tomate ",
+    "nombre": "Jamón cocido y queso ",
     "descripcion": "ciabatta, árabe",
-    "precio": 13000,
+    "precio": 13500,
     "imagen": "img//Jqyt.jpg",
-    "categoria": "COMIDAS"
+    "categoria": "SÁNDWICHES"
   },
   {
     "nombre": "tostado mixto",
