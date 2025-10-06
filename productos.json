@@ -463,10 +463,10 @@
   },
   {
     "nombre": "Sandwiches Lomito BACON",
-    "descripcion": "BACON (queso cheddar, panceta y tomate)",
-    "precio": 26000,
+    "descripcion": "BACON (queso cheddar, panceta y tomate)en pan de ciabatta, con papas fritas",
+    "precio": 25500,
     "imagen": "img//Lomitobac.jpg",
-    "categoria": "COMIDAS"
+    "categoria": "SÁNDWICHES"
   },
   {
     "nombre": "hamburguesas NOVILLO",
