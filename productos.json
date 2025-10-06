@@ -553,13 +553,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "SUIZA",
-    "descripcion": "Salsa blanca y queso gratinado Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": 21500,
-    "imagen": "img/Mizuisa.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
     "nombre": "MILA NAPOLITANA CARNR O POLLO",
     "descripcion": "Salsa de tomate, jamón y queso Acompañadas con puré, fideos, ensalada o papas fritas",
     "precio": 21000,
