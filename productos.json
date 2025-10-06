@@ -532,13 +532,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "STRACCIATELLA mozzarella italiana",
-    "descripcion": "Mix de verdes, tomates cherries, jamón crudo, mozzarella, tiras de tortilla",
-    "precio": 28000,
-    "imagen": "img/Estrachatelaens.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
     "nombre": "  ESALADA PARMA",
     "descripcion": "Mix con hojas verdes, queso regianito\n tomates cherries,jamon crudo y tiras de tortilla ",
     "precio": 16800,
