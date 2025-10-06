@@ -812,13 +812,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "MILA SPAGUETTI",
-    "descripcion": "DE TERNERA CON SPAGUETTI ROSA",
-    "precio": 19000,
-    "imagen": "img/20250817_142010.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
     "nombre": "LOMO A LA RIOJANA",
     "descripcion": "CON CEBOLLA, MORRONES Y HUEVO FRITOS CON FRITAS",
     "precio": 34000,
