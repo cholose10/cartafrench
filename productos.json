@@ -539,8 +539,8 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "COBB SALAD",
-    "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
+    "nombre": "  ESALADA PARMA",
+    "descripcion": "Mix con hojas verdes, queso regianito\n tomates cherries,jamon crudo y tiras de tortilla ",
     "precio": 16800,
     "imagen": "img/Cpsala.jpg",
     "categoria": "COMIDAS"
