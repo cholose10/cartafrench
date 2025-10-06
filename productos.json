@@ -483,9 +483,9 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "Burgers BACON",
-    "descripcion": "BACON (queso cheddar, panceta y tomate)",
-    "precio": 19000,
+    "nombre": "hamburguesas NOT COW",
+    "descripcion": " A BASE DE PROTEINAS DE ARVEJAS\n con rucula tomate y queso fundido",
+    "precio": 16500,
     "imagen": "img/Bacon .jpg",
     "categoria": "COMIDAS"
   },
