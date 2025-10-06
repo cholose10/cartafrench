@@ -2,300 +2,269 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin - Tilo Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin - Tilo Café</title>
   <style>
-    :root{--bg:#faf7f5;--card:#fff;--accent:#8c6954;--danger:#e74c3c}
-    body{font-family: "Segoe UI", Roboto, sans-serif; margin:0; background:var(--bg); color:#222}
-    header{background:var(--card); text-align:center; padding:10px; box-shadow:0 2px 5px rgba(0,0,0,.08)}
-    header img{max-width:220px; height:auto}
-    .container{max-width:1100px; margin:18px auto; padding:0 12px}
-    .top{display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .search-box{flex:1; min-width:220px}
-    .search-box input{width:100%; padding:10px 12px; border:2px solid var(--accent); border-radius:8px; font-size:1rem}
-    .controls{display:flex; gap:8px; align-items:center}
-    button, input[type="file"]{background:var(--accent); color:#fff; border:none; padding:9px 12px; border-radius:8px; cursor:pointer}
-    button.secondary{background:#6b4e3d}
-    button.warn{background:var(--danger)}
-    .form-container{background:var(--card); margin:18px 0; padding:16px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.06)}
-    .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-    form input, form select, form textarea{width:100%; padding:10px; border:2px solid var(--accent); border-radius:8px; font-size:1rem; box-sizing:border-box}
-    form textarea{resize:vertical; min-height:70px}
-    .product-list{display:flex; flex-wrap:wrap; gap:14px; padding:18px 0}
-    .item{width:260px; background:var(--card); border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.08); overflow:hidden; display:flex; flex-direction:column}
-    .item img{width:100%; height:160px; object-fit:cover}
-    .card-body{padding:10px; flex:1}
-    .card-body h3{margin:0 0 6px; font-size:1.05rem}
-    .card-body p{margin:0 0 8px; color:#444; font-size:.95rem}
-    .price{font-weight:700; margin-bottom:6px}
-    .card-actions{display:flex; gap:8px; padding:10px; justify-content:flex-end}
-    .small{font-size:.85rem; color:#666}
-    footer{padding:14px; text-align:center; color:#666}
-    @media(max-width:700px){ .form-grid{grid-template-columns:1fr} .item{width:100%} .top{flex-direction:column; align-items:stretch}}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #faf7f5;
+      color: #45270a;
+    }
+    header {
+      background: #fff;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+    .banner {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 15px;
+    }
+    .search-box {
+      text-align: center;
+      margin: 15px;
+    }
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      border: 2px solid #8c6954;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .form-container {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      max-width: 600px;
+    }
+    .form-container h2 {
+      text-align: center;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 2px solid #8c6954;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #8c6954;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 5px;
+    }
+    form button:hover {
+      background: #6b4e3d;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.2s ease;
+    }
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .item h3 { margin: 10px; }
+    .item p { margin: 0 10px 10px; }
+    .item .price { font-weight: bold; margin: 0 10px 10px; display: block; }
+    .item button {
+      background: #e74c3c;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .item button:hover {
+      background: #c0392b;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="img/french99.jpg" alt="Tilo Café - Admin">
+    <img src="img/french99.jpg" alt="Tilo Café">
   </header>
 
-  <div class="container">
-    <div class="top">
-      <div class="search-box">
-        <input id="searchInput" placeholder="🔍 Buscar producto (presiona Enter para buscar)"/>
-      </div>
+  <div class="banner">Panel de Administración - Tilo Café ☕</div>
 
-      <div class="controls">
-        <input id="fileInput" type="file" accept=".json" style="display:none"/>
-        <button id="importBtn" class="secondary">📥 Importar productos (JSON)</button>
-        <button id="exportBtn">📤 Exportar productos (requiere token)</button>
-      </div>
-    </div>
-
-    <div class="form-container">
-      <h2>Agregar / Editar Producto</h2>
-      <form id="productForm">
-        <input type="hidden" id="productId">
-        <div class="form-grid">
-          <input id="nombre" placeholder="Nombre del producto" required>
-          <input id="precio" type="number" placeholder="Precio (solo número)" required>
-          <input id="categoria" placeholder="Categoría (ej: CAFETERÍA)" required>
-          <input id="imagen" placeholder="Ruta de imagen (ej: img/cafe.jpg)">
-          <textarea id="descripcion" placeholder="Descripción" required></textarea>
-        </div>
-        <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap">
-          <button type="submit">💾 Guardar producto</button>
-          <button id="resetBtn" type="button" class="secondary">🔄 Limpiar</button>
-          <button id="deleteSelected" type="button" class="warn" style="display:none">🗑️ Eliminar seleccionado</button>
-        </div>
-      </form>
-      <div style="margin-top:8px" class="small">Nota: la exportación descarga un archivo JSON con los productos actuales.</div>
-    </div>
-
-    <div id="product-list" class="product-list" tabindex="-1"></div>
-
-    <footer>Admin local — Token para exportar: <strong>tilo2025</strong></footer>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
   </div>
 
-  <script>
-    // TOKEN LOCAL (no es real, solo para UI)
-    const ADMIN_TOKEN = 'tilo2025';
+  <div class="form-container">
+    <h2>Agregar / Editar Producto</h2>
+    <form id="productForm">
+      <input type="hidden" id="productId" />
+      <input type="text" id="nombre" placeholder="Nombre del producto" required>
+      <textarea id="descripcion" placeholder="Descripción" required></textarea>
+      <input type="number" id="precio" placeholder="Precio (solo número)" required>
+      <select id="categoria" required>
+        <option value="">Seleccionar categoría</option>
+        <option value="CAFETERÍA">CAFETERÍA</option>
+        <option value="PICADAS">PICADAS</option>
+        <option value="COMIDAS">COMIDAS</option>
+        <option value="POSTRES">POSTRES</option>
+        <option value="REFRESCOS">REFRESCOS</option>
+        <option value="TRAGOS">TRAGOS</option>
+        <option value="EVENTOS">EVENTOS</option>
+      </select>
+      <input type="text" id="imagen" placeholder="Ruta de imagen (ej: img/cafe.jpg)">
+      <button type="submit">💾 Guardar producto</button>
+    </form>
+  </div>
 
+  <div class="product-list" id="product-list"></div>
+
+  <script>
     let productos = [];
 
-    const listEl = document.getElementById('product-list');
-    const searchInput = document.getElementById('searchInput');
-    const fileInput = document.getElementById('fileInput');
-    const importBtn = document.getElementById('importBtn');
-    const exportBtn = document.getElementById('exportBtn');
-
-    // Cargar productos iniciales desde productos.json
+    // Cargar productos existentes
     fetch('productos.json')
-      .then(r => {
-        if (!r.ok) throw new Error('No se encontró productos.json');
-        return r.json();
-      })
+      .then(res => res.json())
       .then(data => {
-        productos = normalizeProducts(data);
+        productos = data;
         renderProducts(productos);
       })
-      .catch(err => {
-        console.warn('No se pudo cargar productos.json:', err);
-        productos = [];
-        renderProducts(productos);
-      });
+      .catch(err => console.error('Error al cargar productos.json:', err));
 
-    // Normaliza tipos: convierte precios string->number si hace falta
-    function normalizeProducts(arr){
-      return arr.map(p => {
-        const copy = {...p};
-        if (typeof copy.precio === 'string'){
-          // quitar puntos y comas posibles
-          const cleaned = copy.precio.replace(/\\./g,'').replace(/,/g,'.').trim();
-          const n = Number(cleaned);
-          copy.precio = Number.isFinite(n) ? n : copy.precio;
-        }
-        return copy;
-      });
-    }
-
-    // Render
-    function renderProducts(lista){
-      listEl.innerHTML = '';
-      if (!lista.length){
-        listEl.innerHTML = '<div style="padding:18px;color:#666">No hay productos para mostrar</div>';
-        return;
-      }
-      lista.forEach((p, idx) => {
+    function renderProducts(lista) {
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+      lista.forEach((p, index) => {
         const item = document.createElement('div');
         item.className = 'item';
-        const imgSrc = sanitizeImagePath(p.imagen || 'img/placeholder.jpg');
         item.innerHTML = `
-          <img src="${imgSrc}" alt="${escapeHtml(p.nombre || '')}" onerror="this.src='img/placeholder.jpg'">
-          <div class="card-body">
-            <h3>${escapeHtml(p.nombre || '')}</h3>
-            <p>${escapeHtml(p.descripcion || '')}</p>
-            <div class="price">$${p.precio ?? ''}</div>
-            <div class="small">Categoría: ${escapeHtml(p.categoria || '')}</div>
-          </div>
-          <div class="card-actions">
-            <button onclick="editProduct(${idx})">✏️ Editar</button>
-            <button onclick="deleteProduct(${idx})" style="background:#aaa">🗑️</button>
-          </div>
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span class="price">$${p.precio}</span>
+          <button onclick="editProduct(${index})">✏️ Editar</button>
+          <button onclick="deleteProduct(${index})">🗑️ Eliminar</button>
         `;
-        listEl.appendChild(item);
+        container.appendChild(item);
       });
     }
 
-    // Sanitiza rutas de imagen: quita dobles slashes al inicio de nombre de archivo
-    function sanitizeImagePath(path){
-      if (!path) return 'img/placeholder.jpg';
-      return path.replace(/\\/\\/+/, '/').replace(/img\\/\\//, 'img/').trim();
-    }
-
-    // Escape simple para HTML
-    function escapeHtml(s){
-      if (!s && s !== 0) return '';
-      return String(s).replace(/[&<>"']/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[c]);
-    }
-
-    // Buscar SOLO cuando presionen ENTER
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter'){
-        e.preventDefault();
-        doSearchAndScroll();
-      }
-    });
-
-    function doSearchAndScroll(){
-      const term = searchInput.value.trim().toLowerCase();
-      if (!term){
-        renderProducts(productos);
-        window.scrollTo({ top: listEl.offsetTop - 10, behavior: 'smooth' });
-        return;
-      }
+    // Buscador
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const term = e.target.value.toLowerCase();
       const filtrados = productos.filter(p =>
-        (p.nombre && p.nombre.toLowerCase().includes(term)) ||
-        (p.descripcion && p.descripcion.toLowerCase().includes(term)) ||
-        (p.categoria && p.categoria.toLowerCase().includes(term))
+        p.nombre.toLowerCase().includes(term) ||
+        p.descripcion.toLowerCase().includes(term) ||
+        p.categoria.toLowerCase().includes(term)
       );
       renderProducts(filtrados);
-      // desplazamiento suave a resultados
-      setTimeout(()=> listEl.scrollIntoView({behavior:'smooth', block:'start'}), 80);
-    }
+    });
 
-    // Form guardar producto
-    document.getElementById('productForm').addEventListener('submit', e => {
+    // Guardar producto local + en GitHub
+    document.getElementById('productForm').addEventListener('submit', async e => {
       e.preventDefault();
+
       const id = document.getElementById('productId').value;
       const nuevo = {
-        nombre: document.getElementById('nombre').value.trim(),
-        descripcion: document.getElementById('descripcion').value.trim(),
+        nombre: document.getElementById('nombre').value,
+        descripcion: document.getElementById('descripcion').value,
         precio: Number(document.getElementById('precio').value),
-        categoria: document.getElementById('categoria').value.trim(),
-        imagen: document.getElementById('imagen').value.trim()
+        categoria: document.getElementById('categoria').value,
+        imagen: document.getElementById('imagen').value
       };
-      if (!nuevo.nombre){ alert('El producto necesita un nombre'); return; }
-      if (id !== '') {
-        productos[id] = nuevo;
-      } else {
-        productos.push(nuevo);
-      }
+
+      if (id) productos[id] = nuevo;
+      else productos.push(nuevo);
+
       renderProducts(productos);
       e.target.reset();
       document.getElementById('productId').value = '';
-      document.getElementById('deleteSelected').style.display = 'none';
-      alert('✅ Producto guardado. Para persistir fuera del navegador usa "Exportar productos (requiere token)".');
+
+      // Token manual
+      const token = prompt("🔐 Ingresá tu token de GitHub para guardar (solo se usa localmente):");
+      if (!token) return alert("❌ No se ingresó token.");
+
+      const owner = "frenchtilo-boop";
+      const repo = "cartatilo";
+      const path = "productos.json";
+
+      try {
+        // Obtener SHA actual
+        const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+          headers: { Authorization: `token ${token}` }
+        });
+        const getData = await getRes.json();
+        const sha = getData.sha;
+
+        const body = {
+          message: "Actualización desde admin.html",
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(productos, null, 2)))),
+          sha
+        };
+
+        const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `token ${token}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(body)
+        });
+
+        if (putRes.ok) {
+          alert("✅ Guardado correctamente en GitHub.");
+        } else {
+          const errData = await putRes.json();
+          alert("⚠️ Error al guardar: " + JSON.stringify(errData));
+        }
+      } catch (error) {
+        console.error(error);
+        alert("❌ Error al conectar con GitHub.");
+      }
     });
 
-    document.getElementById('resetBtn').addEventListener('click', ()=> {
-      document.getElementById('productForm').reset();
-      document.getElementById('productId').value = '';
-      document.getElementById('deleteSelected').style.display = 'none';
-    });
-
-    // Editar
-    window.editProduct = function(index){
+    function editProduct(index) {
       const p = productos[index];
       document.getElementById('productId').value = index;
-      document.getElementById('nombre').value = p.nombre || '';
-      document.getElementById('descripcion').value = p.descripcion || '';
-      document.getElementById('precio').value = p.precio ?? '';
-      document.getElementById('categoria').value = p.categoria || '';
-      document.getElementById('imagen').value = p.imagen || '';
-      document.getElementById('deleteSelected').style.display = 'inline-block';
-      // scroll a formulario
+      document.getElementById('nombre').value = p.nombre;
+      document.getElementById('descripcion').value = p.descripcion;
+      document.getElementById('precio').value = p.precio;
+      document.getElementById('categoria').value = p.categoria;
+      document.getElementById('imagen').value = p.imagen;
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    // Eliminar
-    window.deleteProduct = function(index){
-      if (!confirm('¿Seguro que deseas eliminar este producto?')) return;
-      productos.splice(index,1);
-      renderProducts(productos);
-    };
-
-    document.getElementById('deleteSelected').addEventListener('click', () => {
-      const id = document.getElementById('productId').value;
-      if (id === '') return alert('No hay producto seleccionado.');
-      if (!confirm('Eliminar producto seleccionado?')) return;
-      productos.splice(Number(id), 1);
-      renderProducts(productos);
-      document.getElementById('productForm').reset();
-      document.getElementById('productId').value = '';
-      document.getElementById('deleteSelected').style.display = 'none';
-    });
-
-    // Importar JSON desde archivo
-    importBtn.addEventListener('click', ()=> fileInput.click());
-    fileInput.addEventListener('change', (e)=>{
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          const parsed = JSON.parse(reader.result);
-          if (!Array.isArray(parsed)) throw new Error('El JSON debe ser un array de productos');
-          productos = normalizeProducts(parsed);
-          renderProducts(productos);
-          alert('✅ productos.json importado correctamente (en memoria). No olvides exportar si querés guardar fuera del navegador.');
-        } catch(err){
-          alert('Error al parsear JSON: ' + err.message);
-        }
-      };
-      reader.readAsText(file, 'utf-8');
-      // limpiar input
-      fileInput.value = '';
-    });
-
-    // Exportar JSON (requiere token)
-    exportBtn.addEventListener('click', () => {
-      const token = prompt('Ingresá el token para exportar productos (admin):');
-      if (token === null) return; // canceló
-      if (token !== ADMIN_TOKEN){
-        alert('Token incorrecto. No autorizado.');
-        return;
-      }
-      downloadJSON(productos, 'productos.json');
-    });
-
-    function downloadJSON(obj, filename){
-      const blob = new Blob([JSON.stringify(obj, null, 2)], {type:'application/json;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      alert('✅ Se descargó productos.json con los datos actuales.');
     }
 
-    // pequeñas utilidades
-    // permitir pegar JSON con CTRL+V en la lista si se desea (opcional) - no invocado por defecto
-    // Helpers seguros: evitar inyección en HTML ya que usamos escapeHtml.
-
+    function deleteProduct(index) {
+      if (confirm("¿Seguro que deseas eliminar este producto?")) {
+        productos.splice(index, 1);
+        renderProducts(productos);
+      }
+    }
   </script>
 </body>
 </html>
