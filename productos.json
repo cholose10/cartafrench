@@ -16,7 +16,7 @@
   {
     "nombre": "Café descafeinado",
     "descripcion": "Café descafeinado",
-    "precio": 36,
+    "precio": 3600,
     "imagen": "img/20250813_094842.jpg",
     "categoria": "CAFETERÍA"
   },
