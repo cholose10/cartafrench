@@ -1,132 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel Admin - Tilo Café</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      color: #333;
       margin: 0;
-      background: #faf7f5;
-      color: #45270a;
+      padding: 0;
     }
-    header {
-      background: #fff;
+    h1 {
       text-align: center;
+      background: #8b5e3c;
+      color: white;
+      margin: 0;
+      padding: 15px 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #8b5e3c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #6b452b;
+    }
+    .product-list {
+      margin-top: 20px;
+    }
+    .item {
+      background: #fff8f3;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
     }
-    header img {
-      max-width: 100%;
-      height: auto;
+    .item h3 {
+      margin: 5px 0;
     }
-    .banner {
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin: 15px;
+    .item button {
+      background: #d9534f;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .item button:hover {
+      background: #c9302c;
     }
     .search-box {
       text-align: center;
       margin: 15px;
     }
     .search-box input {
-      width: 90%;
+      width: 80%;
       max-width: 400px;
-      padding: 10px;
-      border: 2px solid #8c6954;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    .form-container {
-      background: #fff;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      max-width: 600px;
-    }
-    .form-container h2 {
-      text-align: center;
-    }
-    form input, form select, form textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 2px solid #8c6954;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    form button {
-      background: #8c6954;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 5px;
-    }
-    form button:hover {
-      background: #6b4e3d;
-    }
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
-    }
-    .item {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      overflow: hidden;
-      width: 280px;
-      transition: transform 0.2s ease;
-    }
-    .item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .item h3 { margin: 10px; }
-    .item p { margin: 0 10px 10px; }
-    .item .price { font-weight: bold; margin: 0 10px 10px; display: block; }
-    .item button {
-      background: #e74c3c;
-      border: none;
-      color: white;
-      border-radius: 6px;
-      padding: 8px 12px;
-      margin: 5px;
-      cursor: pointer;
-    }
-    .item button:hover {
-      background: #c0392b;
+      padding: 8px;
+      border: 2px solid #8b5e3c;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="img/french99.jpg" alt="Tilo Café">
-  </header>
-
-  <div class="banner">Panel de Administración - Tilo Café ☕</div>
+  <h1>Panel Admin - Tilo Café</h1>
 
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
   </div>
 
-  <div class="form-container">
-    <h2>Agregar / Editar Producto</h2>
+  <div class="container">
     <form id="productForm">
-      <input type="hidden" id="productId" />
+      <input type="hidden" id="productId">
       <input type="text" id="nombre" placeholder="Nombre del producto" required>
       <textarea id="descripcion" placeholder="Descripción" required></textarea>
-      <input type="number" id="precio" placeholder="Precio (solo número)" required>
+      <input type="number" id="precio" placeholder="Precio" required>
       <select id="categoria" required>
         <option value="">Seleccionar categoría</option>
         <option value="CAFETERÍA">CAFETERÍA</option>
@@ -140,41 +108,38 @@
       <input type="text" id="imagen" placeholder="Ruta de imagen (ej: img/cafe.jpg)">
       <button type="submit">💾 Guardar producto</button>
     </form>
-  </div>
 
-  <div class="product-list" id="product-list"></div>
+    <div class="product-list" id="product-list"></div>
+  </div>
 
   <script>
     let productos = [];
 
-    // Cargar productos existentes
     fetch('productos.json')
       .then(res => res.json())
       .then(data => {
         productos = data;
         renderProducts(productos);
-      })
-      .catch(err => console.error('Error al cargar productos.json:', err));
+      });
 
     function renderProducts(lista) {
-      const container = document.getElementById('product-list');
-      container.innerHTML = '';
-      lista.forEach((p, index) => {
+      const cont = document.getElementById('product-list');
+      cont.innerHTML = '';
+      lista.forEach((p, i) => {
         const item = document.createElement('div');
         item.className = 'item';
         item.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
           <p>${p.descripcion}</p>
-          <span class="price">$${p.precio}</span>
-          <button onclick="editProduct(${index})">✏️ Editar</button>
-          <button onclick="deleteProduct(${index})">🗑️ Eliminar</button>
+          <p><b>$${p.precio}</b> - ${p.categoria}</p>
+          <p><small>${p.imagen}</small></p>
+          <button onclick="editProduct(${i})">✏️ Editar</button>
+          <button onclick="deleteProduct(${i})">🗑️ Eliminar</button>
         `;
-        container.appendChild(item);
+        cont.appendChild(item);
       });
     }
 
-    // Buscador
     document.getElementById('searchInput').addEventListener('input', e => {
       const term = e.target.value.toLowerCase();
       const filtrados = productos.filter(p =>
@@ -185,10 +150,8 @@
       renderProducts(filtrados);
     });
 
-    // Guardar producto local + en GitHub
     document.getElementById('productForm').addEventListener('submit', async e => {
       e.preventDefault();
-
       const id = document.getElementById('productId').value;
       const nuevo = {
         nombre: document.getElementById('nombre').value,
@@ -205,21 +168,17 @@
       e.target.reset();
       document.getElementById('productId').value = '';
 
-      // Token manual
-      const token = prompt("🔐 Ingresá tu token de GitHub para guardar (solo se usa localmente):");
-      if (!token) return alert("❌ No se ingresó token.");
-
+      const token = "TU_TOKEN_AQUI"; // <-- Pega tu token aquí
       const owner = "frenchtilo-boop";
       const repo = "cartatilo";
       const path = "productos.json";
 
       try {
-        // Obtener SHA actual
-        const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
           headers: { Authorization: `token ${token}` }
         });
-        const getData = await getRes.json();
-        const sha = getData.sha;
+        const data = await res.json();
+        const sha = data.sha;
 
         const body = {
           message: "Actualización desde admin.html",
@@ -227,8 +186,8 @@
           sha
         };
 
-        const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
-          method: "PUT",
+        const put = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+          method: 'PUT',
           headers: {
             Authorization: `token ${token}`,
             "Content-Type": "application/json"
@@ -236,21 +195,17 @@
           body: JSON.stringify(body)
         });
 
-        if (putRes.ok) {
-          alert("✅ Guardado correctamente en GitHub.");
-        } else {
-          const errData = await putRes.json();
-          alert("⚠️ Error al guardar: " + JSON.stringify(errData));
-        }
-      } catch (error) {
-        console.error(error);
-        alert("❌ Error al conectar con GitHub.");
+        if (put.ok) alert("✅ Actualizado en GitHub correctamente");
+        else alert("⚠️ Error al guardar en GitHub");
+      } catch (err) {
+        console.error(err);
+        alert("❌ Error de conexión con GitHub");
       }
     });
 
-    function editProduct(index) {
-      const p = productos[index];
-      document.getElementById('productId').value = index;
+    function editProduct(i) {
+      const p = productos[i];
+      document.getElementById('productId').value = i;
       document.getElementById('nombre').value = p.nombre;
       document.getElementById('descripcion').value = p.descripcion;
       document.getElementById('precio').value = p.precio;
@@ -259,9 +214,9 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function deleteProduct(index) {
-      if (confirm("¿Seguro que deseas eliminar este producto?")) {
-        productos.splice(index, 1);
+    function deleteProduct(i) {
+      if (confirm("¿Eliminar este producto?")) {
+        productos.splice(i, 1);
         renderProducts(productos);
       }
     }
