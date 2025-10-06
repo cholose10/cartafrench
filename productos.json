@@ -434,13 +434,6 @@
     "categoria": "SÁNDWICHES"
   },
   {
-    "nombre": "Pavita, queso y tomate",
-    "descripcion": "ciabatta o arabe",
-    "precio": 16000,
-    "imagen": "img/Pabita.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
     "nombre": "Chipa tostado ",
     "descripcion": "con j y Q 15.000, chedar y J 16.000",
     "precio": 15000,
