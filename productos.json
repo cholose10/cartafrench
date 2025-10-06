@@ -457,9 +457,9 @@
   {
     "nombre": "Sandwiches Lomito CLÁSICO",
     "descripcion": "CLÁSICO (lechuga, tomate, jamón y queso)",
-    "precio": 24000,
+    "precio": 23500,
     "imagen": "img/20250914_130533.jpg",
-    "categoria": "COMIDAS"
+    "categoria": "SÁNDWICHES"
   },
   {
     "nombre": "Sandwiches Lomito BACON",
