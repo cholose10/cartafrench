@@ -17,29 +17,15 @@
     button:hover { background:#a07b68; }
     #preview { max-width:100px; margin-top:5px; display:block; }
     #search { width:40%; padding:8px; border-radius:6px; border:1px solid #ccc; }
-
-    /* 🟢 BOTÓN FLOTANTE SUBIR */
     #btnSubir {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #806250;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-      display: none;
-      transition: all 0.3s ease;
-      z-index: 999;
+      position: fixed; bottom: 25px; right: 25px;
+      background: #8c6954; color: white;
+      border: none; border-radius: 50%;
+      width: 50px; height: 50px; font-size: 1.5rem;
+      cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none; transition: opacity 0.3s ease;
     }
-    #btnSubir:hover {
-      background-color: #a07b68;
-      transform: scale(1.1);
-    }
+    #btnSubir:hover { background: #6b4e3d; }
   </style>
 </head>
 <body>
@@ -75,20 +61,20 @@
     <input type="text" id="imagen" required oninput="previewImage()">
     <img id="preview" src="" alt="Vista previa">
 
+    <!-- 🆕 CAMPO DE CATEGORÍAS INTELIGENTE -->
     <label>Categoría</label>
-    <select id="categoria" required>
-      <option value="">Seleccionar...</option>
-      <option value="CAFETERÍA">CAFETERÍA</option>
-      <option value="COMIDAS">COMIDAS</option>
-      <option value="POSTRES">POSTRES</option>
-      <option value="TRAGOS">TRAGOS</option>
-      <option value="REFRESCOS">REFRESCOS</option>
-      <option value="VINOS">VINOS</option>
-      <option value="HAPPY HOUR">HAPPY HOUR</option>
-      <option value="EVENTOS">EVENTOS</option>
-      <option value="PROMOCIONES">PROMOCIONES</option>
-      <option value="SÁNDWICHES">SÁNDWICHES</option>
-    </select>
+    <input list="categorias" id="categoria" required placeholder="Elegí o escribí una categoría">
+    <datalist id="categorias">
+      <option value="CAFETERÍA">
+      <option value="COMIDAS">
+      <option value="POSTRES">
+      <option value="TRAGOS">
+      <option value="REFRESCOS">
+      <option value="ENTRADAS">
+      <option value="EVENTOS">
+      <option value="PROMOCIONES">
+      <option value="SÁNDWICHES">
+    </datalist>
 
     <button type="submit">Guardar</button>
   </form>
@@ -104,7 +90,7 @@
     <tbody id="tbody"></tbody>
   </table>
 
-  <!-- 🟢 BOTÓN SUBIR -->
+  <!-- Botón para subir -->
   <button id="btnSubir" title="Subir">⬆️</button>
 
   <script>
@@ -113,7 +99,6 @@
     const FILE_PATH = "productos.json";
 
     let productos = [];
-    let vistaActual = [];
 
     // 🟤 TOKEN
     function saveToken(){
@@ -135,12 +120,11 @@
       const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
       const res=await fetch(url);
       productos=await res.json();
-      vistaActual = [...productos];
-      render(vistaActual);
+      render(productos);
     }
 
-    // 🟤 RENDERIZAR TABLA
-    function render(lista){
+    // 🟤 RENDERIZAR TABLA (edit/eliminar seguros)
+    function render(lista = productos){
       const tb=document.getElementById('tbody'); tb.innerHTML='';
       lista.forEach((p)=>{
         tb.innerHTML+=`
@@ -151,29 +135,38 @@
             <td>${p.categoria}</td>
             <td>$${p.precio}</td>
             <td>
-              <button onclick="editByName('${p.nombre.replace(/'/g,"\\'")}')">Editar</button>
-              <button onclick="delByName('${p.nombre.replace(/'/g,"\\'")}')">Eliminar</button>
+              <button onclick="editByName('${p.nombre.replace(/'/g, "\\'")}')">Editar</button>
+              <button onclick="delByName('${p.nombre.replace(/'/g, "\\'")}')">Eliminar</button>
             </td>
           </tr>`;
       });
     }
 
-    // 🟤 BUSCAR CON ENTER
+    function editByName(nombre){
+      const i=productos.findIndex(p=>p.nombre===nombre);
+      if(i!==-1) edit(i);
+    }
+    function delByName(nombre){
+      const i=productos.findIndex(p=>p.nombre===nombre);
+      if(i!==-1) del(i);
+    }
+
+    // 🟤 BUSCAR
     document.getElementById('search').addEventListener('keypress', function(e){
       if(e.key === 'Enter'){
         e.preventDefault();
         const q=this.value.toLowerCase();
-        vistaActual=productos.filter(p=> 
+        const filtrados=productos.filter(p=> 
           p.nombre.toLowerCase().includes(q) || 
           p.descripcion.toLowerCase().includes(q) ||
           p.categoria.toLowerCase().includes(q)
         );
-        render(vistaActual);
+        render(filtrados);
         document.getElementById('tablaTitulo').scrollIntoView({ behavior: "smooth" });
       }
     });
 
-    // 🟤 PREVIEW DE IMAGEN
+    // 🟤 PREVIEW
     function previewImage(){
       const src=document.getElementById('imagen').value.trim();
       document.getElementById('preview').src=src || '';
@@ -208,6 +201,20 @@
     // 🟤 FORMULARIO
     document.getElementById('form').onsubmit=function(e){
       e.preventDefault();
+
+      // 🆕 Agregar automáticamente nueva categoría al datalist
+      const categoriaInput = document.getElementById('categoria');
+      const datalist = document.getElementById('categorias');
+      const nuevaCategoria = categoriaInput.value.trim();
+      if (nuevaCategoria) {
+        const existe = Array.from(datalist.options).some(opt => opt.value.toLowerCase() === nuevaCategoria.toLowerCase());
+        if (!existe) {
+          const option = document.createElement('option');
+          option.value = nuevaCategoria;
+          datalist.appendChild(option);
+        }
+      }
+
       const idx=document.getElementById('editIndex').value;
       const prod={
         nombre:document.getElementById('nombre').value,
@@ -218,23 +225,10 @@
       };
       if(idx===''){ productos.push(prod);} 
       else { productos[idx]=prod; document.getElementById('editIndex').value='';}
-      vistaActual = [...productos];
-      render(vistaActual);
+      render(productos);
       this.reset();
       document.getElementById('preview').src='';
       saveToGitHub(JSON.stringify(productos,null,2));
-    }
-
-    // 🟤 EDITAR / ELIMINAR POR NOMBRE
-    function editByName(nombre){
-      const index = productos.findIndex(p => p.nombre === nombre);
-      if(index === -1) return alert("Producto no encontrado.");
-      edit(index);
-    }
-    function delByName(nombre){
-      const index = productos.findIndex(p => p.nombre === nombre);
-      if(index === -1) return alert("Producto no encontrado.");
-      del(index);
     }
 
     // 🟤 EDITAR
@@ -254,20 +248,15 @@
     function del(i){
       if(confirm('¿Eliminar producto?')){
         productos.splice(i,1);
-        vistaActual = [...productos];
-        render(vistaActual);
+        render(productos);
         saveToGitHub(JSON.stringify(productos,null,2));
       }
     }
 
-    // 🟢 BOTÓN SUBIR (mostrar/ocultar y scroll suave)
-    const btnSubir = document.getElementById('btnSubir');
-    window.addEventListener('scroll', () => {
-      btnSubir.style.display = window.scrollY > 250 ? 'block' : 'none';
-    });
-    btnSubir.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // 🟤 BOTÓN SUBIR
+    const btnSubir=document.getElementById('btnSubir');
+    window.addEventListener('scroll',()=>{ btnSubir.style.display=window.scrollY>300?'block':'none'; });
+    btnSubir.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
 
     // 🟤 INICIAR
     loadProducts();
