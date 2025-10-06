@@ -33,7 +33,7 @@
 
   <!-- BUSCADOR -->
   <div style="margin-bottom:15px;">
-    <input type="text" id="search" placeholder="Buscar producto..." oninput="buscarProducto()">
+    <input type="text" id="search" placeholder="Buscar producto... (Enter para buscar)">
   </div>
 
   <!-- FORMULARIO -->
@@ -69,7 +69,7 @@
   </form>
 
   <!-- TABLA -->
-  <h2>Productos</h2>
+  <h2 id="tablaTitulo">Productos</h2>
   <table>
     <thead>
       <tr>
@@ -128,16 +128,20 @@
       });
     }
 
-    // 🟤 BUSCAR PRODUCTO
-    function buscarProducto(){
-      const q=document.getElementById('search').value.toLowerCase();
-      const filtrados=productos.filter(p=> 
-        p.nombre.toLowerCase().includes(q) || 
-        p.descripcion.toLowerCase().includes(q) ||
-        p.categoria.toLowerCase().includes(q)
-      );
-      render(filtrados);
-    }
+    // 🟤 BUSCAR AL PRESIONAR ENTER
+    document.getElementById('search').addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        const q=this.value.toLowerCase();
+        const filtrados=productos.filter(p=> 
+          p.nombre.toLowerCase().includes(q) || 
+          p.descripcion.toLowerCase().includes(q) ||
+          p.categoria.toLowerCase().includes(q)
+        );
+        render(filtrados);
+        document.getElementById('tablaTitulo').scrollIntoView({ behavior: "smooth" });
+      }
+    });
 
     // 🟤 PREVIEW DE IMAGEN
     function previewImage(){
@@ -200,6 +204,9 @@
       document.getElementById('categoria').value=p.categoria;
       document.getElementById('editIndex').value=i;
       document.getElementById('preview').src=p.imagen;
+
+      // 🔽 Subir al formulario
+      document.getElementById('form').scrollIntoView({ behavior: "smooth" });
     }
 
     // 🟤 ELIMINAR
