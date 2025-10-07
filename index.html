@@ -3,264 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Carta - Tilo Café</title>
+  <title>Carta Tilo Café</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:20px; background:#f7f3f0; color:#333;}
-    h1 { text-align: center; color:#806250; }
-    form { background:#fff; padding:15px; border-radius:10px; margin-bottom:20px;}
-    input,textarea,select { width:100%; padding:8px; margin:6px 0; border:1px solid #ccc; border-radius:6px;}
-    table { width:100%; border-collapse:collapse; background:#fff;}
-    th,td { border:1px solid #ddd; padding:8px; text-align:left;}
-    th { background:#806250; color:white; }
-    img { max-width:60px; border-radius:6px; }
-    button { cursor:pointer; background:#806250; color:white; border:none; padding:6px 10px; border-radius:6px; }
-    button:hover { background:#a07b68; }
-    #preview { max-width:100px; margin-top:5px; display:block; }
-    #search { width:40%; padding:8px; border-radius:6px; border:1px solid #ccc; }
-    #btnSubir {
-      position: fixed; bottom: 25px; right: 25px;
-      background: #8c6954; color: white;
-      border: none; border-radius: 50%;
-      width: 50px; height: 50px; font-size: 1.5rem;
-      cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      display: none; transition: opacity 0.3s ease;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #888;
+      color: #45270a;
     }
-    #btnSubir:hover { background: #6b4e3d; }
+    header {
+      background: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    header img {
+      width: 100vw;
+      height: auto;
+      display: block;
+    }
+    .banner {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 15px;
+    }
+    .search-box {
+      text-align: center;
+      margin: 15px;
+    }
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      border: 2px solid #8c6954;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+    }
+    nav button {
+      background: #8c6954;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 20px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: 150px;
+    }
+    nav button:hover {
+      background: #6b4e3d;
+      transform: translateY(-3px);
+    }
+    .icon {
+      font-size: 1.8rem;
+    }
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.2s ease;
+    }
+    .item:hover { transform: scale(1.02); }
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .item h3 { margin: 10px; }
+    .item p { margin: 0 10px 10px; }
+    .item .price {
+      font-weight: bold;
+      color: #000;
+      margin: 0 10px 10px;
+      display: block;
+    }
+    /* Botón subir */
+    #btnSubir {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #8c6954;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+    #btnSubir:hover {
+      background: #6b4e3d;
+    }
   </style>
 </head>
 <body>
-  <h1>Panel de Administración - Tilo Café</h1>
+  <header>
+    <img src="img/french99.jpg" alt="Tilo Café" /> 
+  </header>
 
-  <!-- TOKEN -->
-  <div style="margin-bottom:15px; background:#eee; padding:10px; border-radius:8px;">
-    <label for="token">Token de GitHub:</label><br>
-    <input type="password" id="token" placeholder="Pega tu token aquí" style="width:70%; padding:8px;">
-    <button onclick="saveToken()">Guardar Token</button>
-    <button onclick="clearToken()">Borrar Token</button>
-    <p id="tokenStatus"></p>
+  <div class="banner">¡Bienvenidos a Tilo Resto Café French 3700 !</div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presione Enter)">
   </div>
 
-  <!-- BUSCADOR -->
-  <div style="margin-bottom:15px;">
-    <input type="text" id="search" placeholder="Buscar producto... (Enter para buscar)">
-  </div>
+  <nav>
+    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
+    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
+    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
+    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
+    <button onclick="renderProducts('SANDWICHES')"><span class="icon">🥪</span>Sándwiches</button>
+    <button onclick="renderProducts('PROMOCIONES')"><span class="icon">💥</span>Promociones</button>
+    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
+    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Refrescos y Vinos</button>
+    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Tragos y HAPPY HOUR</button>
+    <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS Y NOVEDADES</button>
+  </nav>
 
-  <!-- FORMULARIO -->
-  <form id="form">
-    <input type="hidden" id="editIndex">
-    <label>Nombre</label>
-    <input type="text" id="nombre" required>
-
-    <label>Descripción</label>
-    <textarea id="descripcion" required></textarea>
-
-    <label>Precio</label>
-    <input type="number" id="precio" required>
-
-    <label>Imagen (ej: img/foto.jpg)</label>
-    <input type="text" id="imagen" required oninput="previewImage()">
-    <img id="preview" src="" alt="Vista previa">
-
-    <!-- 🆕 CAMPO DE CATEGORÍAS INTELIGENTE -->
-    <label>Categoría</label>
-    <input list="categorias" id="categoria" required placeholder="Elegí o escribí una categoría">
-    <datalist id="categorias">
-      <option value="CAFETERÍA">
-      <option value="COMIDAS">
-      <option value="POSTRES">
-      <option value="TRAGOS">
-      <option value="REFRESCOS">
-      <option value="ENTRADAS">
-      <option value="EVENTOS">
-      <option value="PROMOCIONES">
-      <option value="SÁNDWICHES">
-    </datalist>
-
-    <button type="submit">Guardar</button>
-  </form>
-
-  <!-- TABLA -->
-  <h2 id="tablaTitulo">Productos</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio</th><th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <div class="item-list" id="product-list"></div>
 
   <!-- Botón para subir -->
   <button id="btnSubir" title="Subir">⬆️</button>
 
   <script>
-    const USERNAME = "frenchtilo-boop";
-    const REPO = "cartatilo";
-    const FILE_PATH = "productos.json";
-
     let productos = [];
 
-    // 🟤 TOKEN
-    function saveToken(){
-      const t=document.getElementById('token').value.trim();
-      if(t){ 
-        localStorage.setItem('github_token',t); 
-        document.getElementById('token').value=''; 
-        document.getElementById('tokenStatus').innerText="✅ Token guardado."; 
-      }
-    }
-    function clearToken(){ 
-      localStorage.removeItem('github_token'); 
-      document.getElementById('tokenStatus').innerText="⚠️ Token borrado."; 
-    }
-    function getToken(){ return localStorage.getItem('github_token'); }
-
-    // 🟤 CARGAR PRODUCTOS
-    async function loadProducts(){
-      const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
-      const res=await fetch(url);
-      productos=await res.json();
-      render(productos);
-    }
-
-    // 🟤 RENDERIZAR TABLA (edit/eliminar seguros)
-    function render(lista = productos){
-      const tb=document.getElementById('tbody'); tb.innerHTML='';
-      lista.forEach((p)=>{
-        tb.innerHTML+=`
-          <tr>
-            <td><img src="${p.imagen}" alt=""></td>
-            <td>${p.nombre}</td>
-            <td>${p.descripcion}</td>
-            <td>${p.categoria}</td>
-            <td>$${p.precio}</td>
-            <td>
-              <button onclick="editByName('${p.nombre.replace(/'/g, "\\'")}')">Editar</button>
-              <button onclick="delByName('${p.nombre.replace(/'/g, "\\'")}')">Eliminar</button>
-            </td>
-          </tr>`;
+    fetch('productos.json')
+      .then(response => response.json())
+      .then(data => {
+        productos = data;
+        renderProducts('Todos');
       });
+
+    function renderProducts(categoria) {
+      const container = document.getElementById('product-list');
+      container.innerHTML = '';
+
+      const filtrados = categoria === 'Todos'
+        ? productos
+        : productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
+
+      filtrados.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.innerHTML = `
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+          <span class="price">$${p.precio}</span>
+        `;
+        container.appendChild(item);
+      });
+
+      container.scrollIntoView({ behavior: 'smooth' });
     }
 
-    function editByName(nombre){
-      const i=productos.findIndex(p=>p.nombre===nombre);
-      if(i!==-1) edit(i);
-    }
-    function delByName(nombre){
-      const i=productos.findIndex(p=>p.nombre===nombre);
-      if(i!==-1) del(i);
-    }
-
-    // 🟤 BUSCAR
-    document.getElementById('search').addEventListener('keypress', function(e){
-      if(e.key === 'Enter'){
+    const input = document.getElementById('searchInput');
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
         e.preventDefault();
-        const q=this.value.toLowerCase();
-        const filtrados=productos.filter(p=> 
-          p.nombre.toLowerCase().includes(q) || 
-          p.descripcion.toLowerCase().includes(q) ||
-          p.categoria.toLowerCase().includes(q)
+        const term = this.value.toLowerCase().trim();
+        const container = document.getElementById('product-list');
+        container.innerHTML = '';
+
+        const filtrados = productos.filter(p => 
+          p.nombre.toLowerCase().includes(term) || 
+          p.descripcion.toLowerCase().includes(term) ||
+          p.categoria.toLowerCase().includes(term)
         );
-        render(filtrados);
-        document.getElementById('tablaTitulo').scrollIntoView({ behavior: "smooth" });
+
+        filtrados.forEach(p => {
+          const item = document.createElement('div');
+          item.className = 'item';
+          item.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <h3>${p.nombre}</h3>
+            <p>${p.descripcion}</p>
+            <span class="price">$${p.precio}</span>
+          `;
+          container.appendChild(item);
+        });
+        container.scrollIntoView({ behavior: 'smooth' });
       }
     });
 
-    // 🟤 PREVIEW
-    function previewImage(){
-      const src=document.getElementById('imagen').value.trim();
-      document.getElementById('preview').src=src || '';
-    }
-
-    // 🟤 GUARDAR EN GITHUB
-    async function saveToGitHub(newContent){
-      const TOKEN=getToken();
-      if(!TOKEN){ alert("⚠️ Necesitas guardar tu token primero."); return; }
-
-      const apiUrl=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`;
-      const getRes=await fetch(apiUrl,{ headers:{Authorization:`token ${TOKEN}`} });
-      const data=await getRes.json();
-
-      const updateRes=await fetch(apiUrl,{
-        method:"PUT",
-        headers:{
-          "Authorization":`token ${TOKEN}`,
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          message:"Actualización desde admin.html",
-          content:btoa(unescape(encodeURIComponent(newContent))),
-          sha:data.sha
-        })
-      });
-
-      if(updateRes.ok){ alert("✅ Cambios guardados en GitHub."); }
-      else{ alert("❌ Error al guardar en GitHub."); }
-    }
-
-    // 🟤 FORMULARIO
-    document.getElementById('form').onsubmit=function(e){
-      e.preventDefault();
-
-      // 🆕 Agregar automáticamente nueva categoría al datalist
-      const categoriaInput = document.getElementById('categoria');
-      const datalist = document.getElementById('categorias');
-      const nuevaCategoria = categoriaInput.value.trim();
-      if (nuevaCategoria) {
-        const existe = Array.from(datalist.options).some(opt => opt.value.toLowerCase() === nuevaCategoria.toLowerCase());
-        if (!existe) {
-          const option = document.createElement('option');
-          option.value = nuevaCategoria;
-          datalist.appendChild(option);
-        }
-      }
-
-      const idx=document.getElementById('editIndex').value;
-      const prod={
-        nombre:document.getElementById('nombre').value,
-        descripcion:document.getElementById('descripcion').value,
-        precio:parseFloat(document.getElementById('precio').value),
-        imagen:document.getElementById('imagen').value,
-        categoria:document.getElementById('categoria').value
-      };
-      if(idx===''){ productos.push(prod);} 
-      else { productos[idx]=prod; document.getElementById('editIndex').value='';}
-      render(productos);
-      this.reset();
-      document.getElementById('preview').src='';
-      saveToGitHub(JSON.stringify(productos,null,2));
-    }
-
-    // 🟤 EDITAR
-    function edit(i){
-      const p=productos[i];
-      document.getElementById('nombre').value=p.nombre;
-      document.getElementById('descripcion').value=p.descripcion;
-      document.getElementById('precio').value=p.precio;
-      document.getElementById('imagen').value=p.imagen;
-      document.getElementById('categoria').value=p.categoria;
-      document.getElementById('editIndex').value=i;
-      document.getElementById('preview').src=p.imagen;
-      document.getElementById('form').scrollIntoView({ behavior: "smooth" });
-    }
-
-    // 🟤 ELIMINAR
-    function del(i){
-      if(confirm('¿Eliminar producto?')){
-        productos.splice(i,1);
-        render(productos);
-        saveToGitHub(JSON.stringify(productos,null,2));
-      }
-    }
-
-    // 🟤 BOTÓN SUBIR
-    const btnSubir=document.getElementById('btnSubir');
-    window.addEventListener('scroll',()=>{ btnSubir.style.display=window.scrollY>300?'block':'none'; });
-    btnSubir.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
-
-    // 🟤 INICIAR
-    loadProducts();
-    if(getToken()){ document.getElementById('tokenStatus').innerText="🔐 Token cargado."; }
+    // Mostrar y usar botón subir
+    const btnSubir = document.getElementById('btnSubir');
+    window.addEventListener('scroll', () => {
+      btnSubir.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btnSubir.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>
