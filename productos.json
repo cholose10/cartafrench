@@ -427,8 +427,8 @@
     "categoria": "SÁNDWICHES"
   },
   {
-    "nombre": "Jamón crudo, queso y tomate árabe o ciabatta ",
-    "descripcion": " árabe o ciabatta ",
+    "nombre": "Jamón crudo, queo y tomate ",
+    "descripcion": "Jamón crudo, queo y tomate ",
     "precio": 18000,
     "imagen": "img/20250820_143727.jpg",
     "categoria": "SÁNDWICHES"
@@ -742,7 +742,7 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "NUGGETS",
+    "nombre": "NUGGETS KIDS",
     "descripcion": "DE POLLO CON FRITAS O PURE",
     "precio": 17000,
     "imagen": "img/Nages.jpg",
