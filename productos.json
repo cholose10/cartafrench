@@ -2,7 +2,7 @@
   {
     "nombre": "Café expresso",
     "descripcion": "Café chico",
-    "precio": 3500,
+    "precio": 3200,
     "imagen": "img/cafe.jpg",
     "categoria": "CAFETERÍA"
   },
@@ -30,7 +30,7 @@
   {
     "nombre": "Café expresso Doble",
     "descripcion": "Café expresso Doble",
-    "precio": 4800,
+    "precio": 4900,
     "imagen": "img/doble.jpg",
     "categoria": "CAFETERÍA"
   },
