@@ -37,35 +37,35 @@
   {
     "nombre": "Capuccino",
     "descripcion": "Café, leche, canela y cacao",
-    "precio": 5000,
+    "precio": 5100,
     "imagen": "img/Capuchino.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Capuccino italiana",
     "descripcion": "Capuccino italiana",
-    "precio": 5100,
+    "precio": 5200,
     "imagen": "img/Capuchino.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café MOKA",
     "descripcion": " cacao intenso, café, leche espumada",
-    "precio": 5550,
+    "precio": 5600,
     "imagen": "img/Moka.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Café CARAMEL",
     "descripcion": "caramelo, café, leche espumada",
-    "precio": 5400,
+    "precio": 5500,
     "imagen": "img/20250903_144413.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Té con leche",
     "descripcion": "te inti zen",
-    "precio": 4100,
+    "precio": 4300,
     "imagen": "img/te.jpg",
     "categoria": "CAFETERÍA"
   },
@@ -75,46 +75,54 @@
     "precio": 4800,
     "imagen": "img/Submarino .jpg",
     "categoria": "CAFETERÍA"
+  },  
+{
+    "nombre": "Chocolate caliente, sevido en cobre",
+    "descripcion": "Chocolate caliente, sevido en cobre",
+    "precio": 4900,
+    "imagen": "img/Submarino .jpg",
+    "categoria": "CAFETERÍA"
   },
+
   {
     "nombre": "Leche caliente o fría",
     "descripcion": "leche descremada",
-    "precio": 2800,
+    "precio": 3000,
     "imagen": "img/20250818_101037.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "CAFE TILO",
     "descripcion": "café, baileys, leche evaporada y chocolate rallado ",
-    "precio": 6000,
+    "precio": 6100,
     "imagen": "img/20250819_160159.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "ICE COFFE🥶",
     "descripcion": "doble shot con hielo❄️",
-    "precio": 4800,
+    "precio": 4900,
     "imagen": "img/20250817_131630.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "LATTE ICE COFFE🥶",
     "descripcion": "leche fría con doble shot de café y hielo❄️ ",
-    "precio": 4800,
+    "precio": 4900,
     "imagen": "img/20250817_131330.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "FRAPPUCCINO OREO🥶",
     "descripcion": "base de leche ❄️",
-    "precio": 6500,
+    "precio": 6600,
     "imagen": "img/20250817_104537.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "FRAPPUCCINO OREO🥶",
     "descripcion": "base de Café❄️",
-    "precio": 6500,
+    "precio": 6600,
     "imagen": "img/20250815_154308.jpg",
     "categoria": "CAFETERÍA"
   },
@@ -163,14 +171,14 @@
   {
     "nombre": "FRENCH TOAST DULCE",
     "descripcion": "Tostadas marinadas en huevo, con canela y azúcar, queso crema, frutas de estación y dip de miel",
-    "precio": 15400,
+    "precio": 15000,
     "imagen": "img/20250819_113846.jpg",
     "categoria": "PROMOCIONES"
   },
   {
     "nombre": "FRENCH TOAST SALADO",
     "descripcion": "Tostadas marinadas en huevo, con canela y azúcar, con bacon, palta y huevo revuelto",
-    "precio": 15000,
+    "precio": 15400,
     "imagen": "img/20250819_113925.jpg",
     "categoria": "PROMOCIONES"
   },
@@ -261,14 +269,14 @@
   {
     "nombre": "Alfajor de chocolate",
     "descripcion": "Alfajor de chocolate",
-    "precio": 4500,
+    "precio": 4600,
     "imagen": "img/Alchoco.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Alfajor de maicena",
     "descripcion": "Alfajor de maicena (sin TACC)",
-    "precio": 4500,
+    "precio": 4600,
     "imagen": "img/Maicena.jpg",
     "categoria": "CAFETERÍA"
   },
@@ -296,14 +304,14 @@
   {
     "nombre": "Plato con frutas de estación",
     "descripcion": "Plato con frutas de estación",
-    "precio": 8200,
+    "precio": 10000,
     "imagen": "img/Platofrutas.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Yogurt ",
-    "descripcion": "Yogurt $5000Yogurt con granola $8.000Yogurt Forte (con frutas y granola) $12.000",
-    "precio": 12000,
+    "descripcion": "Yogurt $5000Yogurt con granola $8.000Yogurt Forte (con frutas y granola) $11.000",
+    "precio": 11000,
     "imagen": "img/IMG-20250802-WA0010.jpg",
     "categoria": "CAFETERÍA"
   },
@@ -317,42 +325,42 @@
   {
     "nombre": "Porción de mermelada",
     "descripcion": "Porción de mermelada, manteca, queso blanco, miel or aderezo",
-    "precio": 2500,
+    "precio": 2000,
     "imagen": "img/Dip.jpg",
     "categoria": "CAFETERÍA"
   },
   {
     "nombre": "Tarta de calabaza",
     "descripcion": "Brócoli, queso sardo, muzarella, cebolla, masa integral",
-    "precio": 18000,
+    "precio": 18500,
     "imagen": "img/Brócoli .jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Tarta de POLLO",
     "descripcion": "Pechuga de pollo, puerro, queso sardo, cebolla, masa integral",
-    "precio": 18000,
+    "precio": 18500,
     "imagen": "img/Tartapollo.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Burritos De la Huerta (caliente) ",
     "descripcion": "Tortilla de trigo,con zuccinni, berengenas, morrones, tomates\n hongos, queso tybo",
-    "precio": 18200,
+    "precio": 18700,
     "imagen": "img/Jangostino.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Burritos de CESAR de POLLO ",
     "descripcion": " (fría): Tortilla de trigo, mix de lechugas, clásico aderezo cesar, pechuga, queso parmesano y croutons",
-    "precio": 18500,
+    "precio": 19000,
     "imagen": "img/20250817_135558.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Burritos COMO MEXICANO ",
     "descripcion": " (caliente): Tortilla de trigo con salsa de pollo, relleno de lomo, vegetales y cheddar ",
-    "precio": 21500,
+    "precio": 22500,
     "imagen": "img//Lomi.jpg",
     "categoria": "COMIDAS"
   },
@@ -366,7 +374,7 @@
   {
     "nombre": "Agua local filtrada y mineralizada",
     "descripcion": "agua fria, natural y con gas",
-    "precio": 3700,
+    "precio": 3500,
     "imagen": "img/20250830_142147.jpg",
     "categoria": "REFRESCOS"
   },
@@ -380,35 +388,35 @@
   {
     "nombre": "Jugo exprimido de naranja",
     "descripcion": "exprimido de naranja",
-    "precio": 6500,
+    "precio": 6600,
     "imagen": "img/Exprimido.jpg",
     "categoria": "REFRESCOS"
   },
   {
     "nombre": "Milkshake OREO",
     "descripcion": "helado de crema, con oreos y crema batida",
-    "precio": 8800,
+    "precio": 94000,
     "imagen": "img/Mioreo.jpg",
     "categoria": "REFRESCOS"
   },
   {
     "nombre": "Licuadas",
     "descripcion": "con frutas de estacion(base de agua, leche o exprimido",
-    "precio": 7000,
+    "precio": 7700,
     "imagen": "img/20250903_110035.jpg",
     "categoria": "REFRESCOS"
   },
   {
     "nombre": "Limonada a la menta con jengibre",
     "descripcion": "Limonada a la menta con jengibre",
-    "precio": 6500,
+    "precio": 6800,
     "imagen": "img/Limonada.jpg",
     "categoria": "REFRESCOS"
   },
   {
     "nombre": "Limonada ",
     "descripcion": "Limonada simple",
-    "precio": 6200,
+    "precio": 6600,
     "imagen": "img/Limosim.jpg",
     "categoria": "REFRESCOS"
   },
@@ -485,28 +493,28 @@
   {
     "nombre": "Omelette de jamón y queso",
     "descripcion": "Omelette de jamón y queso",
-    "precio": 15000,
+    "precio": 17000,
     "imagen": "img/20250804_132736.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Tortilla de papa y cebolla",
     "descripcion": "Tortilla de papa y cebolla",
-    "precio": 15500,
+    "precio": 17500,
     "imagen": "img/20250816_134538.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Omelette de queso y champignones",
     "descripcion": "Omelette de queso y champignones",
-    "precio": 17000,
+    "precio": 19000,
     "imagen": "img/Omecham.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Tortilla de espinaca",
     "descripcion": "Tortilla de espinaca",
-    "precio": 15700,
+    "precio": 17700,
     "imagen": "img/20250813_131026 (1).jpg",
     "categoria": "COMIDAS"
   },
@@ -541,14 +549,14 @@
   {
     "nombre": "MILA SOLA de POLLO o CARNE",
     "descripcion": "Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": 19000,
+    "precio": 20000,
     "imagen": "img/20250816_144204.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "MILA ESPINACA carne o pollo",
     "descripcion": "Crema de espinaca y queso gratinado Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": 21000,
+    "precio": 2000,
     "imagen": "img/Esp.jpg",
     "categoria": "COMIDAS"
   },
@@ -557,27 +565,6 @@
     "descripcion": "Salsa de tomate, jamón y queso Acompañadas con puré, fideos, ensalada o papas fritas",
     "precio": 21000,
     "imagen": "img/20250813_125845 (1).jpg",
-    "categoria": "COMIDAS"
-  },
-  {
-    "nombre": "SMOKE",
-    "descripcion": "Salsa de tomate, mermelada de bacon, cheddar Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": 22500,
-    "imagen": "img/Smuk.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
-    "nombre": "Filet de Merluza a la romana",
-    "descripcion": "con puré mixto",
-    "precio": 18000,
-    "imagen": "img/20250816_135027.jpg",
-    "categoria": "COMIDAS"
-  },
-  {
-    "nombre": "Revuelto de Gramajo",
-    "descripcion": "Papas fritas, panceta, cebolla morrón, arvejas y huevo frito",
-    "precio": 17500,
-    "imagen": "img/Rebuelto.jpg",
     "categoria": "COMIDAS"
   },
   {
@@ -709,28 +696,28 @@
   {
     "nombre": "Pollo (pechuga)",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": 19000,
+    "precio": 20000,
     "imagen": "img/Pechuga.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Bife de chorizo",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": 27000,
+    "precio": 32000,
     "imagen": "img/20250815_151841.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Bife de lomo",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": 31000,
+    "precio": 34000,
     "imagen": "img/IMG-20250816-WA0008.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "MINI BIFE DE CHORISO",
     "descripcion": "Con frita, pure, ensalada o arroz",
-    "precio": 27000,
+    "precio": 28000,
     "imagen": "img/Salmón.jpg",
     "categoria": "COMIDAS"
   },
@@ -758,42 +745,42 @@
   {
     "nombre": "Mila PESTO",
     "descripcion": "Milanesa de carne con ñoquis al pesto",
-    "precio": 19000,
+    "precio": 20000,
     "imagen": "img/Milapesto.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Pollo al CHAMPI",
     "descripcion": "En salsa de hongos con papas fritas",
-    "precio": 22500,
+    "precio": 23500,
     "imagen": "img/Pechuchapi.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "BIFE DE CHORISO A CABALLO",
     "descripcion": "CON DOS HUEVOS FRITOS, PAPAS FREITAS",
-    "precio": 32000,
+    "precio": 33000,
     "imagen": "img/Tari.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "LOMO A LA RIOJANA",
     "descripcion": "CON CEBOLLA, MORRONES Y HUEVO FRITOS CON FRITAS",
-    "precio": 34000,
+    "precio": 35000,
     "imagen": "img/20250815_132057.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Lomo CACIO E PEPE",
     "descripcion": "Bife de lomo grillado con spaghetti en pimienta y queso",
-    "precio": 33000,
+    "precio": 34000,
     "imagen": "img/Pepe.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Lomo AL CHAMPI",
     "descripcion": "Bife de lomo grillado en salsa de hongos con papas fritas",
-    "precio": 35000,
+    "precio": 36000,
     "imagen": "img/IMG-20250816-WA0009.jpg",
     "categoria": "COMIDAS"
   },
@@ -813,21 +800,21 @@
   },
   {
     "nombre": "Flan casero",
-    "descripcion": ". $8.000,con crema y dulce de leche$11.000",
-    "precio": 11000,
+    "descripcion": ". $8.000,con crema y dulce de leche$10.000",
+    "precio": 10000,
     "imagen": "img/Flan.jpg",
     "categoria": "POSTRES"
   },
   {
     "nombre": "Ensalada de frutas ",
     "descripcion": ". $10.000-con bocha de helado$13.500",
-    "precio": 14000,
+    "precio": 13500,
     "imagen": "img/Ensfruta.jpg",
     "categoria": "POSTRES"
   },
   {
     "nombre": "Helado",
-    "descripcion": "(bochas): $8.500 (sabores: dulce de leche, chocolate, americano)",
+    "descripcion": "(bochas): $8.000 (sabores: dulce de leche, chocolate, americano)",
     "precio": 8000,
     "imagen": "img/Helado.jpg",
     "categoria": "POSTRES"
@@ -987,11 +974,18 @@
     "categoria": "EVENTOS"
   },
   {
-    "nombre": "tortas nuevas",
+    "nombre": "mila spaguetti",
     "descripcion": "sugerencia nueva  ",
-    "precio": 9200,
+    "precio": 20000,
     "imagen": "img//Tortasnueva.jpg",
-    "categoria": "EVENTOS"
+    "categoria": "COMIDAS"
+  },
+  {
+    "nombre": "pollo tarillaqui",
+    "descripcion": "sugerencia nueva  ",
+    "precio": 22500,
+    "imagen": "img//Tortasnueva.jpg",
+    "categoria": "COMIDAS"
   },
   {
     "nombre": "GRANOLA",
