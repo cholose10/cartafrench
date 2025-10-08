@@ -75,15 +75,14 @@
     "precio": 4800,
     "imagen": "img/Submarino .jpg",
     "categoria": "CAFETERÍA"
-  },  
-{
+  },
+  {
     "nombre": "Chocolate caliente, sevido en cobre",
     "descripcion": "Chocolate caliente, sevido en cobre",
     "precio": 4900,
     "imagen": "img/Submarino .jpg",
     "categoria": "CAFETERÍA"
   },
-
   {
     "nombre": "Leche caliente o fría",
     "descripcion": "leche descremada",
