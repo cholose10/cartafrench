@@ -3,72 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta Tilo Café</title>
+  <title>Carta - Tilo French 3700</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #888;
+      background: url("img/Fondo1.jpg") repeat;
+      background-size: cover;
       color: #45270a;
     }
     header {
-      background: #fff;
-      text-align: center;
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
+      background: rgba(255,255,255,0.9);
     }
-    header img {
-      width: 100vw;
-      height: auto;
+    .banner-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
       display: block;
     }
     .banner {
       text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 15px;
-    }
-    .search-box {
-      text-align: center;
-      margin: 15px;
-    }
-    .search-box input {
-      width: 90%;
-      max-width: 400px;
       padding: 10px;
-      border: 2px solid #8c6954;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: rgba(255,255,255,0.8);
       border-radius: 8px;
-      font-size: 1rem;
+      margin: 15px auto;
+      width: fit-content;
     }
-    nav {
+    .categories {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       padding: 10px;
     }
-    nav button {
-      background: #8c6954;
+    .categories button {
+      padding: 10px 20px;
+      background-color: #8c6954;
       color: #fff;
       border: none;
-      border-radius: 12px;
-      padding: 20px 25px;
-      font-size: 1rem;
+      border-radius: 10px;
       cursor: pointer;
-      transition: transform 0.2s, background 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-width: 150px;
+      transition: background 0.3s;
+      font-size: 1rem;
     }
-    nav button:hover {
-      background: #6b4e3d;
-      transform: translateY(-3px);
-    }
-    .icon {
-      font-size: 1.8rem;
+    .categories button:hover {
+      background-color: #6b4e3d;
     }
     .item-list {
       display: flex;
@@ -78,148 +59,101 @@
       padding: 20px;
     }
     .item {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
       overflow: hidden;
       width: 280px;
       transition: transform 0.2s ease;
     }
-    .item:hover { transform: scale(1.02); }
+    .item:hover {
+      transform: scale(1.02);
+    }
     .item img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .item h3 { margin: 10px; }
-    .item p { margin: 0 10px 10px; }
+    .item h3 {
+      margin: 10px;
+    }
+    .item p {
+      margin: 0 10px 10px;
+    }
     .item .price {
       font-weight: bold;
       color: #000;
       margin: 0 10px 10px;
       display: block;
     }
-    /* Botón subir */
-    #btnSubir {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #8c6954;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      display: none;
-      transition: opacity 0.3s ease;
-    }
-    #btnSubir:hover {
-      background: #6b4e3d;
-    }
   </style>
 </head>
 <body>
+  <!-- FOTO GRANDE ARRIBA -->
   <header>
-    <img src="img/french99.jpg" alt="Tilo Café" /> 
+    <img src="img/Logo99.jpg" alt="Tilo Café French 3700" class="banner-img" />
   </header>
 
-  <div class="banner">¡Bienvenidos a Tilo Resto Café French 3700 !</div>
+  <div class="banner">¡Bienvenidos a Tilo French 3700!</div>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar producto... (presione Enter)">
-  </div>
+  <!-- Botones de categorías -->
+  <div class="categories" id="category-buttons"></div>
 
-  <nav>
-    <button onclick="renderProducts('Todos')"><span class="icon">📋</span>Todos</button>
-    <button onclick="renderProducts('CAFETERÍA')"><span class="icon">☕</span>Cafetería</button>
-    <button onclick="renderProducts('PICADAS')"><span class="icon">🥟</span>Entradas</button>
-    <button onclick="renderProducts('COMIDAS')"><span class="icon">🍽️</span>Comidas</button>
-    <button onclick="renderProducts('SÁNDWICHES')"><span class="icon">🥪</span>Sándwiches</button>
-    <button onclick="renderProducts('PROMOCIONES')"><span class="icon">💥</span>Desayuno/Merienda</button>
-    <button onclick="renderProducts('POSTRES')"><span class="icon">🍰</span>Postres</button>
-    <button onclick="renderProducts('REFRESCOS')"><span class="icon">🥤🍷</span>Bebidas y Vinos</button>
-    <button onclick="renderProducts('TRAGOS')"><span class="icon">🍹⏰</span>Aperitivos y HAPPY HOUR</button>
-    <button onclick="renderProducts('EVENTOS')"><span class="icon">⭐</span>EVENTOS/NOVEDADES Y MENÚ DEL DIA</button>
-  </nav>
-
+  <!-- Lista de productos -->
   <div class="item-list" id="product-list"></div>
-
-  <!-- Botón para subir -->
-  <button id="btnSubir" title="Subir">⬆️</button>
 
   <script>
     let productos = [];
 
-    fetch('productos.json')
-      .then(response => response.json())
+    // 🔗 Cargar productos desde GitHub
+    fetch('https://raw.githubusercontent.com/cholose10/cartafrench/main/productos.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Error al cargar productos.json');
+        return response.json();
+      })
       .then(data => {
         productos = data;
+        renderCategories();
         renderProducts('Todos');
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('product-list').innerHTML = "<p style='color:red;text-align:center;'>⚠️ Error al cargar los productos.</p>";
       });
 
+    // Renderizar categorías dinámicamente
+    function renderCategories() {
+      const categorias = ['Todos', ...new Set(productos.map(p => p.categoria))];
+      const container = document.getElementById('category-buttons');
+      container.innerHTML = '';
+      categorias.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.textContent = cat;
+        btn.onclick = () => renderProducts(cat);
+        container.appendChild(btn);
+      });
+    }
+
+    // Renderizar productos según la categoría
     function renderProducts(categoria) {
       const container = document.getElementById('product-list');
       container.innerHTML = '';
-
-      const filtrados = categoria === 'Todos'
-        ? productos
-        : productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
-
+      const filtrados = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
       filtrados.forEach(p => {
         const item = document.createElement('div');
         item.className = 'item';
+        const priceDisplay = (String(p.precio||'').trim().startsWith('$'))
+          ? String(p.precio).trim()
+          : ('$' + (p.precio ?? ''));
         item.innerHTML = `
           <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
           <p>${p.descripcion}</p>
-          <span class="price">$${p.precio}</span>
+          <span class="price">${priceDisplay}</span>
         `;
         container.appendChild(item);
       });
-
-      container.scrollIntoView({ behavior: 'smooth' });
     }
-
-    const input = document.getElementById('searchInput');
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        const term = this.value.toLowerCase().trim();
-        const container = document.getElementById('product-list');
-        container.innerHTML = '';
-
-        const filtrados = productos.filter(p => 
-          p.nombre.toLowerCase().includes(term) || 
-          p.descripcion.toLowerCase().includes(term) ||
-          p.categoria.toLowerCase().includes(term)
-        );
-
-        filtrados.forEach(p => {
-          const item = document.createElement('div');
-          item.className = 'item';
-          item.innerHTML = `
-            <img src="${p.imagen}" alt="${p.nombre}">
-            <h3>${p.nombre}</h3>
-            <p>${p.descripcion}</p>
-            <span class="price">$${p.precio}</span>
-          `;
-          container.appendChild(item);
-        });
-        container.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-
-    // Mostrar y usar botón subir
-    const btnSubir = document.getElementById('btnSubir');
-    window.addEventListener('scroll', () => {
-      btnSubir.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    btnSubir.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 </body>
 </html>
