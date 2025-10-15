@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Carta - Tilo Café</title>
+  <title>Admin Carta - Tilo French</title>
   <style>
     body { font-family: Arial, sans-serif; margin:20px; background:#f7f3f0; color:#333;}
     h1 { text-align: center; color:#806250; }
@@ -61,7 +61,6 @@
     <input type="text" id="imagen" required oninput="previewImage()">
     <img id="preview" src="" alt="Vista previa">
 
-    <!-- 🆕 CAMPO DE CATEGORÍAS INTELIGENTE -->
     <label>Categoría</label>
     <input list="categorias" id="categoria" required placeholder="Elegí o escribí una categoría">
     <datalist id="categorias">
@@ -94,8 +93,8 @@
   <button id="btnSubir" title="Subir">⬆️</button>
 
   <script>
-    const USERNAME = "frenchtilo-boop";
-    const REPO = "cartatilo";
+    const USERNAME = "cholose10";
+    const REPO = "cartafrench";
     const FILE_PATH = "productos.json";
 
     let productos = [];
@@ -123,7 +122,7 @@
       render(productos);
     }
 
-    // 🟤 RENDERIZAR TABLA (edit/eliminar seguros)
+    // 🟤 RENDERIZAR TABLA
     function render(lista = productos){
       const tb=document.getElementById('tbody'); tb.innerHTML='';
       lista.forEach((p)=>{
@@ -151,7 +150,7 @@
       if(i!==-1) del(i);
     }
 
-    // 🟤 BUSCAR
+    // 🟤 BUSCADOR
     document.getElementById('search').addEventListener('keypress', function(e){
       if(e.key === 'Enter'){
         e.preventDefault();
@@ -202,7 +201,6 @@
     document.getElementById('form').onsubmit=function(e){
       e.preventDefault();
 
-      // 🆕 Agregar automáticamente nueva categoría al datalist
       const categoriaInput = document.getElementById('categoria');
       const datalist = document.getElementById('categorias');
       const nuevaCategoria = categoriaInput.value.trim();
