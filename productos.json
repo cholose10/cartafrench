@@ -148,7 +148,7 @@
   },
   {
     "nombre": "AVOCADO",
-    "descripcion": "Dos tostada con huevos revueltos, crema de palta y semillas",
+    "descripcion": "Dos tostadas con huevos revueltos, crema de palta y semillas",
     "precio": 15000,
     "imagen": "img/avocado.jpg",
     "categoria": "PROMOCIONES"
