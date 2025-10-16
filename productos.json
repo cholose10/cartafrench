@@ -938,11 +938,11 @@
     "categoria": "REFRESCOS"
   },
   {
-    "nombre": "copa de vino",
-    "descripcion": "BLANCOS o TINTO",
-    "precio": 7500,
-    "imagen": "img/20250903_124351.jpg",
-    "categoria": "REFRESCOS"
+    "nombre": "Brunch para Dos",
+    "descripcion": "Dos infusiones, 2 jugos o limonadas \n2 yogures con fruta y granola\n chipa tostado de jamon y queso Y toston huevo y palta\n $ 48.000\n",
+    "precio": 48,
+    "imagen": "img/.jpg",
+    "categoria": "EVENTOS"
   },
   {
     "nombre": "Portillo Rosé Malbec",
