@@ -891,7 +891,7 @@
   {
     "nombre": "Batido Gancia",
     "descripcion": "Batido Gancia",
-    "precio": 8000,
+    "precio": 10,
     "imagen": "img/Gancia.jpg",
     "categoria": "TRAGOS"
   },
