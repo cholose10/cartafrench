@@ -904,7 +904,7 @@
   },
   {
     "nombre": "HAPPY HOUR",
-    "descripcion": "Aperol naranja O CERVEZA todos los dias de 19 a 21:00",
+    "descripcion": "Aperol naranja $10000 O CERVEZA $7000 todos los dias de 19 a 21:00",
     "precio": 0,
     "imagen": "img/Api.jpg",
     "categoria": "TRAGOS"
@@ -997,14 +997,14 @@
     "nombre": "Brunch Para Dos",
     "descripcion": "Dos infusiones, 2 jugos o limonadas \n2 yogures con fruta y granola\n chipa tostado de jamon y queso Y toston huevo y palta\n $ 48.000\n",
     "precio": 48000,
-    "imagen": "img/.jpg",
+    "imagen": "img/brunch.jpg",
     "categoria": "PROMOCIONES"
   },
   {
     "nombre": "Brunch Para Dos",
     "descripcion": "Dos infusiones, 2 jugos o limonadas \n2 yogures con fruta y granola\n chipa tostado de jamon y queso Y toston huevo y palta\n $ 48.000\n",
     "precio": 48000,
-    "imagen": "img/.jpg",
+    "imagen": "img/brunch.jpg",
     "categoria": "EVENTOS"
   }
 ]
