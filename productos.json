@@ -1006,5 +1006,12 @@
     "precio": 48000,
     "imagen": "img/brunch.jpg",
     "categoria": "EVENTOS"
+  },
+  {
+    "nombre": "BRUNCH",
+    "descripcion": "Dos infusiones, 2 jugos o limonadas 2 yogures con fruta y granola chipa tostado de jamon y queso Y toston huevo y palta $ 48.000",
+    "precio": 48000,
+    "imagen": "img/brunch.jpg",
+    "categoria": "PROMOCIONES"
   }
 ]
