@@ -54,39 +54,176 @@
   <button id="btnArriba" title="Subir">⬆️</button>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const USER='cholose10'; const REPO='cartafrench'; const FILE='productos.json';
-  const RAW_URL=`https://raw.githubusercontent.com/${USER}/${REPO}/main/${FILE}`;
-  let productos=[];
+  const USERNAME = "cholose10";
+  const REPO = "cartaaguero"; // ⚠️ cambiar por "cartafrench" en la otra carta
+  const FILE_PATH = "productos.json";
+  let productos = [];
+  let listaMostrada = []; // ← nueva variable que mantiene lo que se muestra
 
-  const tokenEl=document.getElementById('token'); const statusEl=document.getElementById('tokenStatus');
-  function saveToken(){const t=tokenEl.value.trim();if(!t)return alert('Ingresa token');localStorage.setItem('github_token',t);tokenEl.value='';statusEl.innerText='✅ Token guardado';}
-  function clearToken(){localStorage.removeItem('github_token');statusEl.innerText='⚠️ Token borrado';}
+  // TOKEN
+  function saveToken(){
+    const t=document.getElementById('token').value.trim();
+    if(t){localStorage.setItem('github_token',t);document.getElementById('token').value='';
+      document.getElementById('tokenStatus').innerText="✅ Token guardado.";}
+  }
+  function clearToken(){localStorage.removeItem('github_token');
+    document.getElementById('tokenStatus').innerText="⚠️ Token borrado.";}
   function getToken(){return localStorage.getItem('github_token');}
 
-  async function loadProducts(){try{const r=await fetch(RAW_URL,{cache:"no-store"});productos=await r.json();render(productos);updateCats();}catch(e){alert("Error cargando productos");}}
-  function render(list){const tb=document.getElementById('tbody');tb.innerHTML='';if(!list.length)return tb.innerHTML='<tr><td colspan="6" style="text-align:center">Sin productos</td></tr>';list.forEach((p,i)=>{tb.innerHTML+=`<tr><td><img src="${p.imagen}"></td><td>${p.nombre}</td><td>${p.descripcion}</td><td>${p.categoria}</td><td>$${p.precio}</td><td><button onclick="edit(${i})">Editar</button><button onclick="del(${i})">Eliminar</button></td></tr>`;});}
+  // CARGAR PRODUCTOS
+  async function loadProducts(){
+    const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
+    const res=await fetch(url);
+    productos=await res.json();
+    listaMostrada=[...productos];
+    render(listaMostrada);
+    updateCategoryList();
+  }
 
-  function updateCats(){const dat=document.getElementById('listaCategorias');dat.innerHTML='';[...new Set(productos.map(p=>p.categoria))].sort().forEach(c=>{dat.innerHTML+=`<option value="${c}">`;});}
+  // RENDER TABLA
+  function render(lista){
+    const tb=document.getElementById('tbody');
+    tb.innerHTML='';
+    lista.forEach((p,i)=>{
+      tb.innerHTML+=`
+        <tr>
+          <td><img src="${p.imagen}" alt=""></td>
+          <td>${p.nombre}</td>
+          <td>${p.descripcion}</td>
+          <td>${p.categoria}</td>
+          <td>$${p.precio}</td>
+          <td>
+            <button onclick="edit(${i})">Editar</button>
+            <button onclick="del(${i})">Eliminar</button>
+          </td>
+        </tr>`;
+    });
+  }
 
-  // BUSCAR
-  const s=document.getElementById('search'); const b=document.getElementById('btnSearch');
-  function buscar(){const q=s.value.toLowerCase().trim();const res=productos.filter(p=>(p.nombre+p.descripcion+p.categoria).toLowerCase().includes(q));render(res);document.getElementById('tablaTitulo').scrollIntoView({behavior:'smooth'});}
-  s.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();buscar();}}); b.addEventListener('click',buscar);
+  // ACTUALIZAR CATEGORÍAS
+  function updateCategoryList(){
+    const cats=[...new Set(productos.map(p=>p.categoria))].sort();
+    const datalist=document.getElementById('listaCategorias');
+    datalist.innerHTML='';
+    cats.forEach(c=>{
+      const opt=document.createElement('option');
+      opt.value=c;
+      datalist.appendChild(opt);
+    });
+  }
 
-  window.previewImage=()=>document.getElementById('preview').src=document.getElementById('imagen').value.trim()||'';
+  // BUSCADOR
+  const searchInput=document.getElementById("search");
+  searchInput.addEventListener("keypress",function(e){
+    if(e.key==="Enter"){e.preventDefault();filterProducts();}
+  });
 
-  async function saveToGitHub(newContent){const TOKEN=getToken();if(!TOKEN)return alert("Guardá tu token primero");const api=`https://api.github.com/repos/${USER}/${REPO}/contents/${FILE}`;const get=await fetch(api,{headers:{Authorization:`token ${TOKEN}`}});const data=await get.json();const res=await fetch(api,{method:'PUT',headers:{Authorization:`token ${TOKEN}`,'Content-Type':'application/json'},body:JSON.stringify({message:'update admin',content:btoa(unescape(encodeURIComponent(newContent))),sha:data.sha})});alert(res.ok?'✅ Cambios guardados':'❌ Error al guardar');}
+  function filterProducts(){
+    const q=searchInput.value.toLowerCase().trim();
+    listaMostrada=productos.filter(p=>
+      p.nombre.toLowerCase().includes(q)||
+      p.descripcion.toLowerCase().includes(q)||
+      p.categoria.toLowerCase().includes(q)
+    );
+    render(listaMostrada);
+    if(listaMostrada.length>0){
+      document.getElementById("tablaTitulo").scrollIntoView({behavior:"smooth"});
+    }
+  }
 
-  const form=document.getElementById('form');form.addEventListener('submit',e=>{e.preventDefault();const i=document.getElementById('editIndex').value;const prod={nombre:form.nombre.value,descripcion:form.descripcion.value,precio:parseFloat(form.precio.value),imagen:form.imagen.value,categoria:form.categoria.value};if(i==='')productos.push(prod);else productos[i]=prod;render(productos);updateCats();form.reset();document.getElementById('preview').src='';saveToGitHub(JSON.stringify(productos,null,2));});
+  // PREVIEW
+  function previewImage(){
+    const src=document.getElementById('imagen').value.trim();
+    document.getElementById('preview').src=src||'';
+  }
 
-  window.edit=i=>{const p=productos[i];form.nombre.value=p.nombre;form.descripcion.value=p.descripcion;form.precio.value=p.precio;form.imagen.value=p.imagen;form.categoria.value=p.categoria;document.getElementById('editIndex').value=i;document.getElementById('preview').src=p.imagen;form.scrollIntoView({behavior:'smooth'});};
-  window.del=i=>{if(!confirm('Eliminar producto?'))return;productos.splice(i,1);render(productos);saveToGitHub(JSON.stringify(productos,null,2));};
+  // GUARDAR EN GITHUB
+  async function saveToGitHub(newContent){
+    const TOKEN=getToken();
+    if(!TOKEN){alert("⚠️ Guardá tu token primero.");return;}
+    const apiUrl=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`;
+    const getRes=await fetch(apiUrl,{headers:{Authorization:`token ${TOKEN}`}});
+    const data=await getRes.json();
+    const updateRes=await fetch(apiUrl,{
+      method:"PUT",
+      headers:{
+        "Authorization":`token ${TOKEN}`,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        message:"Actualización desde admin.html",
+        content:btoa(unescape(encodeURIComponent(newContent))),
+        sha:data.sha
+      })
+    });
+    if(updateRes.ok){alert("✅ Cambios guardados en GitHub.");}
+    else{alert("❌ Error al guardar en GitHub.");}
+  }
 
-  const btn=document.getElementById('btnArriba');window.addEventListener('scroll',()=>btn.style.display=window.scrollY>300?'block':'none');btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  // GUARDAR PRODUCTO
+  document.getElementById('form').onsubmit=function(e){
+    e.preventDefault();
+    const idx=document.getElementById('editIndex').value;
+    const prod={
+      nombre:document.getElementById('nombre').value,
+      descripcion:document.getElementById('descripcion').value,
+      precio:parseFloat(document.getElementById('precio').value),
+      imagen:document.getElementById('imagen').value,
+      categoria:document.getElementById('categoria').value
+    };
+    if(idx===''){productos.push(prod);}
+    else{productos[idx]=prod;document.getElementById('editIndex').value='';}
+    listaMostrada=[...productos];
+    render(listaMostrada);
+    updateCategoryList();
+    this.reset();
+    document.getElementById('preview').src='';
+    saveToGitHub(JSON.stringify(productos,null,2));
+  }
 
-  loadProducts();if(getToken())statusEl.innerText='🔐 Token cargado';
-});
+  // EDITAR (usa listaMostrada para buscar el real)
+  function edit(i){
+    const p=listaMostrada[i];
+    const realIndex=productos.indexOf(p);
+    if(realIndex===-1){alert("Error: producto no encontrado.");return;}
+    document.getElementById('nombre').value=p.nombre;
+    document.getElementById('descripcion').value=p.descripcion;
+    document.getElementById('precio').value=p.precio;
+    document.getElementById('imagen').value=p.imagen;
+    document.getElementById('categoria').value=p.categoria;
+    document.getElementById('editIndex').value=realIndex;
+    document.getElementById('preview').src=p.imagen;
+    const form=document.getElementById('form');
+    form.scrollIntoView({behavior:"smooth",block:"start"});
+    form.classList.add('editando');
+    setTimeout(()=>form.classList.remove('editando'),2000);
+  }
+
+  // ELIMINAR (también usa listaMostrada)
+  function del(i){
+    if(confirm('¿Eliminar producto?')){
+      const p=listaMostrada[i];
+      const realIndex=productos.indexOf(p);
+      if(realIndex!==-1){
+        productos.splice(realIndex,1);
+        listaMostrada=[...productos];
+        render(listaMostrada);
+        updateCategoryList();
+        saveToGitHub(JSON.stringify(productos,null,2));
+      }
+    }
+  }
+
+  // BOTÓN ARRIBA
+  window.onscroll=function(){
+    document.getElementById("btnArriba").style.display=window.scrollY>300?"block":"none";
+  };
+  function subir(){
+    document.getElementById("form").scrollIntoView({behavior:"smooth"});
+  }
+
+  // INICIO
+  loadProducts();
+  if(getToken()){document.getElementById('tokenStatus').innerText="🔐 Token cargado.";}
 </script>
-</body>
-</html>
+
