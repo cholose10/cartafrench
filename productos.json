@@ -330,14 +330,14 @@
   },
   {
     "nombre": "Tarta de calabaza",
-    "descripcion": "Brócoli, queso sardo, muzarella, cebolla, masa integral",
+    "descripcion": "Verdura y calabaza ratatouille de verduras y termina con queso gratinado",
     "precio": 18500,
     "imagen": "img/Brócoli .jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "Tarta de POLLO",
-    "descripcion": "Pechuga de pollo, puerro, queso sardo, cebolla, masa integral",
+    "descripcion": "Pechuga de pollo, puerro, muzzarella, cebolla",
     "precio": 18500,
     "imagen": "img/Tartapollo.jpg",
     "categoria": "COMIDAS"
