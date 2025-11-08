@@ -388,7 +388,7 @@
     "nombre": "Jugo exprimido de naranja",
     "descripcion": "exprimido de naranja",
     "precio": 6600,
-    "imagen": "img/Exprimido.jpg",
+    "imagen": "img/exp.jpg",
     "categoria": "REFRESCOS"
   },
   {
@@ -402,7 +402,7 @@
     "nombre": "Licuadas",
     "descripcion": "con frutas de estacion(base de agua, leche o exprimido",
     "precio": 7700,
-    "imagen": "img/20250903_110035.jpg",
+    "imagen": "img/licuado.jpg",
     "categoria": "REFRESCOS"
   },
   {
