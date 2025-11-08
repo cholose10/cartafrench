@@ -994,13 +994,6 @@
     "categoria": "CAFETERÍA"
   },
   {
-    "nombre": "",
-    "descripcion": "Dos infusiones, 2 jugos o limonadas \n2 yogures con fruta y granola\n chipa tostado de jamon y queso Y toston huevo y palta\n $ 48.000\n",
-    "precio": 48000,
-    "imagen": "img/-52.jpg",
-    "categoria": ""
-  },
-  {
     "nombre": "BRUNCH",
     "descripcion": "Dos infusiones, 2 jugos o limonadas 2 yogures con fruta y granola chipa tostado de jamon y queso Y toston huevo y palta $ 48.000",
     "precio": 48000,
