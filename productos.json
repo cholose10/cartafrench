@@ -1006,5 +1006,12 @@
     "precio": 48000,
     "imagen": "img/-52.jpg",
     "categoria": "PROMOCIONES"
+  },
+  {
+    "nombre": "pomelada",
+    "descripcion": "pomelonaturel",
+    "precio": 7000,
+    "imagen": "img/pomelada.jpg",
+    "categoria": "REFRESCOS"
   }
 ]
