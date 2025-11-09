@@ -987,13 +987,6 @@
     "categoria": "COMIDAS"
   },
   {
-    "nombre": "GRANOLA",
-    "descripcion": "YOGURT CON GRANOLA Y FUTAS DE ESTACION MAS DIPS DE MIEL",
-    "precio": 13000,
-    "imagen": "img/cafe.jpg",
-    "categoria": "CAFETERÍA"
-  },
-  {
     "nombre": "BRUNCH",
     "descripcion": "Dos infusiones, 2 jugos o limonadas 2 yogures con fruta y granola chipa tostado de jamon y queso Y toston huevo y palta $ 48.000",
     "precio": 48000,
