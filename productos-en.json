@@ -436,7 +436,7 @@
     {
       "name": "SPINACH MILANESA (BEEF or CHICKEN)",
       "description": "Cream of spinach and gratinated cheese Accompanied by mashed potatoes, noodles, salad or french fries",
-      "price": 2000,
+      "price": 20000,
       "imagen": "img/Esp.jpg",
       "category": "FOODS"
     },
@@ -852,9 +852,7 @@
       "price": 16500,
       "imagen": "img/Bacon .jpg",
       "category": "SANDWICHES"
-    }
-  ],
-  "SNACKS_APPETIZERS": [
+    },
     {
       "name": "Empanadas",
       "description": "KNIFE-CUT BEEF",
