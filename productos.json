@@ -976,14 +976,14 @@
     "nombre": "mila spaguetti",
     "descripcion": "MILA DE CARNE SPAGUETTI CON SALSA ROSA",
     "precio": 20000,
-    "imagen": "img//Tortasnueva.jpg",
+    "imagen": "img/Tortasnueva.jpg",
     "categoria": "COMIDAS"
   },
   {
     "nombre": "pollo tariyaki",
     "descripcion": "POLLO TERIYAKI\nPechuga en salsa dulce con arroz salteado y verduras",
     "precio": 22500,
-    "imagen": "img//Tortasnueva.jpg",
+    "imagen": "img/Tortasnueva.jpg",
     "categoria": "COMIDAS"
   },
   {
