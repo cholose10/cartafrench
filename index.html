@@ -157,7 +157,7 @@
     <img src="img/french99.jpg" alt="Tilo Café">
   </header>
 
-  <div class="banner">¡Bienvenidos a Tilo Café French!</div>
+  <div class="banner" id="banner-text">¡Bienvenidos a Tilo Café French!</div>
 
   <!-- 🌍 Selector de idioma -->
   <div id="languageSwitcher">
@@ -190,6 +190,7 @@
     const btnEs = document.getElementById('btn-es');
     const btnEn = document.getElementById('btn-en');
     const btnPt = document.getElementById('btn-pt');
+    const banner = document.getElementById('banner-text');
     const categoryContainer = document.getElementById('category-buttons');
     const productList = document.getElementById('product-list');
     const searchInput = document.getElementById('search');
@@ -202,6 +203,11 @@
       btnEs.classList.toggle('active', idiomaActual === 'es');
       btnEn.classList.toggle('active', idiomaActual === 'en');
       btnPt.classList.toggle('active', idiomaActual === 'pt');
+
+      // 🪄 Cambiar texto del banner
+      if (idiomaActual === 'es') banner.textContent = "¡Bienvenidos a Tilo Café French!";
+      if (idiomaActual === 'en') banner.textContent = "Welcome to Tilo Café French!";
+      if (idiomaActual === 'pt') banner.textContent = "Bem-vindo ao Tilo Café French!";
     }
 
     async function load() {
@@ -221,17 +227,17 @@
           nombre:
             idiomaActual === 'es' ? p.nombre :
             idiomaActual === 'en' ? p.name :
-            p.nome,
+            p.name,
           descripcion:
             idiomaActual === 'es' ? p.descripcion :
             idiomaActual === 'en' ? p.description :
-            p.descricao,
-          precio: p.precio || p.price || p.preco,
+            p.description,
+          precio: p.precio || p.price,
           imagen: p.imagen,
           categoria:
             idiomaActual === 'es' ? p.categoria :
             idiomaActual === 'en' ? p.category :
-            p.categoria_pt
+            p.category
         }));
 
         renderCategories();
@@ -304,7 +310,7 @@
       scrollToProducts();
     }
 
-    // Eventos de idioma
+    // 🌍 Eventos de idioma
     btnEs.addEventListener('click', () => {
       idiomaActual = 'es';
       localStorage.setItem('idioma', 'es');
@@ -328,7 +334,7 @@
       if (e.key === 'Enter') buscar();
     });
 
-    // Flecha subir
+    // ⬆️ Flecha subir
     window.addEventListener('scroll', () => {
       btnUp.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
