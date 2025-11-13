@@ -163,6 +163,7 @@
   <div id="languageSwitcher">
     <button id="btn-es" class="lang-btn">🇪🇸 Español</button>
     <button id="btn-en" class="lang-btn">🇬🇧 English</button>
+    <button id="btn-pt" class="lang-btn">🇧🇷 Português</button>
   </div>
 
   <!-- 🔍 Buscador -->
@@ -188,6 +189,7 @@
 
     const btnEs = document.getElementById('btn-es');
     const btnEn = document.getElementById('btn-en');
+    const btnPt = document.getElementById('btn-pt');
     const categoryContainer = document.getElementById('category-buttons');
     const productList = document.getElementById('product-list');
     const searchInput = document.getElementById('search');
@@ -199,11 +201,15 @@
     function actualizarBotones() {
       btnEs.classList.toggle('active', idiomaActual === 'es');
       btnEn.classList.toggle('active', idiomaActual === 'en');
+      btnPt.classList.toggle('active', idiomaActual === 'pt');
     }
 
     async function load() {
       actualizarBotones();
-      const filename = idiomaActual === 'es' ? 'productos.json' : 'productos-en.json';
+      let filename = 'productos.json';
+      if (idiomaActual === 'en') filename = 'productos-en.json';
+      if (idiomaActual === 'pt') filename = 'productos-port.json';
+
       const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
 
       try {
@@ -212,11 +218,20 @@
         const data = await res.json();
 
         productos = data.map(p => ({
-          nombre: idiomaActual === 'es' ? p.nombre : p.name,
-          descripcion: idiomaActual === 'es' ? p.descripcion : p.description,
-          precio: p.precio || p.price,
+          nombre:
+            idiomaActual === 'es' ? p.nombre :
+            idiomaActual === 'en' ? p.name :
+            p.nome,
+          descripcion:
+            idiomaActual === 'es' ? p.descripcion :
+            idiomaActual === 'en' ? p.description :
+            p.descricao,
+          precio: p.precio || p.price || p.preco,
           imagen: p.imagen,
-          categoria: idiomaActual === 'es' ? p.categoria : p.category
+          categoria:
+            idiomaActual === 'es' ? p.categoria :
+            idiomaActual === 'en' ? p.category :
+            p.categoria_pt
         }));
 
         renderCategories();
@@ -289,7 +304,7 @@
       scrollToProducts();
     }
 
-    // Eventos
+    // Eventos de idioma
     btnEs.addEventListener('click', () => {
       idiomaActual = 'es';
       localStorage.setItem('idioma', 'es');
@@ -299,6 +314,12 @@
     btnEn.addEventListener('click', () => {
       idiomaActual = 'en';
       localStorage.setItem('idioma', 'en');
+      load();
+    });
+
+    btnPt.addEventListener('click', () => {
+      idiomaActual = 'pt';
+      localStorage.setItem('idioma', 'pt');
       load();
     });
 
