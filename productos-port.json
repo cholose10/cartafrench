@@ -1,1003 +1,1003 @@
 [
-  {
-    "nome": "Café Expresso",
-    "descripcion": "Café pequeno",
-    "precio": "3300",
-    "imagen": "img/20250806_112815.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café Expresso em Jarra",
-    "descripcion": "Café Americano",
-    "precio": "3500",
-    "imagen": "img/cj.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café Descafeinado",
-    "descripcion": "Café Descafeinado",
-    "precio": "3700",
-    "imagen": "img/20250813_094842.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café com Leite Tradicional",
-    "descripcion": "Café com leite tradicional",
-    "precio": "4200",
-    "imagen": "img/cal.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café Expresso Duplo",
-    "descripcion": "Café Expresso Duplo",
-    "precio": "4900",
-    "imagen": "img/cafedo.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Capuccino",
-    "descripcion": "Café, leite, canela e cacau",
-    "precio": "5100",
-    "imagen": "img/Capuchino.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Capuccino Italiano",
-    "descripcion": "Capuccino Italiano",
-    "precio": "5200",
-    "imagen": "img/Capuchino.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café MOKA",
-    "descripcion": "cacau intenso, café, leite espumado",
-    "precio": "5600",
-    "imagen": "img/moka.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Café CARAMEL",
-    "descripcion": "caramelo, café, leite espumado",
-    "precio": "5500",
-    "imagen": "img/caramel.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Chá com Leite",
-    "descripcion": "chá Inti Zen",
-    "precio": "4300",
-    "imagen": "img/te.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Submarino",
-    "descripcion": "leite espumado e barra de chocolate",
-    "precio": "4800",
-    "imagen": "img/subma.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Chocolate Quente, servido em cobre",
-    "descripcion": "Chocolate quente, servido em cobre",
-    "precio": "4900",
-    "imagen": "img/cobre.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Leite Quente ou Frio",
-    "descripcion": "leite desnatado",
-    "precio": "3000",
-    "imagen": "img/leche.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "CAFÉ TILO",
-    "descripcion": "café, Baileys, leite evaporado e chocolate ralado",
-    "precio": "6100",
-    "imagen": "img/ctilo.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "ICE COFFEE🥶",
-    "descripcion": "dose dupla com gelo❄️",
-    "precio": "4900",
-    "imagen": "img/aiccofi.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "LATTE ICE COFFEE🥶",
-    "descripcion": "leite frio com dose dupla de café e gelo❄️",
-    "precio": "4900",
-    "imagen": "img/aiclate.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "FRAPPUCCINO com Leite e OREO🥶",
-    "descripcion": "base de leite ❄️",
-    "precio": "6600",
-    "imagen": "img/miloreo.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "FRAPPUCCINO OREO🥶",
-    "descripcion": "base de Café❄️",
-    "precio": "6600",
-    "imagen": "img/FRAPPUCCINOOREO.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Creme",
-    "descripcion": "Creme de Leite",
-    "precio": "300",
-    "imagen": "img/adi.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Leite de Amêndoas",
-    "descripcion": "Leite de amêndoas pequeno $350 - grande $450",
-    "precio": "350",
-    "imagen": "img/adialma.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Aromatizante Baunilha ou Avelã",
-    "descripcion": "Aromatizante baunilha ou avelãs",
-    "precio": "350",
-    "imagen": "img/medialunas.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Media-luas (Croissants)",
-    "descripcion": "Media-luas 100% manteiga",
-    "precio": "2300",
-    "imagen": "img/Lumas.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Fatura (Doce)",
-    "descripcion": "Com creme de confeiteiro ou marmelada",
-    "precio": "2300",
-    "imagen": "img/20250902_085539(1).jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Cinamon Roll (Rolo de Canela)",
-    "descripcion": "rolo de canela",
-    "precio": "4600",
-    "imagen": "img/rol.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Pão de Chocolate",
-    "descripcion": "massa de croissant com chocolate belga",
-    "precio": "4800",
-    "imagen": "img/panch.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Cookies🍪",
-    "descripcion": "cookies de baunilha com chocolate, chocolate + chocolate",
-    "precio": "4700",
-    "imagen": "img/kuki.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Brownie com nozes brancas",
-    "descripcion": "Brownie sem TACC",
-    "precio": "6700",
-    "imagen": "img/bwoni.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Chipá Recheado",
-    "descripcion": "Chipá recheado com queijo",
-    "precio": "3700",
-    "imagen": "img/chipa.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Scone de Queijo",
-    "descripcion": "Scone de queijo",
-    "precio": "4500",
-    "imagen": "img/scon.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Bolo Inglês (Budín)",
-    "descripcion": "cenoura e canela, limão e papoula, chocolate e café",
-    "precio": "5500",
-    "imagen": "img/budi.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Alfajor de Chocolate",
-    "descripcion": "Alfajor de chocolate",
-    "precio": "4600",
-    "imagen": "img/lafch.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Alfajor de Maizena",
-    "descripcion": "Alfajor de maizena (sem TACC)",
-    "precio": "4600",
-    "imagen": "img/almealfa.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Alfajor de Amêndoas",
-    "descripcion": "Alfajor de amêndoas",
-    "precio": "5500",
-    "imagen": "img/maisena.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Mini Torta",
-    "descripcion": "Mini tortas doces",
-    "precio": "9200",
-    "imagen": "img/Minitor.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Media-lua (Croissant) quente de presunto e queijo",
-    "descripcion": "Media-lua quente de presunto e queijo",
-    "precio": "4600",
-    "imagen": "img/Lujyq.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Prato com Frutas da Estação",
-    "descripcion": "Prato com frutas da estação",
-    "precio": "10000",
-    "imagen": "img/Platofrutas.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Iogurte",
-    "descripcion": "Iogurte $5.000, Iogurte com granola $8.000, Iogurte Forte (com frutas e granola) $11.000",
-    "precio": "11000",
-    "imagen": "img/forte.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Porção de Torradas",
-    "descripcion": "Porção de torradas, brancas ou de farelo com sementes",
-    "precio": "3500",
-    "imagen": "img/Tosta.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Porção de Complementos",
-    "descripcion": "Porção de geleia, manteiga, cream cheese, mel ou molho",
-    "precio": "2000",
-    "imagen": "img/Dip.jpg",
-    "categoria": "CAFETERIA"
-  },
-  {
-    "nome": "Promoção de Media-luas (Croissants)",
-    "descripcion": "3 media-luas caseiras",
-    "precio": "9200",
-    "imagen": "img/proluna.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "TORRADAS🍞",
-    "descripcion": "Pão preto ou branco com cream cheese e geleia caseira",
-    "precio": "9500",
-    "imagen": "img/ptosta.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "OMELETE DE CLARAS",
-    "descripcion": "Omelete com queijo e tomate (com FRITOLIN) e frutas da estação",
-    "precio": "15000",
-    "imagen": "img/Promoomelet.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "ABACATE (AVOCADO)",
-    "descripcion": "Duas torradas com ovos mexidos, creme de abacate e sementes",
-    "precio": "15000",
-    "imagen": "img/avocado.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "OVOS MEXIDOS",
-    "descripcion": "Ovos mexidos com presunto e queijo, uma torrada para acompanhar",
-    "precio": "14500",
-    "imagen": "img/Resultado.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "PROTEICO",
-    "descripcion": "Pancake 100% farinha de amêndoas, cream cheese e fruta da estação mais molho de mel",
-    "precio": "15000",
-    "imagen": "img/protei.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "FRENCH TOAST DOCE",
-    "descripcion": "Torradas marinadas em ovo, com canela e açúcar, cream cheese, frutas da estação e molho de mel",
-    "precio": "15000",
-    "imagen": "img/frnchdulce.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "FRENCH TOAST SALGADO",
-    "descripcion": "Torradas marinadas em ovo, com canela e açúcar, com bacon, abacate e ovo mexido",
-    "precio": "15400",
-    "imagen": "img/Salados.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "BRUNCH",
-    "descripcion": "Duas infusões, 2 sucos ou limonadas, 2 iogurtes com fruta e granola, chipá tostado de presunto e queijo E torrada ovo e abacate $ 48.000",
-    "precio": "48000",
-    "imagen": "img/-52.jpg",
-    "categoria": "PROMOÇÕES"
-  },
-  {
-    "nome": "Torta de Abóbora",
-    "descripcion": "Verdura e abóbora ratatouille de verduras e finaliza com queijo gratinado",
-    "precio": "18500",
-    "imagen": "img/tartacala.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Torta de FRANGO",
-    "descripcion": "Peito de frango, alho-poró, mussarela, cebola",
-    "precio": "18500",
-    "imagen": "img/Tartapollo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Burritos De la Huerta (quente)",
-    "descripcion": "Tortilla de trigo, com abobrinha, berinjela, pimentão, tomates, cogumelos, queijo tybo",
-    "precio": "18700",
-    "imagen": "img/huerta.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Burritos de FRANGO CESAR",
-    "descripcion": "(frio): Tortilla de trigo, mix de alfaces, clássico molho césar, peito de frango, queijo parmesão e *croutons*",
-    "precio": "19000",
-    "imagen": "img/caesarpollo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Burritos COMO MEXICANO",
-    "descripcion": "(quente): Tortilla de trigo com molho de frango, recheio de filé mignon, vegetais e cheddar",
-    "precio": "22500",
-    "imagen": "img//Lomi.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Omelete de Presunto e Queijo",
-    "descripcion": "Omelete de presunto e queijo",
-    "precio": "17000",
-    "imagen": "img/20250804_132736.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Tortilla de Batata e Cebola",
-    "descripcion": "Tortilla de batata e cebola",
-    "precio": "17500",
-    "imagen": "img/tortillapapa.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Omelete de Queijo e Cogumelos",
-    "descripcion": "Omelete de queijo e cogumelos",
-    "precio": "19000",
-    "imagen": "img/Omecham.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Tortilla de Espinafre",
-    "descripcion": "Tortilla de espinafre",
-    "precio": "17700",
-    "imagen": "img/20250813_131026 (1).jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "SALADA FRESCA",
-    "descripcion": "Rúcula, maçã verde, pepino, tomate cereja, nozes, *regianito* (tipo de queijo)",
-    "precio": "21000",
-    "imagen": "img/Fresca.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "SALADA CAESAR COM FRANGO",
-    "descripcion": "Mix de verdes, *croutons*, frango, parmesão e molho Caesar",
-    "precio": "17500",
-    "imagen": "img/Caesarpollo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "SALADA FRANGO CROCANTE (POLLO CRUNCH)",
-    "descripcion": "Mix de verdes, *croutons*, frango crocante, parmesão e molho Caesar.",
-    "precio": "18500",
-    "imagen": "img/Cranch.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "SALADA PARMA",
-    "descripcion": "Mix com folhas verdes, queijo *regianito*, tomates cereja, presunto cru e tiras de tortilla",
-    "precio": "27800",
-    "imagen": "img/20250813_135926 (1).jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MILANESA SIMPLES de FRANGO ou CARNE",
-    "descripcion": "Acompanhadas com purê, macarrão, salada ou batatas fritas",
-    "precio": "20000",
-    "imagen": "img/20250721_132438.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MILANESA ESPINAFRE carne ou frango",
-    "descripcion": "Creme de espinafre e queijo gratinado. Acompanhadas com purê, macarrão, salada ou batatas fritas",
-    "precio": "20000",
-    "imagen": "img/Esp.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MILANESA NAPOLITANA CARNE OU FRANGO",
-    "descripcion": "Molho de tomate, presunto e queijo. Acompanhadas com purê, macarrão, salada ou batatas fritas",
-    "precio": "21000",
-    "imagen": "img/20250813_125845 (1).jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "RISOTO de Frango!",
-    "descripcion": "com frango, abóbora e verduras.",
-    "precio": "23000",
-    "imagen": "img/tortillapapa.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "RISOTO de FRUTOS SECOS",
-    "descripcion": "com verdura, nozes e amêndoas.",
-    "precio": "25000",
-    "imagen": "img/Risotolangos.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "RISOTO de Filé Mignon (Lomo)!",
-    "descripcion": "com verduras.",
-    "precio": "27000",
-    "imagen": "img/Risotolomo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MASSA (FIDEOS)",
-    "descripcion": "MASSA",
-    "precio": "12000",
-    "imagen": "img/Spa.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Nhoque (ñoquis) com ovo",
-    "descripcion": "nhoque com ovo",
-    "precio": "12000",
-    "imagen": "img/Ñoquis.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Raviolis de Verdura, Frango e Presunto",
-    "descripcion": "Recheados com verdura, frango e presunto",
-    "precio": "14000",
-    "imagen": "img/Ravioles.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Raviolis de Verdura e Ricota",
-    "descripcion": "Recheados com verdura e ricota",
-    "precio": "14000",
-    "imagen": "img/Ravioles.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Sorrentinos de Mussarela e Presunto",
-    "descripcion": "Sorrentinos de mussarela e presunto",
-    "precio": "16000",
-    "imagen": "img/Sonren.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Branco",
-    "descripcion": "Molho branco",
-    "precio": "5500",
-    "imagen": "img/20250905_131302.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Fileto",
-    "descripcion": "Molho fileto (tomate)",
-    "precio": "5500",
-    "imagen": "img/fileto.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Alfredo com Frango",
-    "descripcion": "Molho branco com Frango",
-    "precio": "7000",
-    "imagen": "img/Frepollo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Bolonhesa",
-    "descripcion": "molho com carne",
-    "precio": "7500",
-    "imagen": "img/Bolo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Pesto com Nozes",
-    "descripcion": "noz, alho e salsa",
-    "precio": "7200",
-    "imagen": "img/Pesto.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Molho Carbonara",
-    "descripcion": "Creme, *panceta* (toucinho) e cebolinha",
-    "precio": "7500",
-    "imagen": "img/Carbonara.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MOLHOS DIVERSOS",
-    "descripcion": "MANTEIGA, AZEITE ALHO E PARMESÃO",
-    "precio": "6000",
-    "imagen": "img/218.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Frango (peito)",
-    "descripcion": "Com fritas, purê, salada ou arroz",
-    "precio": "20000",
-    "imagen": "img/pollogri.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Bife de Chorizo",
-    "descripcion": "Com fritas, purê, salada ou arroz",
-    "precio": "32000",
-    "imagen": "img/20250815_151841.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Bife de Filé Mignon (Lomo)",
-    "descripcion": "Com fritas, purê, salada ou arroz",
-    "precio": "34000",
-    "imagen": "img/Bifedelomo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "MINI BIFE DE CHORIZO",
-    "descripcion": "Com fritas, purê, salada ou arroz",
-    "precio": "28000",
-    "imagen": "img/minibi.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "POR PORÇÃO",
-    "descripcion": "PURÊ, ARROZ, SALADA OU FRITAS",
-    "precio": "12000",
-    "imagen": "img/Espepollo.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "NUGGETS KIDS",
-    "descripcion": "DE FRANGO COM FRITAS OU PURÊ",
-    "precio": "17000",
-    "imagen": "img/Nages.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "NHOQUE KIDS",
-    "descripcion": "molho fileto ou creme",
-    "precio": "17000",
-    "imagen": "img/Ñoquiskit.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Milanesa PESTO",
-    "descripcion": "Milanesa de carne com nhoque ao pesto",
-    "precio": "20000",
-    "imagen": "img/Milapesto.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Frango ao Cogumelo (CHAMPI)",
-    "descripcion": "Em molho de cogumelos com batatas fritas",
-    "precio": "23500",
-    "imagen": "img/Pechuchapi.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "BIFE DE CHORIZO A CABALLO",
-    "descripcion": "COM DOIS OVOS FRITOS, BATATAS FRITAS",
-    "precio": "33000",
-    "imagen": "img/Tari.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "FILÉ MIGNON (LOMO) À LA RIOJANA",
-    "descripcion": "COM CEBOLA, PIMENTÃO E OVO FRITO COM FRITAS",
-    "precio": "35000",
-    "imagen": "img/Matrio.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Filé Mignon (Lomo) CACIO E PEPE",
-    "descripcion": "Bife de filé mignon grelhado com *spaghetti* em pimenta e queijo",
-    "precio": "34000",
-    "imagen": "img/Pepe.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Filé Mignon (Lomo) AO COGUMELO (CHAMPI)",
-    "descripcion": "Bife de filé mignon grelhado em molho de cogumelos com batatas fritas",
-    "precio": "36000",
-    "imagen": "img/Lochapi.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Milanesa Spaghetti",
-    "descripcion": "MILANESA DE CARNE SPAGHETTI COM MOLHO ROSA",
-    "precio": "20000",
-    "imagen": "img//Tortasnueva.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Frango Teriyaki",
-    "descripcion": "FRANGO TERIYAKI. Peito de frango em molho doce com arroz salteado e verduras",
-    "precio": "22500",
-    "imagen": "img/Tortasnueva.jpg",
-    "categoria": "REFEIÇÕES"
-  },
-  {
-    "nome": "Linha Coca-Cola",
-    "descripcion": "zeros e clássicas",
-    "precio": "4000",
-    "imagen": "img/bebidas.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Água Local Filtrada e Mineralizada",
-    "descripcion": "água fria, natural e com gás",
-    "precio": "3500",
-    "imagen": "img/agua.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Adicional com Limão",
-    "descripcion": "Adicional com limão",
-    "precio": "400",
-    "imagen": "img/20250903_093625.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Suco de Laranja Espremido",
-    "descripcion": "espremido de laranja",
-    "precio": "6600",
-    "imagen": "img/Exprimido.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Milkshake OREO",
-    "descripcion": "sorvete de creme, com oreos e chantilly",
-    "precio": "9400",
-    "imagen": "img/miloreo.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Vitaminas (Licuadas)",
-    "descripcion": "com frutas da estação (base de água, leite ou suco espremido)",
-    "precio": "7700",
-    "imagen": "img/licuado.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Limonada com Menta e Gengibre",
-    "descripcion": "Limonada com menta e gengibre",
-    "precio": "6800",
-    "imagen": "img/limo.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Limonada",
-    "descripcion": "Limonada simples",
-    "precio": "6600",
-    "imagen": "img/Limosim.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "STELLA ARTOIS (410cc - Long Neck)",
-    "descripcion": "long neck",
-    "precio": "7000",
-    "imagen": "img/Coroa.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "CORONA",
-    "descripcion": "long neck",
-    "precio": "7500",
-    "imagen": "img/Estelar.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Trumpeter Malbec",
-    "descripcion": "Trumpeter Malbec (750cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112612.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Trumpeter Cabernet",
-    "descripcion": "Trumpeter Cabernet (750cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112534.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Portillo Malbec",
-    "descripcion": "Portillo Malbec (750cc)",
-    "precio": "17000",
-    "imagen": "img/20250903_111015.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Trumpeter Sauvignon Blanc",
-    "descripcion": "Trumpeter Sauvignon Blanc (750cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112257.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Taça de Vinho",
-    "descripcion": "BRANCOS ou TINTO",
-    "precio": "7500",
-    "imagen": "img/20250903_124351.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Portillo Rosé Malbec",
-    "descripcion": "Portillo Rosé Malbec (Vinho fresco e fácil de beber)",
-    "precio": "17000",
-    "imagen": "img/20250903_110955.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Champagne Chandon",
-    "descripcion": "Champagne Chandon (187cc)",
-    "precio": "15000",
-    "imagen": "img/20250903_113545.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Pomelada",
-    "descripcion": "toranja natural",
-    "precio": "7000",
-    "imagen": "img/pomelada.jpg",
-    "categoria": "REFRIGERANTES"
-  },
-  {
-    "nome": "Sanduíche de Presunto Cozido e Queijo",
-    "descripcion": "ciabatta, pão sírio",
-    "precio": "13500",
-    "imagen": "img/20250806_102519.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Misto Quente (Tostado Misto)",
-    "descripcion": "4 triângulos de presunto e queijo",
-    "precio": "14000",
-    "imagen": "img/tm.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Sanduíche de Presunto Cru, Queijo e Tomate",
-    "descripcion": "Presunto cru, queijo e tomate",
-    "precio": "18000",
-    "imagen": "img/Jqyt.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Chipá Tostado",
-    "descripcion": "com P e Q 15.000, cheddar e P 16.000 (P = Presunto, Q = Queijo)",
-    "precio": "15000",
-    "imagen": "img/chipjyq.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Sanduíche de Filé Mignon (Lomito) Simples",
-    "descripcion": "SIMPLES em pão ciabatta, com batatas fritas",
-    "precio": "21500",
-    "imagen": "img/lomito.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Sanduíche de Filé Mignon (Lomito) CLÁSSICO",
-    "descripcion": "CLÁSSICO (alface, tomate, presunto e queijo) em pão ciabatta, com batatas fritas",
-    "precio": "23500",
-    "imagen": "img/loclacico.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Sanduíche de Filé Mignon (Lomito) BACON",
-    "descripcion": "BACON (queijo cheddar, *panceta* e tomate) em pão ciabatta, com batatas fritas",
-    "precio": "25500",
-    "imagen": "img/lombaco.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Hambúrguer NOVILHO",
-    "descripcion": "MIX DE CARNES, BACON, TOMATE, ALFACE E QUEIJO CHEDDAR",
-    "precio": "18000",
-    "imagen": "img/Bacon.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Hambúrguer BLUE",
-    "descripcion": "MIX DE CARNES, ROQUEFORT, CEBOLA SALTEADA, QUEIJO TYBO",
-    "precio": "18000",
-    "imagen": "img/20250816_135012.jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Hambúrguer NOT COW",
-    "descripcion": "À BASE DE PROTEÍNAS DE ERVILHA com rúcula, tomate e queijo derretido",
-    "precio": "16500",
-    "imagen": "img/Bacon .jpg",
-    "categoria": "SANDUÍCHES"
-  },
-  {
-    "nome": "Empanadas",
-    "descripcion": "CARNE CORTADA À FACA",
-    "precio": "3000",
-    "imagen": "img/Imagen de WhatsApp 2025-11-07 a las 21.45.45_8d843d6a.jpg",
-    "categoria": "PETISCOS"
-  },
-  {
-    "nome": "Mussarelas Empanadas",
-    "descripcion": "Mussarelas empanadas",
-    "precio": "17000",
-    "imagen": "img/muzza.jpg",
-    "categoria": "PETISCOS"
-  },
-  {
-    "nome": "TORTILLA MADRILEÑA",
-    "descripcion": "TORTILLA DE BATATA, CEBOLA, COROADA COM PRESUNTO CRU, TOMATE E CRU",
-    "precio": "24000",
-    "imagen": "img/Faina.jpg",
-    "categoria": "PETISCOS"
-  },
-  {
-    "nome": "Panqueca de Doce de Leite",
-    "descripcion": "Panqueca de doce de leite",
-    "precio": "13500",
-    "imagen": "img/Captura de pantalla 2025-11-07 220504.png",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "HOT BANANA",
-    "descripcion": "Base de torta de queijo com bananas flambadas e calda de doce de leite",
-    "precio": "14400",
-    "imagen": "img/Hotbana.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "Pudim Caseiro (Flan)",
-    "descripcion": ". $8.000, com creme e doce de leite $10.000",
-    "precio": "10000",
-    "imagen": "img/Flan.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "Salada de Frutas",
-    "descripcion": ". $10.000 - com bola de sorvete $13.500",
-    "precio": "13500",
-    "imagen": "img/Ensfruta.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "Sorvete",
-    "descripcion": "(bolas): $8.000 (sabores: doce de leite, chocolate, americano)",
-    "precio": "8000",
-    "imagen": "img/Helado.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "APPLE HOT",
-    "descripcion": "*Apple crumble* morno com sorvete de baunilha e amêndoas torradas",
-    "precio": "14500",
-    "imagen": "img/Apeljot.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "BROWNIE MORNO",
-    "descripcion": "Presunto cru, presunto cozido, queijo roquefort, queijo tybo, tomates cereja, frutos secos. Inclui duas *long necks* de Stella. (Obs: A descrição parece estar incorreta, descrevendo uma tábua de frios, não um brownie).",
-    "precio": "12500",
-    "imagen": "img/Brouni.jpg",
-    "categoria": "SOBREMESAS"
-  },
-  {
-    "nome": "Jack Daniel's",
-    "descripcion": "Jack Daniel's",
-    "precio": "14500",
-    "imagen": "img/Daniel’s.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Johnny Walker Black",
-    "descripcion": "Johnny Walker Black",
-    "precio": "15400",
-    "imagen": "img/Black.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Johnny Walker Red",
-    "descripcion": "Johnny Walker Red",
-    "precio": "13400",
-    "imagen": "img/Ret.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Licor Baileys",
-    "descripcion": "Licor Baileys",
-    "precio": "12000",
-    "imagen": "img/bailes.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Fernet com Coca-Cola",
-    "descripcion": "Fernet com Coca-Cola",
-    "precio": "11000",
-    "imagen": "img/Ferne.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Gin Tônica Beefeater",
-    "descripcion": "Gin Tônica Beefeater",
-    "precio": "11000",
-    "imagen": "img/Ginton.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Batido Gancia",
-    "descripcion": "Batido Gancia",
-    "precio": "10000",
-    "imagen": "img/Gancia.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Aperol com Laranja",
-    "descripcion": "Aperol com laranja",
-    "precio": "10000",
-    "imagen": "img/Api.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "HAPPY HOUR",
-    "descripcion": "Aperol Laranja $10.000 OU CERVEJA $7.000 todos os dias de 19:00 às 21:00",
-    "precio": "0",
-    "imagen": "img/Api.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "Champagne Salentein Brut Nature",
-    "descripcion": "Champagne Salentein Brut Nature",
-    "precio": "30000",
-    "imagen": "img/20250903_104921.jpg",
-    "categoria": "DRINQUES"
-  },
-  {
-    "nome": "MENU do DIA ou SUGESTÕES",
-    "descripcion": "menu do dia: prato principal + bebida + sobremesa ou café. Sugestão: apenas prato principal.",
-    "precio": "0",
-    "imagen": "img/.jpg",
-    "categoria": "EVENTOS"
-  }
-]
+    {
+      "name": "Café Expresso",
+      "description": "Café pequeno",
+      "price": 3300,
+      "imagen": "img/20250806_112815.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café Americano (Jar)",
+      "description": "Café americano",
+      "price": 3500,
+      "imagen": "img/cj.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café Descafeinado",
+      "description": "Café descafeinado",
+      "price": 3700,
+      "imagen": "img/20250813_094842.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café Tradicional com Leite",
+      "description": "Café tradicional com leite",
+      "price": 4200,
+      "imagen": "img/cal.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café Expresso Duplo",
+      "description": "Café expresso duplo",
+      "price": 4900,
+      "imagen": "img/cafedo.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Capuccino",
+      "description": "Café, leite, canela e cacau",
+      "price": 5100,
+      "imagen": "img/Capuchino.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Capuccino Italiano",
+      "description": "Capuccino Italiano",
+      "price": 5200,
+      "imagen": "img/Capuchino.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café MOKA",
+      "description": " cacau intenso, café, leite espumado",
+      "price": 5600,
+      "imagen": "img/moka.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Café CARAMELO",
+      "description": "caramelo, café, leite espumado",
+      "price": 5500,
+      "imagen": "img/caramel.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Chá com Leite",
+      "description": "chá inti zen",
+      "price": 4300,
+      "imagen": "img/te.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Submarino",
+      "description": "leite espumado e barra de chocolate",
+      "price": 4800,
+      "imagen": "img/subma.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Chocolate Quente, servido em caneca de cobre",
+      "description": "Chocolate quente, servido em caneca de cobre",
+      "price": 4900,
+      "imagen": "img/cobre.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Leite Quente ou Frio",
+      "description": "leite desnatado",
+      "price": 3000,
+      "imagen": "img/leche.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "CAFÉ TILO",
+      "description": "café, baileys, leite evaporado e chocolate ralado ",
+      "price": 6100,
+      "imagen": "img/ctilo.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "ICE COFFE🥶",
+      "description": "dose dupla com gelo❄️",
+      "price": 4900,
+      "imagen": "img/aiccofi.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "LATTE ICE COFFE🥶",
+      "description": "leite frio com dose dupla de café e gelo❄️ ",
+      "price": 4900,
+      "imagen": "img/aiclate.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "FRAPPUCCINO com Leite e OREO🥶",
+      "description": "Base de Leite ❄️",
+      "price": 6600,
+      "imagen": "img/miloreo.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "FRAPPUCCINO OREO🥶",
+      "description": "Base de Café❄️",
+      "price": 6600,
+      "imagen": "img/FRAPPUCCINOOREO.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Nata (Creme)",
+      "description": "Creme de leite ",
+      "price": 300,
+      "imagen": "img/adi.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Leite de Amêndoa",
+      "description": "Leite de amêndoa pequeno $350-grande $450",
+      "price": 350,
+      "imagen": "img/adialma.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Aromatizante de Baunilha ou Avelã",
+      "description": "Aromatizante de baunilha ou avelã",
+      "price": 350,
+      "imagen": "img/medialunas.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Croissants",
+      "description": "Croissants 100% manteiga",
+      "price": 2300,
+      "imagen": "img/Lumas.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Doce (Factura)",
+      "description": "Creme ou marmelo",
+      "price": 2300,
+      "imagen": "img/20250902_085539(1).jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Rolo de Canela (Cinnamon Roll)",
+      "description": "rolo de canela",
+      "price": 4600,
+      "imagen": "img/rol.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Pain au Chocolat",
+      "description": "massa de croissant com chocolate belga",
+      "price": 4800,
+      "imagen": "img/panch.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Biscoitos🍪 (Cookies)",
+      "description": "biscoitos de baunilha com chocolate, chocolate+chocolate",
+      "price": 4700,
+      "imagen": "img/kuki.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Brownie com nozes brancas",
+      "description": "Brownie sem glúten (sin TACC)",
+      "price": 6700,
+      "imagen": "img/bwoni.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Chipá Recheado",
+      "description": "Chipá recheado com queijo",
+      "price": 3700,
+      "imagen": "img/chipa.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Scone de Queijo",
+      "description": "Scone de Queijo",
+      "price": 4500,
+      "imagen": "img/scon.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Bolo Inglês (Budín)",
+      "description": "cenoura e canela, limão e sementes de papoula, chocolate e café",
+      "price": 5500,
+      "imagen": "img/budi.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Alfajor de Chocolate",
+      "description": "Alfajor de Chocolate",
+      "price": 4600,
+      "imagen": "img/lafch.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Alfajor de Amido de Milho (Maizena)",
+      "description": "Alfajor de Amido de Milho (sem glúten / sin TACC)",
+      "price": 4600,
+      "imagen": "img/almealfa.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Alfajor de Amêndoa",
+      "description": "Alfajor de Amêndoa",
+      "price": 5500,
+      "imagen": "img/maisena.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Mini Torta ",
+      "description": "Mini tortas doces",
+      "price": 9200,
+      "imagen": "img/Minitor.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Croissant Quente com Presunto e Queijo",
+      "description": "Croissant quente com presunto e queijo",
+      "price": 4600,
+      "imagen": "img/Lujyq.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Prato com Frutas da Estação",
+      "description": "Prato com frutas da estação",
+      "price": 10000,
+      "imagen": "img/Platofrutas.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Iogurte ",
+      "description": "Iogurte $5000Iogurte com granola $8.000Iogurte Forte (com frutas e granola) $11.000",
+      "price": 11000,
+      "imagen": "img/forte.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Porção de Torrada",
+      "description": "Porção de torrada, branca ou integral com sementes",
+      "price": 3500,
+      "imagen": "img/Tosta.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Porção de Doce",
+      "description": "Porção de geleia, manteiga, cream cheese, mel ou molho",
+      "price": 2000,
+      "imagen": "img/Dip.jpg",
+      "category": "COFFEE_SHOP"
+    },
+    {
+      "name": "Promo Croissant",
+      "description": "3 croissants caseiros",
+      "price": 9200,
+      "imagen": "img/proluna.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "TORRADA🍞",
+      "description": "Pão preto ou branco com cream cheese e geleia caseira",
+      "price": 9500,
+      "imagen": "img/ptosta.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "OMELETE DE CLARAS",
+      "description": "Omelete com queijo e tomate (com FRITOLIN) e frutas da estação",
+      "price": 15000,
+      "imagen": "img/Promoomelet.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "ABACATE",
+      "description": "Duas torradas com ovos mexidos, creme de abacate e sementes",
+      "price": 15000,
+      "imagen": "img/avocado.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "MEXIDOS",
+      "description": "Ovos mexidos com presunto e queijo, uma torrada para acompanhar",
+      "price": 14500,
+      "imagen": "img/Resultado.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "PROTEÍNA",
+      "description": "Panqueca de farinha 100% amêndoa, cream cheese e fruta da estação mais dip de mel",
+      "price": 15000,
+      "imagen": "img/protei.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "RABANADA DOCE",
+      "description": "Torrada marinada no ovo, com canela e açúcar, cream cheese, frutas da estação e dip de mel",
+      "price": 15000,
+      "imagen": "img/frnchdulce.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "RABANADA SALGADA",
+      "description": "Torrada marinada no ovo, com canela e açúcar, com bacon, abacate e ovo mexido",
+      "price": 15400,
+      "imagen": "img/Salados.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "BRUNCH",
+      "description": "Duas infusões, 2 sucos ou limonadas 2 iogurtes com fruta e granola chipa torrada com presunto e queijo E torrada com ovo e abacate $ 48.000",
+      "price": 48000,
+      "imagen": "img/-52.jpg",
+      "category": "PROMOTIONS"
+    },
+    {
+      "name": "Torta de Abóbora",
+      "description": "Ratatouille de legumes e abóbora com vegetais e finalizado com queijo gratinado",
+      "price": 18500,
+      "imagen": "img/tartacala.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Torta de FRANGO",
+      "description": "Peito de frango, alho-poró, mussarela, cebola",
+      "price": 18500,
+      "imagen": "img/Tartapollo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Burritos Da Horta (quente) ",
+      "description": "Tortilha de trigo, com abobrinha, berinjela, pimentões, tomates\n cogumelos, queijo tybo",
+      "price": 18700,
+      "imagen": "img/huerta.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Burritos FRANGO CAESAR ",
+      "description": " (frio): Tortilha de trigo, folhas verdes mistas, molho Caesar clássico, peito de frango, queijo parmesão e croutons",
+      "price": 19000,
+      "imagen": "img/caesarpollo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Burritos ESTILO MEXICANO ",
+      "description": " (quente): Tortilha de trigo com molho de frango, recheada com lombo, vegetais e cheddar ",
+      "price": 22500,
+      "imagen": "img//Lomi.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Omelete de Presunto e Queijo",
+      "description": "Omelete de presunto e queijo",
+      "price": 17000,
+      "imagen": "img/20250804_132736.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Tortilha de Batata e Cebola (Omelete Espanhola)",
+      "description": "Tortilha de batata e cebola (Omelete Espanhola)",
+      "price": 17500,
+      "imagen": "img/tortillapapa.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Omelete de Cogumelos e Queijo",
+      "description": "Omelete de cogumelos e queijo",
+      "price": 19000,
+      "imagen": "img/Omecham.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Tortilha de Espinafre (Omelete Espanhola)",
+      "description": "Tortilha de espinafre (Omelete Espanhola)",
+      "price": 17700,
+      "imagen": "img/20250813_131026 (1).jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "SALADA FRESCA  ",
+      "description": "Rúcula, maçã verde, pepino, tomate cereja, nozes, queijo Reggianito",
+      "price": 21000,
+      "imagen": "img/Fresca.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "SALADA CAESAR COM FRANGO",
+      "description": "Folhas verdes mistas, croutons, frango, parmesão e molho Caesar",
+      "price": 17500,
+      "imagen": "img/Caesarpollo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "SALADA FRANGO CRUNCH ",
+      "description": "Folhas verdes mistas, croutons, frango crocante, parmesão e molho Caesar.",
+      "price": 18500,
+      "imagen": "img/Cranch.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "  SALADA PARMA",
+      "description": "Folhas verdes mistas, queijo Reggianito\n tomate cereja, presunto cru e tiras de tortilha ",
+      "price": 27800,
+      "imagen": "img/20250813_135926 (1).jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MILANESA SIMPLES (CARNE BOVINA ou FRANGO)",
+      "description": "Acompanhada de purê de batata, macarrão, salada ou batatas fritas",
+      "price": 20000,
+      "imagen": "img/20250721_132438.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MILANESA DE ESPINAFRE (CARNE BOVINA ou FRANGO)",
+      "description": "Creme de espinafre e queijo gratinado Acompanhada de purê de batata, macarrão, salada ou batatas fritas",
+      "price": 20000,
+      "imagen": "img/Esp.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MILANESA À NAPOLITANA (CARNE BOVINA OU FRANGO)",
+      "description": "Molho de tomate, presunto e queijo Acompanhada de purê de batata, macarrão, salada ou batatas fritas",
+      "price": 21000,
+      "imagen": "img/20250813_125845 (1).jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "RISOTO de Frango!",
+      "description": "com frango, abóbora e vegetais.",
+      "price": 23000,
+      "imagen": "img/tortillapapa.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "RISOTO DE NOZES",
+      "description": "com vegetais, nozes e amêndoas.",
+      "price": 25000,
+      "imagen": "img/Risotolangos.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "RISOTO de Lombo!",
+      "description": "com vegetais.",
+      "price": 27000,
+      "imagen": "img/Risotolomo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MACARRÃO",
+      "description": "MACARRÃO",
+      "price": 12000,
+      "imagen": "img/Spa.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Nhoque de Ovo",
+      "description": "Nhoque de Ovo ",
+      "price": 12000,
+      "imagen": "img/Ñoquis.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Ravioli de Vegetais, Frango e Presunto",
+      "description": "Recheado com vegetais, frango e presunto ",
+      "price": 14000,
+      "imagen": "img/Ravioles.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Ravioli de Vegetais e Ricota",
+      "description": "Recheado com vegetais e ricota",
+      "price": 14000,
+      "imagen": "img/Ravioles.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Sorrentinos de Mussarela e Presunto",
+      "description": "Sorrentinos de mussarela e presunto",
+      "price": 16000,
+      "imagen": "img/Sonren.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Molho Branco (Béchamel)",
+      "description": "Molho Branco",
+      "price": 5500,
+      "imagen": "img/20250905_131302.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Molho Filetto",
+      "description": "Molho Filetto",
+      "price": 5500,
+      "imagen": "img/fileto.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Frango Alfredo",
+      "description": "molho branco com Frango",
+      "price": 7000,
+      "imagen": "img/Frepollo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Bolonhesa",
+      "description": "molho com carne",
+      "price": 7500,
+      "imagen": "img/Bolo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Pesto com Noz",
+      "description": "noz, alho e salsa",
+      "price": 7200,
+      "imagen": "img/Pesto.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Carbonara",
+      "description": "Creme, bacon e cebolinha",
+      "price": 7500,
+      "imagen": "img/Carbonara.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MOLHOS DIVERSOS",
+      "description": "MANTEIGA, AZEITE DE OLIVA COM ALHO E PARMESÃO",
+      "price": 6000,
+      "imagen": "img/218.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Frango (peito)",
+      "description": "Com fritas, purê, salada ou arroz",
+      "price": 20000,
+      "imagen": "img/pollogri.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Bife de Chorizo",
+      "description": "Com fritas, purê, salada ou arroz",
+      "price": 32000,
+      "imagen": "img/20250815_151841.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Bife de Lombo",
+      "description": "Com fritas, purê, salada ou arroz",
+      "price": 34000,
+      "imagen": "img/Bifedelomo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "MINI BIFE DE CHORIZO",
+      "description": "Com fritas, purê, salada ou arroz",
+      "price": 28000,
+      "imagen": "img/minibi.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "POR PORÇÃO",
+      "description": "PURÊ DE BATATA, ARROZ, SALADA OU BATATAS FRITAS",
+      "price": 12000,
+      "imagen": "img/Espepollo.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "NUGGETS KIDS",
+      "description": "FRANGO COM FRITAS OU PURÊ",
+      "price": 17000,
+      "imagen": "img/Nages.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": " NHOQUE KIDS",
+      "description": "filetto ou creme",
+      "price": 17000,
+      "imagen": "img/Ñoquiskit.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Milanesa Pesto",
+      "description": "Milanesa de Carne Bovina com nhoque em molho pesto",
+      "price": 20000,
+      "imagen": "img/Milapesto.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Frango com COGUMELOS",
+      "description": "Em molho de cogumelos com batatas fritas",
+      "price": 23500,
+      "imagen": "img/Pechuchapi.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "BIFE DE CHORIZO A CABALLO",
+      "description": "COM DOIS OVOS FRITOS, BATATAS FRITAS",
+      "price": 33000,
+      "imagen": "img/Tari.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "LOMBO À LA RIOJANA",
+      "description": "COM CEBOLA, PIMENTÕES E OVO FRITO COM FRITAS",
+      "price": 35000,
+      "imagen": "img/Matrio.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Lombo CACIO E PEPE",
+      "description": "Bife de lombo grelhado com espaguete em pimenta e queijo",
+      "price": 34000,
+      "imagen": "img/Pepe.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Lombo com COGUMELOS",
+      "description": "Bife de lombo grelhado em molho de cogumelos com batatas fritas",
+      "price": 36000,
+      "imagen": "img/Lochapi.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Milanesa Espaguete",
+      "description": "MILANESA DE CARNE BOVINA ESPAGUETE COM MOLHO ROSA",
+      "price": 20000,
+      "imagen": "img//Tortasnueva.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Frango Teriyaki",
+      "description": "FRANGO TERIYAKI\nPeito em molho doce com arroz e vegetais salteados",
+      "price": 22500,
+      "imagen": "img//Tortasnueva.jpg",
+      "category": "FOODS"
+    },
+    {
+      "name": "Linha Coca-Cola",
+      "description": "zeros e clássicas",
+      "price": 4000,
+      "imagen": "img/bebidas.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Água Mineralizada e Filtrada Local",
+      "description": "água fria, natural e com gás",
+      "price": 3500,
+      "imagen": "img/agua.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Adicional de Limão",
+      "description": "Adicional de limão",
+      "price": 400,
+      "imagen": "img/20250903_093625.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Suco de Laranja Fresco",
+      "description": "suco de laranja espremido na hora",
+      "price": 6600,
+      "imagen": "img/Exprimido.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Milkshake OREO",
+      "description": "sorvete de creme, com Oreos e chantilly",
+      "price": 9400,
+      "imagen": "img/miloreo.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Smoothies (Vitaminas)",
+      "description": "com frutas da estação (base de água, leite ou suco)",
+      "price": 7700,
+      "imagen": "img/licuado.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Limonada de Menta com Gengibre",
+      "description": "Limonada de menta com gengibre",
+      "price": 6800,
+      "imagen": "img/limo.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Limonada ",
+      "description": "Limonada simples",
+      "price": 6600,
+      "imagen": "img/Limosim.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "STELLA ARTOIS (410cc - Garrafa Pequena)",
+      "description": "garrafa pequena",
+      "price": 7000,
+      "imagen": "img/Coroa.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "CORONA",
+      "description": "garrafa pequena",
+      "price": 7500,
+      "imagen": "img/Estelar.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Trumpeter Malbec",
+      "description": "Trumpeter Malbec (750cc) ",
+      "price": 25000,
+      "imagen": "img/20250903_112612.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Trumpeter Cabernet",
+      "description": "Trumpeter Cabernet (750cc)",
+      "price": 25000,
+      "imagen": "img/20250903_112534.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Portillo Malbec",
+      "description": "Portillo Malbec (750cc)",
+      "price": 17000,
+      "imagen": "img/20250903_111015.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Trumpeter Sauvignon Blanc",
+      "description": "Trumpeter Sauvignon Blanc (750cc)",
+      "price": 25000,
+      "imagen": "img/20250903_112257.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Taça de Vinho",
+      "description": "BRANCO ou TINTO",
+      "price": 7500,
+      "imagen": "img/20250903_124351.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Portillo Rosé Malbec",
+      "description": "Portillo Rosé Malbec (Vinho fresco e fácil de beber)",
+      "price": 17000,
+      "imagen": "img/20250903_110955.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Champanhe Chandon",
+      "description": "Champanhe Chandon (187cc)",
+      "price": 15000,
+      "imagen": "img/20250903_113545.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Limonada de Toranja (Pomelada)",
+      "description": "Limonada natural de toranja",
+      "price": 7000,
+      "imagen": "img/pomelada.jpg",
+      "category": "DRINKS"
+    },
+    {
+      "name": "Presunto Cozido e Queijo ",
+      "description": "ciabatta, pão pita",
+      "price": 13500,
+      "imagen": "img/20250806_102519.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Misto Quente (Tostado Mixto)",
+      "description": "4 triângulos de presunto e queijo",
+      "price": 14000,
+      "imagen": "img/tm.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Presunto Cru, Queijo e Tomate ",
+      "description": "Presunto cru, queijo e tomate ",
+      "price": 18000,
+      "imagen": "img/Jqyt.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Chipa Tostado ",
+      "description": "com presunto e queijo 15.000, cheddar e presunto 16.000",
+      "price": 15000,
+      "imagen": "img/chipjyq.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Sanduíche de Lombo (Lomito) simples",
+      "description": "SIMPLES no pão ciabatta, com batatas fritas",
+      "price": 21500,
+      "imagen": "img/lomito.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Sanduíche de Lombo CLÁSSICO (Lomito)",
+      "description": "CLÁSSICO (alface, tomate, presunto e queijo) no pão ciabatta, com batatas fritas",
+      "price": 23500,
+      "imagen": "img/loclacico.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Sanduíche de Lombo BACON (Lomito)",
+      "description": "BACON (queijo cheddar, bacon e tomate) no pão ciabatta, com batatas fritas",
+      "price": 25500,
+      "imagen": "img/lombaco.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Hambúrguer NOVILHO",
+      "description": " MISTURA DE CARNES, BACON\n TOMATE, ALFACE E QUEIJO CHEDDAR",
+      "price": 18000,
+      "imagen": "img/Bacon.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Hambúrguer BLUE",
+      "description": " MISTURA DE CARNES, ROQUEFORT,\n CEBOLA SALTEADA, QUEIJO TYBO",
+      "price": 18000,
+      "imagen": "img/20250816_135012.jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Hambúrguer NOT COW",
+      "description": " À BASE DE PROTEÍNA DE ERVILHA\n com rúcula, tomate e queijo derretido",
+      "price": 16500,
+      "imagen": "img/Bacon .jpg",
+      "category": "SANDWICHES"
+    },
+    {
+      "name": "Empanadas",
+      "description": "CARNE BOVINA CORTADA À FACA",
+      "price": 3000,
+      "imagen": "img/Imagen de WhatsApp 2025-11-07 a las 21.45.45_8d843d6a.jpg",
+      "category": "SNACKS_APPETIZERS"
+    },
+    {
+      "name": "Palitos de Mussarela Empanados",
+      "description": "Palitos de Mussarela Empanados",
+      "price": 17000,
+      "imagen": "img/muzza.jpg",
+      "category": "SNACKS_APPETIZERS"
+    },
+    {
+      "name": "TORTILHA MADRILENHA",
+      "description": "TORTILHA DE BATATA, CEBOLA, COROADA COM PRESUNTO CRU, TOMATE",
+      "price": 24000,
+      "imagen": "img/Faina.jpg",
+      "category": "SNACKS_APPETIZERS"
+    },
+    {
+      "name": "Panqueca de Doce de Leite",
+      "description": "Panqueca de doce de leite",
+      "price": 13500,
+      "imagen": "img/Captura de pantalla 2025-11-07 220504.png",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "BANANA QUENTE (HOT BANANA)",
+      "description": "Base de cheesecake com bananas flambadas e molho de doce de leite",
+      "price": 14400,
+      "imagen": "img/Hotbana.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "Pudim Caseiro (Flan)",
+      "description": ". $8.000, com creme e doce de leite $10.000",
+      "price": 10000,
+      "imagen": "img/Flan.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "Salada de Frutas ",
+      "description": ". $10.000 - com bola de sorvete $13.500",
+      "price": 13500,
+      "imagen": "img/Ensfruta.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "Sorvete",
+      "description": "(bolas): $8.000 (sabores: doce de leite, chocolate, creme americano)",
+      "price": 8000,
+      "imagen": "img/Helado.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "MAÇÃ QUENTE (APPLE HOT)",
+      "description": "Crumble de maçã quente com sorvete de baunilha e amêndoas torradas",
+      "price": 14500,
+      "imagen": "img/Apeljot.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "BROWNIE QUENTE",
+      "description": "Presunto cru, presunto cozido, queijo Roquefort, queijo Tybo, tomate cereja, nozes. Inclui duas garrafas pequenas de Stella.",
+      "price": 12500,
+      "imagen": "img/Brouni.jpg",
+      "category": "DESSERTS"
+    },
+    {
+      "name": "Jack Daniel's",
+      "description": "Jack Daniel's",
+      "price": 14500,
+      "imagen": "img/Daniel’s.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Johnny Walker Black",
+      "description": "Johnny Walker Black",
+      "price": 15400,
+      "imagen": "img/Black.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Johnny Walker Red",
+      "description": "Johnny Walker Red",
+      "price": 13400,
+      "imagen": "img/Ret.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Licor Baileys",
+      "description": "Licor Baileys",
+      "price": 12000,
+      "imagen": "img/bailes.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Fernet com Coca-Cola",
+      "description": "Fernet com Coca-Cola",
+      "price": 11000,
+      "imagen": "img/Ferne.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Gin Tônica Beefeater",
+      "description": "Gin Tônica Beefeater",
+      "price": 11000,
+      "imagen": "img/Ginton.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Gancia Spritzer (Batido)",
+      "description": "Gancia Spritzer",
+      "price": 10000,
+      "imagen": "img/Gancia.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Aperol com Laranja",
+      "description": "Aperol com laranja",
+      "price": 10000,
+      "imagen": "img/Api.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "HAPPY HOUR",
+      "description": "Aperol laranja $10000 OU CERVEJA $7000 todos os dias das 19:00 às 21:00",
+      "price": 0,
+      "imagen": "img/Api.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "Champanhe Salentein Brut Nature",
+      "description": "Champanhe Salentein Brut Nature",
+      "price": 30000,
+      "imagen": "img/20250903_104921.jpg",
+      "category": "COCKTAILS_SPIRITS"
+    },
+    {
+      "name": "MENU DO DIA ou SUGESTÕES",
+      "description": "Prato principal do menu do dia + bebida + sobremesa ou café, Sugestão é apenas o prato",
+      "price": 0,
+      "imagen": "img/.jpg",
+      "category": "EVENTS"
+    }
+  ]
