@@ -99,26 +99,26 @@
       transform: scale(1.05);
     }
 
+    /* 🟢 NUEVO DISEÑO RESPONSIVE AUTOMÁTICO */
     #product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 15px;
-      padding: 10px;
+      padding: 15px;
     }
 
     .item {
       background: rgba(255,255,255,0.95);
-      border-radius: 10px;
-      width: 280px;
+      border-radius: 12px;
+      width: 100%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       overflow: hidden;
-      transition: 0.2s;
     }
 
     .item img {
       width: 100%;
-      height: 180px;
+      height: auto;
+      aspect-ratio: 1 / 1; /* Imagen cuadrada auto */
       object-fit: cover;
     }
 
@@ -181,7 +181,7 @@
   <!-- ⬆️ Flecha para subir -->
   <button id="btnUp">⬆️</button>
 
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const USER = 'cholose10';
     const REPO = 'cartafrench';
@@ -204,7 +204,6 @@
       btnEn.classList.toggle('active', idiomaActual === 'en');
       btnPt.classList.toggle('active', idiomaActual === 'pt');
 
-      // 🪄 Cambiar texto del banner
       if (idiomaActual === 'es') banner.textContent = "¡Bienvenidos a Tilo Café French!";
       if (idiomaActual === 'en') banner.textContent = "Welcome to Tilo Café French!";
       if (idiomaActual === 'pt') banner.textContent = "Bem-vindo ao Tilo Café French!";
@@ -212,53 +211,56 @@
 
     async function load() {
       actualizarBotones();
-      let filename = 'productos.json';
-      if (idiomaActual === 'en') filename = 'productos-en.json';
-      if (idiomaActual === 'pt') filename = 'productos-port.json';
+
+      let filename = "productos.json";
+      if (idiomaActual === "en") filename = "productos-en.json";
+      if (idiomaActual === "pt") filename = "productos-port.json";
 
       const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
 
       try {
         const res = await fetch(RAW_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error('Error cargando ' + RAW_URL);
+        if (!res.ok) throw new Error("Error cargando productos");
+
         const data = await res.json();
 
         productos = data.map(p => ({
           nombre:
-            idiomaActual === 'es' ? p.nombre :
-            idiomaActual === 'en' ? p.name :
+            idiomaActual === "es" ? p.nombre :
+            idiomaActual === "en" ? p.name :
             p.name,
           descripcion:
-            idiomaActual === 'es' ? p.descripcion :
-            idiomaActual === 'en' ? p.description :
+            idiomaActual === "es" ? p.descripcion :
+            idiomaActual === "en" ? p.description :
             p.description,
           precio: p.precio || p.price,
           imagen: p.imagen,
           categoria:
-            idiomaActual === 'es' ? p.categoria :
-            idiomaActual === 'en' ? p.category :
+            idiomaActual === "es" ? p.categoria :
+            idiomaActual === "en" ? p.category :
             p.category
         }));
 
         renderCategories();
-        renderProducts('Todos');
-      } catch (err) {
-        console.error(err);
+        renderProducts("Todos");
+
+      } catch (e) {
+        console.error(e);
         productList.innerHTML = '<div class="msg">⚠️ No se pudieron cargar los productos.</div>';
       }
     }
 
     function scrollToProducts() {
-      productList.scrollIntoView({ behavior: 'smooth' });
+      productList.scrollIntoView({ behavior: "smooth" });
     }
 
     function renderCategories() {
-      const categorias = ['Todos', ...new Set(productos.map(p => p.categoria).filter(Boolean))];
-      categoryContainer.innerHTML = '';
+      const categorias = ["Todos", ...new Set(productos.map(p => p.categoria).filter(Boolean))];
+      categoryContainer.innerHTML = "";
       categorias.forEach(cat => {
-        const btn = document.createElement('button');
+        const btn = document.createElement("button");
         btn.textContent = cat;
-        btn.addEventListener('click', () => {
+        btn.addEventListener("click", () => {
           renderProducts(cat);
           scrollToProducts();
         });
@@ -267,19 +269,21 @@
     }
 
     function renderProducts(categoria) {
-      productList.innerHTML = '';
-      const lista = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
+      productList.innerHTML = "";
+      const lista = categoria === "Todos" ? productos : productos.filter(p => p.categoria === categoria);
+
       if (lista.length === 0) {
         productList.innerHTML = '<div class="msg">No hay productos disponibles.</div>';
         return;
       }
+
       lista.forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'item';
+        const div = document.createElement("div");
+        div.className = "item";
         div.innerHTML = `
           <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ''}</p>
+          <p>${p.descripcion || ""}</p>
           <span class="price">$${p.precio}</span>`;
         productList.appendChild(div);
       });
@@ -289,62 +293,48 @@
       const q = searchInput.value.toLowerCase().trim();
       const res = productos.filter(p =>
         p.nombre.toLowerCase().includes(q) ||
-        (p.descripcion || '').toLowerCase().includes(q) ||
+        (p.descripcion || "").toLowerCase().includes(q) ||
         p.categoria.toLowerCase().includes(q)
       );
+
       if (res.length === 0) {
         productList.innerHTML = '<div class="msg">🔍 No se encontraron resultados.</div>';
         return;
       }
-      productList.innerHTML = '';
+
+      productList.innerHTML = "";
       res.forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'item';
+        const div = document.createElement("div");
+        div.className = "item";
         div.innerHTML = `
           <img src="${p.imagen}" alt="${p.nombre}">
           <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ''}</p>
+          <p>${p.descripcion || ""}</p>
           <span class="price">$${p.precio}</span>`;
         productList.appendChild(div);
       });
+
       scrollToProducts();
     }
 
-    // 🌍 Eventos de idioma
-    btnEs.addEventListener('click', () => {
-      idiomaActual = 'es';
-      localStorage.setItem('idioma', 'es');
-      load();
+    btnEs.addEventListener("click", () => { idiomaActual = "es"; localStorage.setItem("idioma", "es"); load(); });
+    btnEn.addEventListener("click", () => { idiomaActual = "en"; localStorage.setItem("idioma", "en"); load(); });
+    btnPt.addEventListener("click", () => { idiomaActual = "pt"; localStorage.setItem("idioma", "pt"); load(); });
+
+    btnSearch.addEventListener("click", buscar);
+    searchInput.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+
+    window.addEventListener("scroll", () => {
+      btnUp.style.display = window.scrollY > 300 ? "block" : "none";
     });
 
-    btnEn.addEventListener('click', () => {
-      idiomaActual = 'en';
-      localStorage.setItem('idioma', 'en');
-      load();
-    });
-
-    btnPt.addEventListener('click', () => {
-      idiomaActual = 'pt';
-      localStorage.setItem('idioma', 'pt');
-      load();
-    });
-
-    btnSearch.addEventListener('click', buscar);
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') buscar();
-    });
-
-    // ⬆️ Flecha subir
-    window.addEventListener('scroll', () => {
-      btnUp.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-
-    btnUp.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    btnUp.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     load();
   });
-  </script>
+</script>
+
 </body>
 </html>
