@@ -10,7 +10,7 @@
   {
     "nombre": "Café expresso jarrito",
     "descripcion": "Café americano",
-    "precio": "3500",
+    "precio": "3500000",
     "imagen": "img/cj.jpg",
     "categoria": "CAFETERÍA",
     "id": "prod0002"
