@@ -3,7 +3,7 @@
     "nome": "Café expresso",
     "descricao": "Café pequeno",
     "preco": "3300",
-    "imagem": "img/20250806_112815.jpg",
+    "imagen": "img/20250806_112815.jpg",
     "categoria": "Cafeteria",
     "id": "prod0001"
   },
@@ -11,7 +11,7 @@
     "nome": "Café expresso em caneca",
     "descricao": "Café americano",
     "preco": "3500",
-    "imagem": "img/cj.jpg",
+    "imagen": "img/cj.jpg",
     "categoria": "Cafeteria",
     "id": "prod0002"
   },
@@ -423,7 +423,6 @@
     "categoria": "Comidas",
     "id": "prod0053"
   },
-[
   {
     "nome": "Omelete de presunto e queijo",
     "descricao": "Omelete de presunto e queijo",
@@ -632,7 +631,6 @@
     "categoria": "Comidas",
     "id": "prod0079"
   },
-[
   {
     "nome": "Frango (peito)",
     "descricao": "Com batata frita, purê, salada ou arroz",
@@ -913,7 +911,6 @@
     "categoria": "Sanduíches",
     "id": "prod0114"
   },
-[
   {
     "nome": "Presunto cru, queijo e tomate",
     "descricao": "Presunto cru, queijo e tomate",
