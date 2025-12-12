@@ -1,386 +1,696 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Carta - Tilo Café French</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Carta</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f7f3f0;
-      color: #333;
+    body{font-family:Arial,Helvetica,sans-serif;margin:18px;background:#f7f3f0;color:#333}
+    h1{text-align:center;color:#806250;margin-bottom:10px}
+    .topRow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px}
+    .controls{display:flex;gap:8px;align-items:center}
+    input[type="text"], input[type="password"], textarea{
+      padding:8px;border-radius:6px;border:1px solid #ccc;width:100%;box-sizing:border-box
     }
-    h1 {
-      text-align: center;
-      color: #806250;
+    button{
+      background:#806250;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer
     }
-    form {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: box-shadow 0.5s;
+    button.secondary{background:#5c8a50}
+    button.danger{background:#c0392b}
+    form{background:#fff;padding:12px;border-radius:10px;margin-bottom:12px;display:none}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
+    th{background:#806250;color:#fff}
+    img.mini{max-width:60px;border-radius:6px}
+    #guardarTodos{
+      position:fixed;top:18px;right:18px;z-index:1200;padding:10px 14px;
+      background:#a07b68;color:#fff;border-radius:8px
     }
-    form.editando {
-      box-shadow: 0 0 15px #806250;
+    .small{font-size:13px;color:#666}
+    .toast {
+      position: fixed; top: 24px; right: 24px; z-index: 2000; padding: 12px 16px;
+      border-radius: 8px; color: white; font-weight: 600; box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      opacity: 0; transform: translateY(-10px); transition: opacity .25s ease, transform .25s ease; max-width: 360px;
     }
-    input, textarea, datalist {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background: #806250;
-      color: white;
-    }
-    img {
-      max-width: 60px;
-      border-radius: 6px;
-    }
-    button {
-      cursor: pointer;
-      background: #806250;
-      color: white;
-      border: none;
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #a07b68;
-    }
-    #preview {
-      max-width: 100px;
-      margin-top: 5px;
-      display: block;
-      border-radius: 8px;
-    }
-    #search {
-      width: 60%;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .search-container {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-    #btnArriba {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #806250;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      display: none;
-      z-index: 100;
-      transition: background 0.3s;
-    }
-    #btnArriba:hover {
-      background: #a07b68;
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.ok { background: #2ecc71; }
+    .toast.info { background: #3498db; }
+    .toast.err { background: #e74c3c; }
+
+    @media(max-width:720px){
+      .topRow{flex-direction:column;align-items:flex-start}
+      table{font-size:13px}
     }
   </style>
 </head>
 <body>
-  <h1>Panel de Administración - Tilo Café French</h1>
 
-  <!-- TOKEN -->
-  <div style="margin-bottom:15px; background:#eee; padding:10px; border-radius:8px;">
-    <label for="token">Token de GitHub:</label><br>
-    <input type="password" id="token" placeholder="Pega tu token aquí" style="width:70%; padding:8px;">
-    <button onclick="saveToken()">Guardar Token</button>
-    <button onclick="clearToken()">Borrar Token</button>
-    <p id="tokenStatus"></p>
+<h1>Admin Carta</h1>
+
+<div class="topRow">
+  <div style="flex:1">
+    <div style="display:flex;gap:8px;align-items:center">
+      <label style="min-width:40px">Token:</label>
+      <input type="password" id="token" placeholder="Pegar token de GitHub" style="max-width:420px">
+      <button onclick="saveToken()">Guardar</button>
+      <button onclick="clearToken()">Borrar</button>
+      <span class="small" id="tokenStatus" style="margin-left:8px">No guardado</span>
+    </div>
   </div>
 
-  <!-- BUSCADOR -->
-  <div class="search-container">
-    <input type="text" id="search" placeholder="Buscar producto...">
-    <button onclick="filterProducts()">🔍 Buscar</button>
+  <div class="controls">
+    <input id="search" placeholder="Buscar..." oninput="filterProducts()"
+           style="min-width:180px;max-width:360px">
+    <button id="toggleFormBtn" onclick="toggleForm()">+ Agregar producto</button>
+  </div>
+</div>
+
+<button id="guardarTodos" onclick="guardarTodosLosPrecios()">
+  💾 Guardar TODOS los cambios
+</button>
+
+<form id="form">
+  <input type="hidden" id="editIndex">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div>
+      <label>Nombre</label>
+      <input id="nombre" type="text">
+    </div>
+
+    <div>
+      <label>Precio</label>
+      <input id="precio" type="text" placeholder="Ej: 3400">
+    </div>
+
+    <div style="grid-column:1/3">
+      <label>Descripción</label>
+      <textarea id="descripcion" rows="3"></textarea>
+    </div>
+
+    <div>
+      <label>Imagen (ruta o URL)</label>
+      <input id="imagen" type="text" oninput="previewImage()">
+      <img id="preview" class="previewImg" style="display:none;max-width:120px;border-radius:6px;margin-top:8px">
+    </div>
+
+    <div>
+      <label>Categoría</label>
+      <input id="categoria" type="text">
+    </div>
   </div>
 
-  <!-- FORMULARIO -->
-  <form id="form">
-    <input type="hidden" id="editIndex">
-    <label>Nombre</label>
-    <input type="text" id="nombre" required>
+  <div style="margin-top:10px;display:flex;gap:8px">
+    <button type="button" onclick="guardarFormulario()">Guardar</button>
+    <button type="button" onclick="cancelForm()" style="background:#999">Cancelar</button>
+  </div>
+</form>
 
-    <label>Descripción</label>
-    <textarea id="descripcion" required></textarea>
+<table aria-label="Productos">
+  <thead>
+    <tr>
+      <th style="width:80px">Imagen</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Categoría</th>
+      <th style="width:100px">Precio</th>
+      <th style="width:180px">Acciones</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
 
-    <label>Precio</label>
-    <input type="number" id="precio" required>
+<script>
 
-    <label>Imagen (ej: img/foto.jpg)</label>
-    <input type="text" id="imagen" required oninput="previewImage()">
-    <img id="preview" src="" alt="Vista previa">
+/**************************************
+ * 1) CONFIG — MODIFICAR SOLO ESTO:
+ **************************************/
+const USERNAME = "cholose10";   // ← CAMBIAR A TU USER
+const REPO = "cartafrench";     // ← CAMBIAR A TU REPO
+const BRANCH = "main";
 
-    <label>Categoría</label>
-    <input list="listaCategorias" type="text" id="categoria" placeholder="Ej: CAFETERÍA, POSTRES, etc." required>
-    <datalist id="listaCategorias"></datalist>
+const MAIN_JSON = "productos.json";
+const EN_JSON = "productos-en.json";
+const PT_JSON = "productos-port.json";
 
-    <button type="submit">Guardar</button>
-  </form>
+let productos = [];
+/**********************************************************
+ * Toast
+ **********************************************************/
+function showToast(msg, variant = 'ok', timeout = 3000){
+  const div = document.createElement('div');
+  div.className = 'toast ' + variant;
+  div.innerText = msg;
+  document.body.appendChild(div);
+  requestAnimationFrame(()=>div.classList.add('show'));
+  setTimeout(()=>{
+    div.classList.remove('show');
+    setTimeout(()=>div.remove(),300);
+  }, timeout);
+}
 
-  <!-- TABLA -->
-  <h2 id="tablaTitulo">Productos</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio</th><th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+/**********************************************************
+ * Token
+ **********************************************************/
+function saveToken(){
+  const t = document.getElementById('token').value.trim();
+  if(!t){ showToast("Pegá tu token", "err"); return; }
+  localStorage.setItem("github_token", t);
+  document.getElementById("tokenStatus").innerText = "Token guardado";
+  showToast("Token guardado");
+}
 
-  <button id="btnArriba" onclick="subir()">⬆️</button>
+function clearToken(){
+  localStorage.removeItem("github_token");
+  document.getElementById("tokenStatus").innerText = "Token borrado";
+  showToast("Token borrado","info");
+}
 
- <script>
-  const USERNAME = "cholose10";
-  const REPO = "cartafrench"; // ⚠️ cambiar por "cartafrench" en la otra sucursal
-  const FILE_PATH = "productos.json";
-  let productos = [];
-  let autoSaveTimer = null;
+function getToken(){
+  return localStorage.getItem("github_token");
+}
 
-  // 🟤 TOKEN
-  function saveToken(){
-    const t=document.getElementById('token').value.trim();
-    if(t){ 
-      localStorage.setItem('github_token',t); 
-      document.getElementById('token').value=''; 
-      document.getElementById('tokenStatus').innerText="✅ Token guardado."; 
-    }
+(function initToken(){
+  const t = getToken();
+  if(t) document.getElementById("tokenStatus").innerText = "Token guardado";
+})();
+
+/**********************************************************
+ * Utilidades
+ **********************************************************/
+function sanitizePrice(v){
+  return String(v || "").replace(/[^\d]/g,"");
+}
+
+function extractNumberFromProdId(id){
+  if(!id) return null;
+  const m = String(id).match(/(\d+)$/);
+  return m ? Number(m[1]) : null;
+}
+
+function generateNextProdId(){
+  let max = 0;
+  for(const p of productos){
+    const num = extractNumberFromProdId(p.id || "");
+    if(Number.isFinite(num) && num > max) max = num;
   }
-  function clearToken(){ 
-    localStorage.removeItem('github_token'); 
-    document.getElementById('tokenStatus').innerText="⚠️ Token borrado."; 
-  }
-  function getToken(){ return localStorage.getItem('github_token'); }
+  const next = max + 1;
+  return "prod" + String(next).padStart(4,"0");
+}
 
-  // 🟤 CARGAR PRODUCTOS
-  async function loadProducts(){
-    const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
-    const res=await fetch(url);
-    productos=await res.json();
-    render(productos);
-    updateCategoryList();
-  }
+/**********************************************************
+ * Ordenar campos por idioma
+ **********************************************************/
+function ordenarCamposPorIdioma(item, idioma){
+  const id = item.id || "";
 
-  // 🟤 RENDER TABLA
-  function render(lista){
-    const tb=document.getElementById('tbody'); tb.innerHTML='';
-    lista.forEach((p,i)=>{
-      tb.innerHTML+=`
-        <tr>
-          <td><img src="${p.imagen}" alt=""></td>
-          <td>${p.nombre}</td>
-          <td>${p.descripcion}</td>
-          <td>${p.categoria}</td>
-          <td>$${p.precio}</td>
-          <td>
-            <button onclick="edit(${i})">Editar</button>
-            <button onclick="del(${i})">Eliminar</button>
-          </td>
-        </tr>`;
-    });
-  }
-
-  // 🟤 ACTUALIZAR CATEGORÍAS
-  function updateCategoryList(){
-    const cats=[...new Set(productos.map(p=>p.categoria))].sort();
-    const datalist=document.getElementById('listaCategorias');
-    datalist.innerHTML='';
-    cats.forEach(c=>{
-      const opt=document.createElement('option');
-      opt.value=c;
-      datalist.appendChild(opt);
-    });
-  }
-
-  // 🟤 BUSCADOR
-  const searchInput=document.getElementById("search");
-  searchInput.addEventListener("keypress",function(e){
-    if(e.key==="Enter"){
-      e.preventDefault();
-      filterProducts();
-    }
-  });
-
-  function filterProducts(){
-    const q=searchInput.value.toLowerCase().trim();
-    if(!q){ render(productos); return; }
-    const filtrados=productos.filter(p=>
-      p.nombre.toLowerCase().includes(q) ||
-      p.descripcion.toLowerCase().includes(q) ||
-      p.categoria.toLowerCase().includes(q)
-    );
-    render(filtrados);
-    if(filtrados.length>0){
-      document.getElementById("tablaTitulo").scrollIntoView({behavior:"smooth"});
-    }
-  }
-
-  // 🟤 PREVIEW
-  function previewImage(){
-    const src=document.getElementById('imagen').value.trim();
-    document.getElementById('preview').src=src||'';
-  }
-
-  // 🟤 NOTIFICACIÓN (sin alert)
-  function mostrarNotificacion(mensaje, exito = true) {
-    const notif = document.getElementById('notificacion');
-    notif.style.background = exito ? '#806250' : '#c0392b';
-    notif.innerText = mensaje;
-    notif.style.display = 'block';
-    setTimeout(() => notif.style.display = 'none', 3000);
-  }
-
-  // 🟤 GUARDAR EN GITHUB
-  async function saveToGitHub(newContent){
-    const TOKEN=getToken();
-    if(!TOKEN){ mostrarNotificacion("⚠️ Guardá tu token primero.", false); return; }
-    const apiUrl=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`;
-    const getRes=await fetch(apiUrl,{headers:{Authorization:`token ${TOKEN}`}});
-    const data=await getRes.json();
-    const updateRes=await fetch(apiUrl,{
-      method:"PUT",
-      headers:{
-        "Authorization":`token ${TOKEN}`,
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        message:"Auto guardado desde admin.html",
-        content:btoa(unescape(encodeURIComponent(newContent))),
-        sha:data.sha
-      })
-    });
-    if(updateRes.ok){ mostrarNotificacion("✅ Cambios guardados en GitHub."); }
-    else{ mostrarNotificacion("❌ Error al guardar en GitHub.", false); }
-  }
-
-  // 🟤 AUTO GUARDADO
-  function autoGuardar(){
-    clearTimeout(autoSaveTimer);
-    autoSaveTimer = setTimeout(()=>{
-      const idx=document.getElementById('editIndex').value;
-      if(idx==='') return; // solo si estamos editando
-      productos[idx]={
-        nombre:document.getElementById('nombre').value,
-        descripcion:document.getElementById('descripcion').value,
-        precio:parseFloat(document.getElementById('precio').value),
-        imagen:document.getElementById('imagen').value,
-        categoria:document.getElementById('categoria').value
-      };
-      saveToGitHub(JSON.stringify(productos,null,2));
-    },1000); // guarda 1 segundo después de dejar de escribir
-  }
-
-  // 🟤 GUARDAR PRODUCTO MANUAL
-  document.getElementById('form').onsubmit=function(e){
-    e.preventDefault();
-    const idx=document.getElementById('editIndex').value;
-    const prod={
-      nombre:document.getElementById('nombre').value,
-      descripcion:document.getElementById('descripcion').value,
-      precio:parseFloat(document.getElementById('precio').value),
-      imagen:document.getElementById('imagen').value,
-      categoria:document.getElementById('categoria').value
+  if(idioma === "EN"){
+    return {
+      id,
+      name: item.name || item.nombre || "",
+      description: item.description || item.descripcion || "",
+      price: item.price || item.precio || "",
+      image: item.image || item.imagen || "",
+      category: item.category || item.categoria || ""
     };
-    if(idx===''){ productos.push(prod);} 
-    else { productos[idx]=prod; document.getElementById('editIndex').value='';}
+  }
+
+  if(idioma === "PT"){
+    return {
+      nome: item.nome || item.nombre || "",
+      descricao: item.descricao || item.descripcion || "",
+      preco: item.preco || item.precio || "",
+      imagem: item.imagem || item.imagen || "",
+      categoria: item.categoria || item.category || "",
+      id
+    };
+  }
+
+  return {
+    nombre: item.nombre || item.name || "",
+    descripcion: item.descripcion || item.description || "",
+    precio: item.precio || item.price || "",
+    imagen: item.imagen || item.image || "",
+    categoria: item.categoria || item.category || "",
+    id
+  };
+}
+
+/**********************************************************
+ * Cargar productos.json
+ **********************************************************/
+async function loadProducts(){
+  try{
+    const r = await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/${BRANCH}/${MAIN_JSON}`);
+    if(!r.ok) throw new Error("No se pudo cargar productos.json");
+    const arr = await r.json();
+
+    productos = arr.map(item => ({
+      id: item.id || "",
+      nombre: item.nombre || item.name || "",
+      descripcion: item.descripcion || item.description || "",
+      precio: String(item.precio || item.price || ""),
+      imagen: item.imagen || item.image || "",
+      categoria: item.categoria || item.category || ""
+    }));
+
+    let fixed = false;
+    productos.forEach(p=>{
+      if(!p.id || !/^prod\d{4}$/.test(p.id)){
+        p.id = generateNextProdId();
+        fixed = true;
+      }
+    });
+
+    if(fixed) showToast("IDs reparados","info");
+
     render(productos);
-    updateCategoryList();
-    this.reset();
-    document.getElementById('preview').src='';
-    saveToGitHub(JSON.stringify(productos,null,2));
+
+  }catch(e){
+    console.error(e);
+    showToast("Error cargando productos.json","err");
+  }
+}
+
+/**********************************************************
+ * Render tabla
+ **********************************************************/
+function render(lista){
+  const tb = document.getElementById("tbody");
+  tb.innerHTML = "";
+
+  lista.forEach((p,i)=>{
+    const tr = document.createElement("tr");
+
+    // imagen
+    const tdImg = document.createElement("td");
+    const im = document.createElement("img");
+    im.className = "mini";
+    im.src = p.imagen || "";
+    im.onerror = ()=>im.style.display="none";
+    tdImg.appendChild(im);
+    tr.appendChild(tdImg);
+
+    // nombre
+    const tdNom = document.createElement("td");
+    const inNom = document.createElement("input");
+    inNom.type = "text";
+    inNom.value = p.nombre;
+    inNom.oninput = e => p.nombre = e.target.value;
+    tdNom.appendChild(inNom);
+    tr.appendChild(tdNom);
+
+    // descripcion
+    const tdDes = document.createElement("td");
+    const inDes = document.createElement("textarea");
+    inDes.rows = 2;
+    inDes.value = p.descripcion;
+    inDes.oninput = e => p.descripcion = e.target.value;
+    tdDes.appendChild(inDes);
+    tr.appendChild(tdDes);
+
+    // categoria
+    const tdCat = document.createElement("td");
+    const inCat = document.createElement("input");
+    inCat.type = "text";
+    inCat.value = p.categoria;
+    inCat.oninput = e => p.categoria = e.target.value;
+    tdCat.appendChild(inCat);
+    tr.appendChild(tdCat);
+
+    // precio
+    const tdPre = document.createElement("td");
+    const inPre = document.createElement("input");
+    inPre.type = "text";
+    inPre.value = p.precio;
+    inPre.oninput = e => p.precio = e.target.value;
+    tdPre.appendChild(inPre);
+    tr.appendChild(tdPre);
+
+    // acciones
+    const tdAct = document.createElement("td");
+    const btnEdit = document.createElement("button");
+    const btnSave = document.createElement("button");
+    const btnDel = document.createElement("button");
+
+    btnSave.textContent = "Guardar";
+    btnSave.onclick = ()=>guardarFila(i);
+
+    btnEdit.textContent = "Editar";
+    btnEdit.style.background="#2980b9";
+    btnEdit.onclick = ()=>loadIntoForm(i);
+
+    btnDel.textContent = "Eliminar";
+    btnDel.className = "danger";
+    btnDel.onclick = ()=>eliminarProducto(i);
+
+    tdAct.appendChild(btnSave);
+    tdAct.appendChild(btnEdit);
+    tdAct.appendChild(btnDel);
+
+    tr.appendChild(tdAct);
+    tb.appendChild(tr);
+  });
+}
+
+/**********************************************************
+ * Formulario de edición
+ **********************************************************/
+function toggleForm(){
+  const f = document.getElementById("form");
+  const visible = f.style.display === "block";
+  f.style.display = visible ? "none" : "block";
+}
+
+function loadIntoForm(i){
+  const p = productos[i];
+  if(!p) return;
+
+  document.getElementById("editIndex").value = i;
+  document.getElementById("nombre").value = p.nombre;
+  document.getElementById("descripcion").value = p.descripcion;
+  document.getElementById("precio").value = p.precio;
+  document.getElementById("imagen").value = p.imagen;
+  document.getElementById("categoria").value = p.categoria;
+
+  previewImage();
+
+  document.getElementById("form").style.display = "block";
+
+  // ⭐ SCROLL AUTOMÁTICO AL FORMULARIO
+  document.getElementById("form").scrollIntoView({ behavior:"smooth", block:"start" });
+}
+
+function cancelForm(){
+  document.getElementById("editIndex").value = "";
+  document.getElementById("form").style.display = "none";
+}
+
+function previewImage(){
+  const v = document.getElementById("imagen").value.trim();
+  const img = document.getElementById("preview");
+  if(!v){ img.style.display="none"; return; }
+  img.src = v;
+  img.style.display="block";
+}
+
+function guardarFormulario(){
+  const i = document.getElementById("editIndex").value;
+  const obj = {
+    nombre: document.getElementById("nombre").value.trim(),
+    descripcion: document.getElementById("descripcion").value.trim(),
+    precio: sanitizePrice(document.getElementById("precio").value.trim()),
+    imagen: document.getElementById("imagen").value.trim(),
+    categoria: document.getElementById("categoria").value.trim()
+  };
+
+  if(!obj.nombre){ showToast("Falta nombre","err"); return; }
+  if(!obj.precio){ showToast("Falta precio","err"); return; }
+
+  if(i !== ""){
+    const idx = Number(i);
+    productos[idx] = { ...productos[idx], ...obj };
+  } else {
+    const id = generateNextProdId();
+    productos.push({ id, ...obj });
   }
 
-  // 🟤 EDITAR
-  function edit(i){
-    const tabla=document.getElementById('tbody');
-    const filas=tabla.querySelectorAll('tr');
-    const nombreSeleccionado=filas[i].children[1].innerText.trim();
+  render(productos);
+  showToast("Guardado local");
+  document.getElementById("form").style.display="none";
+}
 
-    const p=productos.find(prod=>prod.nombre.trim()===nombreSeleccionado);
-    const realIndex=productos.indexOf(p);
+/**********************************************************
+ * Eliminar
+ **********************************************************/
+function eliminarProducto(i){
+  if(!confirm("Eliminar producto?")) return;
+  productos.splice(i,1);
+  render(productos);
+}
 
-    document.getElementById('nombre').value=p.nombre;
-    document.getElementById('descripcion').value=p.descripcion;
-    document.getElementById('precio').value=p.precio;
-    document.getElementById('imagen').value=p.imagen;
-    document.getElementById('categoria').value=p.categoria;
-    document.getElementById('editIndex').value=realIndex;
-    document.getElementById('preview').src=p.imagen;
+/**********************************************************
+ * Tomar valores actuales de la tabla
+ **********************************************************/
+function refrescarArrayDesdeTabla(){
+  const filas = document.querySelectorAll("#tbody tr");
+  const nuevos = [];
 
-    const form=document.getElementById('form');
-    form.scrollIntoView({behavior:"smooth",block:"start"});
-    form.classList.add('editando');
-    setTimeout(()=>form.classList.remove('editando'),2000);
+  filas.forEach((fila, idx)=>{
+    const c = fila.querySelectorAll("td");
+
+    const nombre = c[1].querySelector("input").value.trim();
+    const descripcion = c[2].querySelector("textarea").value.trim();
+    const categoria = c[3].querySelector("input").value.trim();
+    const precio = sanitizePrice(c[4].querySelector("input").value.trim());
+
+    const id = productos[idx]?.id || generateNextProdId();
+    const imagen = productos[idx]?.imagen || "";
+
+    nuevos.push({ id, nombre, descripcion, categoria, precio, imagen });
+  });
+
+  productos = nuevos;
+}
+/**********************************************************
+ * GitHub - obtener info archivo
+ **********************************************************/
+async function githubGetFileInfo(path){
+  const token = getToken();
+  const headers = token
+    ? { Authorization: "token " + token, Accept: "application/vnd.github.v3+json" }
+    : { Accept: "application/vnd.github.v3+json" };
+
+  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`;
+  const res = await fetch(url, { headers });
+
+  if(!res.ok){
+    const txt = await res.text().catch(()=> "");
+    throw new Error(`GitHub GET ${path} → ${res.status}: ${txt}`);
   }
 
-  // 🟤 ELIMINAR
-  function del(i){
-    if(confirm('¿Eliminar producto?')){
-      const tabla=document.getElementById('tbody');
-      const nombre=tabla.querySelectorAll('tr')[i].children[1].innerText.trim();
-      const realIndex=productos.findIndex(prod=>prod.nombre.trim()===nombre);
-      productos.splice(realIndex,1);
-      render(productos);
-      updateCategoryList();
-      saveToGitHub(JSON.stringify(productos,null,2));
+  return await res.json();   // contiene .sha
+}
+
+/**********************************************************
+ * GitHub PUT archivo (con SHA obligatorio)
+ **********************************************************/
+async function githubPutFile(path, contentString, message, sha){
+  const token = getToken();
+  if(!token) throw new Error("Falta token");
+
+  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`;
+
+  const body = {
+    message,
+    content: btoa(unescape(encodeURIComponent(contentString))),
+    branch: BRANCH
+  };
+
+  if(sha) body.sha = sha;
+
+  const res = await fetch(url, {
+    method: "PUT",
+    headers:{
+      Authorization: "token " + token,
+      "Content-Type": "application/json",
+      Accept: "application/vnd.github.v3+json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await res.json().catch(()=> ({}));
+
+  if(!res.ok){
+    throw new Error(`GitHub PUT ${path} → ${res.status}: ${data.message || JSON.stringify(data)}`);
+  }
+
+  return data;
+}
+
+/**********************************************************
+ * Guardar productos.json (SHA fresco ANTES del PUT)
+ **********************************************************/
+async function saveMainJson(arr, commitMessage){
+  const out = arr.map(item => ordenarCamposPorIdioma(item, "ES"));
+  const contentString = JSON.stringify(out, null, 2);
+
+  let shaActual;
+
+  // 1) Intentar obtener SHA actual
+  try{
+    const info = await githubGetFileInfo(MAIN_JSON);
+    shaActual = info.sha;
+  }catch(e){
+    shaActual = undefined; // archivo no existe → se creará
+  }
+
+  // 2) Obtener SHA fresco otra vez justo antes de subir
+  try{
+    const info2 = await githubGetFileInfo(MAIN_JSON);
+    shaActual = info2.sha;
+  }catch(e){}
+
+  // 3) Subir archivo
+  await githubPutFile(MAIN_JSON, contentString, commitMessage, shaActual);
+}
+
+/**********************************************************
+ * Sincronizar precios en EN y PT
+ **********************************************************/
+async function syncPricesToLangs(){
+
+  const byId = {};
+  productos.forEach(p => { if(p.id) byId[p.id] = p; });
+
+  async function processLangFile(filename, idioma){
+    let info = null;
+
+    try{
+      info = await githubGetFileInfo(filename);
+    }catch(e){
+      info = null; // no existe → se crea después
+    }
+
+    let arr = [];
+
+    if(info && info.content){
+      const raw = info.content.replace(/\n/g, "");
+      const decoded = decodeURIComponent(escape(window.atob(raw)));
+      try{
+        arr = JSON.parse(decoded);
+        if(!Array.isArray(arr)) arr = [];
+      }catch(e){
+        arr = [];
+      }
+    }
+
+    let changed = false;
+
+    // sincronizar solo precios
+    const newArr = arr.map(item => {
+      const id = item.id;
+      if(id && byId[id]){
+        const nuevo = sanitizePrice(byId[id].precio);
+
+        if("precio" in item && String(item.precio) !== nuevo){
+          item.precio = nuevo; changed = true;
+        }
+        if("price" in item && String(item.price) !== nuevo){
+          item.price = nuevo; changed = true;
+        }
+        if("preco" in item && String(item.preco) !== nuevo){
+          item.preco = nuevo; changed = true;
+        }
+      }
+
+      return ordenarCamposPorIdioma(item, idioma);
+    });
+
+    // si archivo no existía → crearlo entero directo
+    if(info === null){
+      const created = [];
+      for(const pid in byId){
+        const p = byId[pid];
+        created.push( ordenarCamposPorIdioma({
+          id: p.id,
+          nombre: p.nombre,
+          descripcion: p.descripcion,
+          precio: p.precio,
+          imagen: p.imagen,
+          categoria: p.categoria
+        }, idioma) );
+      }
+
+      const contentString = JSON.stringify(created, null, 2);
+      await githubPutFile(filename, contentString, `Crea ${filename}`, undefined);
+      return;
+    }
+
+    // si hubo cambios, subirlos
+    if(changed){
+      const latest = await githubGetFileInfo(filename);
+      const contentString = JSON.stringify(newArr, null, 2);
+      await githubPutFile(filename, contentString, `Sync precios desde ES`, latest.sha);
     }
   }
 
-  // 🟤 BOTÓN ARRIBA
-  window.onscroll=function(){
-    document.getElementById("btnArriba").style.display=window.scrollY>300?"block":"none";
-  };
-  function subir(){
-    document.getElementById("form").scrollIntoView({behavior:"smooth"});
+  await processLangFile(EN_JSON, "EN");
+  await processLangFile(PT_JSON, "PT");
+}
+
+/**********************************************************
+ * Guardar UNA fila
+ **********************************************************/
+async function guardarFila(i){
+  try{
+    const p = productos[i];
+    if(!p) return;
+
+    p.precio = sanitizePrice(p.precio);
+    if(!p.id || !/^prod\d{4}$/.test(p.id)) p.id = generateNextProdId();
+
+    // 1) Guardar ES
+    await saveMainJson(productos, `Actualiza ${p.id}`);
+
+    // 2) Sync EN / PT
+    await syncPricesToLangs();
+
+    showToast("Producto guardado", "ok");
+    render(productos);
+
+  }catch(e){
+    console.error(e);
+    showToast("Error: " + e.message, "err");
   }
+}
 
-  // 🟤 EVENTOS DE AUTO GUARDADO
-  ["nombre","descripcion","precio","imagen","categoria"].forEach(id=>{
-    document.getElementById(id).addEventListener("input",autoGuardar);
-  });
+/**********************************************************
+ * Guardar TODOS los cambios
+ **********************************************************/
+async function guardarTodosLosPrecios(){
 
-  // 🟤 INICIO
-  loadProducts();
-  if(getToken()){ document.getElementById('tokenStatus').innerText="🔐 Token cargado."; }
+  try{
+    refrescarArrayDesdeTabla();
+
+    productos = productos.map(p => ({
+      ...p,
+      precio: sanitizePrice(p.precio)
+    }));
+
+    await saveMainJson(productos, `Guardar TODOS`);
+    await syncPricesToLangs();
+
+    showToast("Todos los cambios guardados", "ok");
+    render(productos);
+
+  }catch(e){
+    console.error(e);
+    showToast("Error al guardar todos: " + e.message, "err");
+  }
+}
+
+/**********************************************************
+ * Búsqueda
+ **********************************************************/
+function filterProducts(){
+  const q = document.getElementById("search").value.toLowerCase().trim();
+  if(!q){ render(productos); return; }
+
+  const f = productos.filter(p =>
+    (p.nombre||"").toLowerCase().includes(q) ||
+    (p.descripcion||"").toLowerCase().includes(q) ||
+    (p.categoria||"").toLowerCase().includes(q)
+  );
+
+  render(f);
+}
+
+/**********************************************************
+ * INIT
+ **********************************************************/
+document.addEventListener("DOMContentLoaded", loadProducts);
 </script>
 
-<!-- 🔔 Notificación -->
-<div id="notificacion" style="
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #806250;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  display: none;
-  z-index: 200;
-  font-weight: bold;
-  font-size: 15px;
-"></div>
+</body>
+</html>
