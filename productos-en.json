@@ -1,1146 +1,1146 @@
 [
   {
+    "id": "prod0001",
     "name": "Espresso Coffee",
     "description": "Small coffee",
     "price": "3300",
-    "imagen": "img/20250806_112815.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0001"
+    "image": "img/20250806_112815.jpg",
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0002",
     "name": "Espresso Coffee in Small Cup",
     "description": "American coffee",
     "price": "3500",
-    "imagen": "img/cj.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0002"
+    "image": "img/cj.jpg",
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0003",
     "name": "Decaffeinated Coffee",
     "description": "Decaffeinated coffee",
     "price": "3700",
     "image": "img/20250813_094842.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0003"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0004",
     "name": "Traditional Coffee with Milk",
     "description": "Traditional coffee with milk",
     "price": "4200",
     "image": "img/cal.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0004"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0005",
     "name": "Double Espresso Coffee",
     "description": "Double espresso coffee",
     "price": "4900",
     "image": "img/cafedo.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0005"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0006",
     "name": "Cappuccino",
     "description": "Coffee, milk, cinnamon and cocoa",
     "price": "5100",
     "image": "img/Capuchino.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0006"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0007",
     "name": "Italian Cappuccino",
     "description": "Italian cappuccino",
     "price": "5200",
     "image": "img/Capuchino.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0007"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0008",
     "name": "Mocha Coffee",
     "description": "Intense cocoa, coffee, frothed milk",
     "price": "5600",
     "image": "img/moka.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0008"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0009",
     "name": "Caramel Coffee",
     "description": "Caramel, coffee, frothed milk",
     "price": "5500",
     "image": "img/caramel.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0009"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0010",
     "name": "Tea with Milk",
     "description": "Inti Zen tea",
     "price": "4300",
     "image": "img/te.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0010"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0011",
     "name": "Submarino",
     "description": "Frothed milk and chocolate bar",
     "price": "4800",
     "image": "img/subma.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0011"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0012",
     "name": "Hot Chocolate Served in Copper",
     "description": "Hot chocolate served in copper",
     "price": "4900",
     "image": "img/cobre.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0012"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0013",
     "name": "Hot or Cold Milk",
     "description": "Skim milk",
     "price": "3000",
     "image": "img/leche.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0013"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0014",
     "name": "Tilo Coffee",
     "description": "Coffee, Baileys, evaporated milk and grated chocolate",
     "price": "6100",
     "image": "img/ctilo.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0014"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0015",
     "name": "Iced Coffee 🥶",
     "description": "Double shot with ice ❄️",
     "price": "4900",
     "image": "img/aiccofi.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0015"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0016",
     "name": "Iced Latte Coffee 🥶",
     "description": "Cold milk with double coffee shot and ice ❄️",
     "price": "4900",
     "image": "img/aiclate.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0016"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0017",
     "name": "Milk & Oreo Frappuccino 🥶",
     "description": "Milk-based ❄️",
     "price": "6600",
     "image": "img/miloreo.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0017"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0018",
     "name": "Oreo Frappuccino 🥶",
     "description": "Coffee-based ❄️",
     "price": "6600",
     "image": "img/FRAPPUCCINOOREO.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0018"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0019",
     "name": "Cream",
     "description": "Cream",
     "price": "300",
     "image": "img/adi.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0019"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0020",
     "name": "Almond Milk",
     "description": "Almond milk small $350 - large $450",
     "price": "350",
     "image": "img/adialma.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0020"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0021",
     "name": "Vanilla or Hazelnut Flavoring",
     "description": "Vanilla or hazelnut flavoring",
     "price": "350",
     "image": "img/medialunas.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0021"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0022",
     "name": "Croissants",
     "description": "100% butter croissants",
     "price": "2300",
     "image": "img/Lumas.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0022"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0023",
     "name": "Pastry",
     "description": "Custard or quince pastries",
     "price": "2300",
     "image": "img/20250902_085539(1).jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0023"
+    "category": "COFFEE SHOP"
   },
   {
+    "id": "prod0024",
     "name": "Cinnamon Roll",
     "description": "Cinnamon roll",
     "price": "4600",
     "image": "img/rol.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0024"
+    "category": "COFFEE SHOP"
   },
-{
+  {
+    "id": "prod0025",
     "name": "Chocolate Bread",
     "description": "Croissant dough with Belgian chocolate",
     "price": "4800",
     "image": "img/panch.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0025"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0026",
     "name": "Cookies🍪",
     "description": "Vanilla cookies with chocolate, chocolate + chocolate",
     "price": "4700",
     "image": "img/kuki.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0026"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0027",
     "name": "Brownie with White Walnuts",
     "description": "Gluten-free brownie",
     "price": "6700",
     "image": "img/bwoni.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0027"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0028",
     "name": "Stuffed Chipá",
     "description": "Chipá stuffed with cheese",
     "price": "3700",
     "image": "img/chipa.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0028"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0029",
     "name": "Cheese Scone",
     "description": "Cheese scone",
     "price": "4500",
     "image": "img/scon.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0029"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0030",
     "name": "Pound Cake",
     "description": "Carrot & cinnamon, lemon & poppy seeds, chocolate & coffee",
     "price": "5500",
     "image": "img/budi.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0030"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0031",
     "name": "Chocolate Alfajor",
     "description": "Chocolate alfajor",
     "price": "4600",
     "image": "img/lafch.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0031"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0032",
     "name": "Cornstarch Alfajor",
     "description": "Cornstarch alfajor (gluten-free)",
     "price": "4600",
     "image": "img/almealfa.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0032"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0033",
     "name": "Almond Alfajor",
     "description": "Almond alfajor",
     "price": "5500",
     "image": "img/maisena.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0033"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0034",
     "name": "Mini Tart",
     "description": "Mini sweet tart",
     "price": "9200",
     "image": "img/Minitor.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0034"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0035",
     "name": "Warm Ham & Cheese Croissant",
     "description": "Warm ham and cheese croissant",
     "price": "4600",
     "image": "img/Lujyq.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0035"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0036",
     "name": "Seasonal Fruit Plate",
     "description": "Plate with seasonal fruits",
     "price": "10000",
     "image": "img/Platofrutas.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0036"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0037",
     "name": "Yogurt",
     "description": "Yogurt $5000 • Yogurt with granola $8000 • Forte Yogurt (fruits & granola) $11000",
     "price": "11000",
     "image": "img/forte.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0037"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0038",
     "name": "Toast Portion",
     "description": "Toast portion, white or whole grain with seeds",
     "price": "3500",
     "image": "img/Tosta.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0038"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0039",
     "name": "Jam Portion",
     "description": "Portion of jam, butter, cream cheese, honey or dressing",
     "price": "2000",
     "image": "img/Dip.jpg",
-    "category": "COFFEE SHOP",
-    "id": "prod0039"
-},
-{
+    "category": "COFFEE SHOP"
+  },
+  {
+    "id": "prod0040",
     "name": "Croissant Promo",
     "description": "3 homemade croissants",
     "price": "9200",
     "image": "img/proluna.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0040"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0041",
     "name": "TOASTS🍞",
     "description": "White or whole wheat bread with cream cheese and homemade jam",
     "price": "9500",
     "image": "img/ptosta.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0041"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0042",
     "name": "EGG WHITE OMELETTE",
     "description": "Omelette with cheese and tomato (with light oil spray) and seasonal fruits",
     "price": "15000",
     "image": "img/Promoomelet.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0042"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0043",
     "name": "AVOCADO",
     "description": "Two toasts with scrambled eggs, avocado cream and seeds",
     "price": "15000",
     "image": "img/avocado.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0043"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0044",
     "name": "SCRAMBLED",
     "description": "Scrambled eggs with ham and cheese, served with toast",
     "price": "14500",
     "image": "img/Resultado.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0044"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0045",
     "name": "PROTEIN PLATE",
     "description": "100% almond flour pancake, cream cheese and seasonal fruits plus honey dip",
     "price": "15000",
     "image": "img/protei.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0045"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0046",
     "name": "FRENCH TOAST SWEET",
     "description": "Egg-soaked toasts with cinnamon and sugar, cream cheese, seasonal fruits and honey dip",
     "price": "15000",
     "image": "img/frnchdulce.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0046"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0047",
     "name": "FRENCH TOAST SAVORY",
     "description": "Egg-soaked toasts with cinnamon and sugar, served with bacon, avocado and scrambled egg",
     "price": "15400",
     "image": "img/Salados.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0047"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0048",
     "name": "BRUNCH",
     "description": "Two hot drinks, 2 juices or lemonades, 2 yogurts with fruit and granola, chipá, ham & cheese toast, and avocado toast with egg — $48,000",
     "price": "48000",
     "image": "img/-52.jpg",
-    "category": "PROMOTIONS",
-    "id": "prod0048"
-},
-{
+    "category": "PROMOTIONS"
+  },
+  {
+    "id": "prod0049",
     "name": "Pumpkin Tart",
     "description": "Vegetables and pumpkin with ratatouille, topped with gratinated cheese",
     "price": "18500",
     "image": "img/tartacala.jpg",
-    "category": "FOOD",
-    "id": "prod0049"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0050",
     "name": "Chicken Tart",
     "description": "Chicken breast, leek, mozzarella, onion",
     "price": "18500",
     "image": "img/Tartapollo.jpg",
-    "category": "FOOD",
-    "id": "prod0050"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0051",
     "name": "Garden Burritos (hot)",
     "description": "Wheat tortilla with zucchini, eggplant, peppers, tomatoes, mushrooms, Tybo cheese",
     "price": "18700",
     "image": "img/huerta.jpg",
-    "category": "FOOD",
-    "id": "prod0051"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0052",
     "name": "Chicken Caesar Burritos",
     "description": "Cold: Wheat tortilla, lettuce mix, classic Caesar dressing, chicken breast, Parmesan and croutons",
     "price": "19000",
     "image": "img/caesarpollo.jpg",
-    "category": "FOOD",
-    "id": "prod0052"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0053",
     "name": "Mexican-Style Burritos",
     "description": "Hot: Wheat tortilla with chicken sauce, beef tenderloin filling, vegetables and cheddar",
     "price": "22500",
     "image": "img//Lomi.jpg",
-    "category": "FOOD",
-    "id": "prod0053"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0054",
     "name": "Ham & Cheese Omelette",
     "description": "Ham and cheese omelette",
     "price": "17000",
     "image": "img/20250804_132736.jpg",
-    "category": "FOOD",
-    "id": "prod0054"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0055",
     "name": "Potato & Onion Tortilla",
     "description": "Potato and onion tortilla",
     "price": "17500",
     "image": "img/tortillapapa.jpg",
-    "category": "FOOD",
-    "id": "prod0055"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0056",
     "name": "Cheese & Mushroom Omelette",
     "description": "Cheese and mushroom omelette",
     "price": "19000",
     "image": "img/Omecham.jpg",
-    "category": "FOOD",
-    "id": "prod0056"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0057",
     "name": "Spinach Tortilla",
     "description": "Spinach tortilla",
     "price": "17700",
     "image": "img/20250813_131026 (1).jpg",
-    "category": "FOOD",
-    "id": "prod0057"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0058",
     "name": "Fresh Salad",
     "description": "Arugula, green apple, cucumber, cherry tomatoes, walnuts, Reggianito cheese",
     "price": "21000",
     "image": "img/Fresca.jpg",
-    "category": "FOOD",
-    "id": "prod0058"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0059",
     "name": "Caesar Salad with Chicken",
     "description": "Mixed greens, croutons, chicken, Parmesan and Caesar dressing",
     "price": "17500",
     "image": "img/Caesarpollo.jpg",
-    "category": "FOOD",
-    "id": "prod0059"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0060",
     "name": "Crunchy Chicken Salad",
     "description": "Mixed greens, croutons, crispy chicken, Parmesan and Caesar dressing",
     "price": "18500",
     "image": "img/Cranch.jpg",
-    "category": "FOOD",
-    "id": "prod0060"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0061",
     "name": "Parma Salad",
     "description": "Mixed greens, Reggianito cheese, cherry tomatoes, cured ham and tortilla strips",
     "price": "27800",
     "image": "img/20250813_135926 (1).jpg",
-    "category": "FOOD",
-    "id": "prod0061"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0062",
     "name": "Chicken or Beef Milanesa",
     "description": "Served with mashed potatoes, pasta, salad or fries",
     "price": "20000",
     "image": "img/20250721_132438.jpg",
-    "category": "FOOD",
-    "id": "prod0062"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0063",
     "name": "Spinach Milanesa (beef or chicken)",
     "description": "Spinach cream and gratinated cheese. Served with mashed potatoes, pasta, salad or fries",
     "price": "20000",
     "image": "img/Esp.jpg",
-    "category": "FOOD",
-    "id": "prod0063"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0064",
     "name": "Napolitan Milanesa (beef or chicken)",
     "description": "Tomato sauce, ham and cheese. Served with mashed potatoes, pasta, salad or fries",
     "price": "21000",
     "image": "img/20250813_125845 (1).jpg",
-    "category": "FOOD",
-    "id": "prod0064"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0065",
     "name": "Chicken Risotto",
     "description": "With chicken, pumpkin and vegetables",
     "price": "23000",
     "image": "img/tortillapapa.jpg",
-    "category": "FOOD",
-    "id": "prod0065"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0066",
     "name": "Nut & Vegetable Risotto",
     "description": "With vegetables, walnuts and almonds",
     "price": "25000",
     "image": "img/Risotolangos.jpg",
-    "category": "FOOD",
-    "id": "prod0066"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0067",
     "name": "Beef Tenderloin Risotto",
     "description": "With vegetables",
     "price": "27000",
     "image": "img/Risotolomo.jpg",
-    "category": "FOOD",
-    "id": "prod0067"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0068",
     "name": "Pasta",
     "description": "Pasta",
     "price": "12000",
     "image": "img/Spa.jpg",
-    "category": "FOOD",
-    "id": "prod0068"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0069",
     "name": "Egg Gnocchi",
     "description": "Egg gnocchi",
     "price": "12000",
     "image": "img/Ñoquis.jpg",
-    "category": "FOOD",
-    "id": "prod0069"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0070",
     "name": "Vegetable, Chicken & Ham Ravioli",
     "description": "Stuffed with veggies, chicken and ham",
     "price": "14000",
     "image": "img/Ravioles.jpg",
-    "category": "FOOD",
-    "id": "prod0070"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0071",
     "name": "Vegetable & Ricotta Ravioli",
     "description": "Stuffed with vegetables and ricotta",
     "price": "14000",
     "image": "img/Ravioles.jpg",
-    "category": "FOOD",
-    "id": "prod0071"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0072",
     "name": "Mozzarella and Ham Sorrentinos",
     "description": "Mozzarella and ham sorrentinos",
     "price": "16000",
     "image": "img/Sonren.jpg",
-    "category": "FOOD",
-    "id": "prod0072"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0073",
     "name": "White Sauce",
     "description": "White sauce",
     "price": "5500",
     "image": "img/20250905_131302.jpg",
-    "category": "FOOD",
-    "id": "prod0073"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0074",
     "name": "Fileto",
     "description": "Fileto",
     "price": "5500",
     "image": "img/fileto.jpg",
-    "category": "FOOD",
-    "id": "prod0074"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0075",
     "name": "Chicken Alfredo",
     "description": "White sauce with chicken",
     "price": "7000",
     "image": "img/Frepollo.jpg",
-    "category": "FOOD",
-    "id": "prod0075"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0076",
     "name": "Bolognese",
     "description": "Meat sauce",
     "price": "7500",
     "image": "img/Bolo.jpg",
-    "category": "FOOD",
-    "id": "prod0076"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0077",
     "name": "Walnut Pesto",
     "description": "Walnut, garlic and parsley",
     "price": "7200",
     "image": "img/Pesto.jpg",
-    "category": "FOOD",
-    "id": "prod0077"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0078",
     "name": "Carbonara",
     "description": "Cream, bacon and scallions",
     "price": "7500",
     "image": "img/Carbonara.jpg",
-    "category": "FOOD",
-    "id": "prod0078"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0079",
     "name": "VARIOUS SAUCES",
     "description": "Butter, olive oil, garlic and parmesan",
     "price": "6000",
     "image": "img/218.jpg",
-    "category": "FOOD",
-    "id": "prod0079"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0080",
     "name": "Chicken (breast)",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "20000",
     "image": "img/pollogri.jpg",
-    "category": "FOOD",
-    "id": "prod0080"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0081",
     "name": "Ribeye Steak",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "32000",
     "image": "img/20250815_1.jpg",
-    "category": "FOOD",
-    "id": "prod0081"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0082",
     "name": "Tenderloin Steak",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "34000",
     "image": "img/Bifedelomo.jpg",
-    "category": "FOOD",
-    "id": "prod0082"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0083",
     "name": "Mini Ribeye Steak",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "28000",
     "image": "img/minibi.jpg",
-    "category": "FOOD",
-    "id": "prod0083"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0084",
     "name": "BY PORTION",
     "description": "Mashed potatoes, rice, salad or fries",
     "price": "12000",
     "image": "img/Espepollo.jpg",
-    "category": "FOOD",
-    "id": "prod0084"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0085",
     "name": "Kids Nuggets",
     "description": "Chicken with fries or mashed potatoes",
     "price": "17000",
     "image": "img/Nages.jpg",
-    "category": "FOOD",
-    "id": "prod0085"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0086",
     "name": "Kids Gnocchi",
     "description": "Fileto or cream sauce",
     "price": "17000",
     "image": "img/Ñoquiskit.jpg",
-    "category": "FOOD",
-    "id": "prod0086"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0087",
     "name": "Pesto Milanesa",
     "description": "Beef milanesa with gnocchi in pesto sauce",
     "price": "20000",
     "image": "img/Milapesto.jpg",
-    "category": "FOOD",
-    "id": "prod0087"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0088",
     "name": "Chicken with Mushrooms",
     "description": "In mushroom sauce with fries",
     "price": "23500",
     "image": "img/Pechuchapi.jpg",
-    "category": "FOOD",
-    "id": "prod0088"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0089",
     "name": "Ribeye Steak a Caballo",
     "description": "With two fried eggs and fries",
     "price": "33000",
     "image": "img/Taripg",
-    "category": "FOOD",
-    "id": "prod0089"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0090",
     "name": "Riojana Tenderloin",
     "description": "With onions, peppers and fried egg, served with fries",
     "price": "35000",
     "image": "img/Matrio.jpg",
-    "category": "FOOD",
-    "id": "prod0090"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0091",
     "name": "Tenderloin Cacio e Pepe",
     "description": "Grilled tenderloin with spaghetti in pepper and cheese",
     "price": "34000",
     "image": "img/Pepe.jpg",
-    "category": "FOOD",
-    "id": "prod0091"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0092",
     "name": "Tenderloin with Mushrooms",
     "description": "Grilled tenderloin in mushroom sauce with fries",
     "price": "36000",
     "image": "img/Lochapi.jpg",
-    "category": "FOOD",
-    "id": "prod0092"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0093",
     "name": "Milanesa Spaghetti",
     "description": "Beef milanesa with spaghetti in pink sauce",
     "price": "20000",
     "image": "img//Tortasnueva.jpg",
-    "category": "FOOD",
-    "id": "prod0093"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0094",
     "name": "Teriyaki Chicken",
     "description": "Chicken breast in sweet sauce with sautéed rice and vegetables",
     "price": "22500",
     "image": "img/Tortasnueva.jpg",
-    "category": "FOOD",
-    "id": "prod0094"
-},
-{
+    "category": "FOOD"
+  },
+  {
+    "id": "prod0095",
     "name": "Coca-Cola Line",
     "description": "Zero and classic",
     "price": "4000",
     "image": "img/bebidas.jpg",
-    "category": "DRINKS",
-    "id": "prod0095"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0096",
     "name": "Filtered & Mineralized Water",
     "description": "Cold, still or sparkling water",
     "price": "3500",
     "image": "img/agua.jpg",
-    "category": "DRINKS",
-    "id": "prod0096"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0097",
     "name": "Extra Lemon",
     "description": "Extra lemon",
     "price": "400",
     "image": "img/20250903_093625.jpg",
-    "category": "DRINKS",
-    "id": "prod0097"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0098",
     "name": "Fresh Orange Juice",
     "description": "Fresh-squeezed orange juice",
     "price": "6600",
     "image": "img/Exprimido.jpg",
-    "category": "DRINKS",
-    "id": "prod0098"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0099",
     "name": "OREO Milkshake",
     "description": "Cream ice cream with Oreos and whipped cream",
     "price": "9400",
     "image": "img/miloreo.jpg",
-    "category": "DRINKS",
-    "id": "prod0099"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0100",
     "name": "Smoothies",
     "description": "With seasonal fruits (water base, milk or orange juice)",
     "price": "7700",
     "image": "img/licuado.jpg",
-    "category": "DRINKS",
-    "id": "prod0100"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0101",
     "name": "Mint Ginger Lemonade",
     "description": "Mint ginger lemonade",
     "price": "6800",
     "image": "img/limo.jpg",
-    "category": "DRINKS",
-    "id": "prod0101"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0102",
     "name": "Lemonade",
     "description": "Simple lemonade",
     "price": "6600",
     "image": "img/Limosim.jpg",
-    "category": "DRINKS",
-    "id": "prod0102"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0103",
     "name": "STELLA ARTOIS (410cc - Bottle)",
     "description": "Bottle",
     "price": "7000",
     "image": "img/Coroa.jpg",
-    "category": "DRINKS",
-    "id": "prod0103"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0104",
     "name": "CORONA",
     "description": "Bottle",
     "price": "7500",
     "image": "img/Estelar.jpg",
-    "category": "DRINKS",
-    "id": "prod0104"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0105",
     "name": "Trumpeter Malbec",
     "description": "Trumpeter Malbec (750cc)",
     "price": "25000",
     "image": "img/20250903_112612.jpg",
-    "category": "DRINKS",
-    "id": "prod0105"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0106",
     "name": "Trumpeter Cabernet",
     "description": "Trumpeter Cabernet (750cc)",
     "price": "25000",
     "image": "img/20250903_112534.jpg",
-    "category": "DRINKS",
-    "id": "prod0106"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0107",
     "name": "Portillo Malbec",
     "description": "Portillo Malbec (750cc)",
     "price": "17000",
     "image": "img/20250903_111015.jpg",
-    "category": "DRINKS",
-    "id": "prod0107"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0108",
     "name": "Trumpeter Sauvignon Blanc",
     "description": "Trumpeter Sauvignon Blanc (750cc)",
     "price": "25000",
     "image": "img/20250903_112257.jpg",
-    "category": "DRINKS",
-    "id": "prod0108"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0109",
     "name": "Glass of Wine",
     "description": "White or Red",
     "price": "7500",
     "image": "img/20250903_124351.jpg",
-    "category": "DRINKS",
-    "id": "prod0109"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0110",
     "name": "Portillo Rosé Malbec",
     "description": "Portillo Rosé Malbec (Fresh and easy to drink wine)",
     "price": "17000",
     "image": "img/20250903_110955.jpg",
-    "category": "DRINKS",
-    "id": "prod0110"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0111",
     "name": "Chandon Champagne",
     "description": "Chandon Champagne (187cc)",
     "price": "15000",
     "image": "img/20250903_113545.jpg",
-    "category": "DRINKS",
-    "id": "prod0111"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0112",
     "name": "Grapefruit Drink",
     "description": "Natural grapefruit",
     "price": "7000",
     "image": "img/pomelada.jpg",
-    "category": "DRINKS",
-    "id": "prod0112"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0113",
     "name": "Cooked Ham and Cheese",
     "description": "Ciabatta or arabic bread",
     "price": "13500",
     "image": "img/20250806_102519.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0113"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0114",
     "name": "Mixed Toasted Sandwich",
     "description": "4 ham and cheese triangles",
     "price": "14000",
     "image": "img/tm.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0114"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0115",
     "name": "Cured Ham, Cheese and Tomato",
     "description": "Cured ham, cheese and tomato",
     "price": "18000",
     "image": "img/Jqyt.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0115"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0116",
     "name": "Toasted Chipa",
     "description": "With ham & cheese 15,000 / cheddar & ham 16,000",
     "price": "15000",
     "image": "img/chipjyq.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0116"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0117",
     "name": "Lomito Sandwich (Simple)",
     "description": "Simple in ciabatta bread, with fries",
     "price": "21500",
     "image": "img/lomito.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0117"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0118",
     "name": "Lomito Sandwich CLASSIC",
     "description": "Classic (lettuce, tomato, ham and cheese) in ciabatta bread, with fries",
     "price": "23500",
     "image": "img/loclacico.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0118"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0119",
     "name": "Lomito Sandwich BACON",
     "description": "Bacon (cheddar cheese, bacon and tomato) in ciabatta bread, with fries",
     "price": "25500",
     "image": "img/lombaco.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0119"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0120",
     "name": "NOVILLO Burger",
     "description": "Meat mix, bacon, tomato, lettuce and cheddar cheese",
     "price": "18000",
     "image": "img/Bacon.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0120"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0121",
     "name": "BLUE Burger",
     "description": "Meat mix, Roquefort, sautéed onion, Tybo cheese",
     "price": "18000",
     "image": "img/20250816_135012.jpg",
-    "category": "SANDWICHES",
-    "id": "prod0121"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0122",
     "name": "NOT COW Burger",
     "description": "Pea-protein based, with arugula, tomato and melted cheese",
     "price": "16500",
     "image": "img/Bacon .jpg",
-    "category": "SANDWICHES",
-    "id": "prod0122"
-},
-{
+    "category": "SANDWICHES"
+  },
+  {
+    "id": "prod0123",
     "name": "Empanadas",
     "description": "Knife-cut beef",
     "price": "3000",
     "image": "img/Imagen de WhatsApp 2025-11-07 a las 21.45.45_8d843d6a.jpg",
-    "category": "SNACKS",
-    "id": "prod0123"
-},
-{
+    "category": "SNACKS"
+  },
+  {
+    "id": "prod0124",
     "name": "Breaded Mozzarella",
     "description": "Breaded mozzarella",
     "price": "17000",
     "image": "img/muzza.jpg",
-    "category": "SNACKS",
-    "id": "prod0124"
-},
-{
+    "category": "SNACKS"
+  },
+  {
+    "id": "prod0125",
     "name": "Madrid Omelette",
     "description": "Potato and onion omelette topped with cured ham and tomato",
     "price": "24000",
     "image": "img/Faina.jpg",
-    "category": "SNACKS",
-    "id": "prod0125"
-},
-{
+    "category": "SNACKS"
+  },
+  {
+    "id": "prod0126",
     "name": "Dulce de Leche Crepe",
     "description": "Dulce de leche crepe",
     "price": "13500",
     "image": "img/Captura de pantalla 2025-11-07 220504.png",
-    "category": "DESSERTS",
-    "id": "prod0126"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0127",
     "name": "HOT BANANA",
     "description": "Cheesecake base with flambéed bananas and dulce de leche sauce",
     "price": "14400",
     "image": "img/Hotbana.jpg",
-    "category": "DESSERTS",
-    "id": "prod0127"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0128",
     "name": "Homemade Flan",
     "description": "Flan $8,000 — with cream and dulce de leche $10,000",
     "price": "10000",
     "image": "img/Flan.jpg",
-    "category": "DESSERTS",
-    "id": "prod0128"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0129",
     "name": "Fruit Salad",
     "description": "Fruit salad $10,000 — with ice cream scoop $13,500",
     "price": "13500",
     "image": "img/Ensfruta.jpg",
-    "category": "DESSERTS",
-    "id": "prod0129"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0130",
     "name": "Ice Cream",
     "description": "(scoops): $8,000 (flavors: dulce de leche, chocolate, american)",
     "price": "8000",
     "image": "img/Helado.jpg",
-    "category": "DESSERTS",
-    "id": "prod0130"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0131",
     "name": "APPLE HOT",
     "description": "Warm apple crumble with vanilla ice cream and toasted almonds",
     "price": "14500",
     "image": "img/Apeljot.jpg",
-    "category": "DESSERTS",
-    "id": "prod0131"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0132",
     "name": "WARM BROWNIE",
     "description": "Cured ham, cooked ham, Roquefort cheese, Tybo cheese, cherry tomatoes and nuts. Includes two Stella bottles.",
     "price": "12500",
     "image": "img/Brouni.jpg",
-    "category": "DESSERTS",
-    "id": "prod0132"
-},
-{
+    "category": "DESSERTS"
+  },
+  {
+    "id": "prod0133",
     "name": "Jack Daniel's",
     "description": "Jack Daniel's",
     "price": "14500",
     "image": "img/Daniel’s.jpg",
-    "category": "DRINKS",
-    "id": "prod0133"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0134",
     "name": "Johnny Walker Black",
     "description": "Johnny Walker Black",
     "price": "15400",
     "image": "img/Black.jpg",
-    "category": "DRINKS",
-    "id": "prod0134"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0135",
     "name": "Johnny Walker Red",
     "description": "Johnny Walker Red",
     "price": "13400",
     "image": "img/Ret.jpg",
-    "category": "DRINKS",
-    "id": "prod0135"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0136",
     "name": "Baileys Liqueur",
     "description": "Baileys Liqueur",
     "price": "12000",
     "image": "img/bailes.jpg",
-    "category": "DRINKS",
-    "id": "prod0136"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0137",
     "name": "Fernet with Coca-Cola",
     "description": "Fernet with Coca-Cola",
     "price": "11000",
     "image": "img/Ferne.jpg",
-    "category": "DRINKS",
-    "id": "prod0137"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0138",
     "name": "Beefeater Gin Tonic",
     "description": "Beefeater Gin Tonic",
     "price": "11000",
     "image": "img/Ginton.jpg",
-    "category": "DRINKS",
-    "id": "prod0138"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0139",
     "name": "Gancia Shake",
     "description": "Gancia Shake",
     "price": "10000",
     "image": "img/Gancia.jpg",
-    "category": "DRINKS",
-    "id": "prod0139"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0140",
     "name": "Aperol with Orange",
     "description": "Aperol with orange",
     "price": "10000",
     "image": "img/Api.jpg",
-    "category": "DRINKS",
-    "id": "prod0140"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0141",
     "name": "HAPPY HOUR",
     "description": "Aperol with orange $10000 OR BEER $7000 every day from 19:00 to 21:00",
     "price": "",
     "image": "img/Api.jpg",
-    "category": "DRINKS",
-    "id": "prod0141"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0142",
     "name": "Salentein Brut Nature Champagne",
     "description": "Salentein Brut Nature Champagne",
     "price": "30000",
     "image": "img/20250903_104921.jpg",
-    "category": "DRINKS",
-    "id": "prod0142"
-},
-{
+    "category": "DRINKS"
+  },
+  {
+    "id": "prod0143",
     "name": "DAILY MENU or SUGGESTIONS",
     "description": "Daily menu: main dish + drink + dessert or coffee. Suggestion includes only the dish.",
-    "price": "00",
+    "price": "",
     "image": "img/.jpg",
-    "category": "EVENTS",
-    "id": "prod0143"
-}
+    "category": "EVENTS"
+  }
 ]
