@@ -2,7 +2,7 @@
   {
     "nombre": "Café expresso",
     "descripcion": "Café chico",
-    "precio": "330000",
+    "precio": "3300",
     "imagen": "img/20250806_112815.jpg",
     "categoria": "CAFETERÍA",
     "id": "prod0001"
@@ -10,7 +10,7 @@
   {
     "nombre": "Café expresso jarrito",
     "descripcion": "Café americano",
-    "precio": "3500000",
+    "precio": "3500",
     "imagen": "img/cj.jpg",
     "categoria": "CAFETERÍA",
     "id": "prod0002"
@@ -18,7 +18,7 @@
   {
     "nombre": "Café descafeinado",
     "descripcion": "Café descafeinado",
-    "precio": "3700000",
+    "precio": "3700",
     "imagen": "img/20250813_094842.jpg",
     "categoria": "CAFETERÍA",
     "id": "prod0003"
