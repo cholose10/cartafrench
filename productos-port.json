@@ -1,7 +1,7 @@
 [
   {
-    "nome": "Café expresso",
-    "descricao": "Café pequeno",
+    "nombre": "Café expresso",
+    "descripcin": "Café pequeno",
     "preco": "3300",
     "imagen": "img/20250806_112815.jpg",
     "categoria": "Cafeteria",
