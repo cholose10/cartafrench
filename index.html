@@ -210,131 +210,130 @@
     }
 
     async function load() {
-      actualizarBotones();
+    actualizarBotones();
 
-      let filename = "productos.json";
-      if (idiomaActual === "en") filename = "productos-en.json";
-      if (idiomaActual === "pt") filename = "productos-port.json";
+    let filename = "productos.json";
+    if (idiomaActual === "en") filename = "productos-en.json";
+    if (idiomaActual === "pt") filename = "productos-port.json";
 
-      /* 🚀 URL SIN BLOQUEO (jsDelivr) */
+    /* 🚀 URL SIN BLOQUEO (jsDelivr) */
     const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
 
-      try {
-        const res = await fetch(RAW_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error("Error cargando productos");
+    try {
+      const res = await fetch(RAW_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("Error cargando productos");
 
-        const data = await res.json();
+      const data = await res.json();
 
-        productos = data.map(p => ({
-          nombre:
-            idiomaActual === "es" ? p.nombre :
-            idiomaActual === "en" ? p.name :
-            p.name,
-          descripcion:
-            idiomaActual === "es" ? p.descripcion :
-            idiomaActual === "en" ? p.description :
-            p.description,
-          precio: p.precio || p.price,
-          imagen: p.imagen,
-          categoria:
-            idiomaActual === "es" ? p.categoria :
-            idiomaActual === "en" ? p.category :
-            p.category
-        }));
+      productos = data.map(p => ({
+        nombre:
+          idiomaActual === "es" ? (p.nombre || p.nome) :
+          idiomaActual === "en" ? (p.name || p.nome) :
+          p.nome,
 
-        renderCategories();
-        renderProducts("Todos");
+        descripcion:
+          idiomaActual === "es" ? (p.descripcion || p.descricao) :
+          idiomaActual === "en" ? (p.description || p.descricao) :
+          p.descricao,
 
-      } catch (e) {
-        console.error(e);
-        productList.innerHTML = '<div class="msg">⚠️ No se pudieron cargar los productos.</div>';
-      }
+        precio: p.precio || p.preco || p.price,
+        imagen: p.imagen || p.imagem || p.image,
+
+        categoria:
+          idiomaActual === "es" ? p.categoria :
+          idiomaActual === "en" ? (p.category || p.categoria) :
+          p.categoria
+      }));
+
+      renderCategories();
+      renderProducts("Todos");
+
+    } catch (e) {
+      console.error(e);
+      productList.innerHTML = `<div class="msg">⚠️ No se pudieron cargar los productos.</div>`;
     }
+  }
 
-    function scrollToProducts() {
-      productList.scrollIntoView({ behavior: "smooth" });
-    }
-
-    function renderCategories() {
-      const categorias = ["Todos", ...new Set(productos.map(p => p.categoria).filter(Boolean))];
-      categoryContainer.innerHTML = "";
-      categorias.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.textContent = cat;
-        btn.addEventListener("click", () => {
-          renderProducts(cat);
-          scrollToProducts();
-        });
-        categoryContainer.appendChild(btn);
+  function renderCategories() {
+    const categorias = ["Todos", ...new Set(productos.map(p => p.categoria).filter(Boolean))];
+    categoryContainer.innerHTML = "";
+    categorias.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.textContent = cat;
+      btn.addEventListener("click", () => {
+        renderProducts(cat);
+        scrollToProducts();
       });
+      categoryContainer.appendChild(btn);
+    });
+  }
+
+  function renderProducts(categoria) {
+    productList.innerHTML = "";
+    const lista = categoria === "Todos" ? productos : productos.filter(p => p.categoria === categoria);
+
+    if (lista.length === 0) {
+      productList.innerHTML = `<div class="msg">No hay productos disponibles.</div>`;
+      return;
     }
 
-    function renderProducts(categoria) {
-      productList.innerHTML = "";
-      const lista = categoria === "Todos" ? productos : productos.filter(p => p.categoria === categoria);
+    lista.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
+    });
+  }
 
-      if (lista.length === 0) {
-        productList.innerHTML = '<div class="msg">No hay productos disponibles.</div>';
-        return;
-      }
+  function buscar() {
+    const q = searchInput.value.toLowerCase().trim();
+    const res = productos.filter(p =>
+      p.nombre.toLowerCase().includes(q) ||
+      (p.descripcion || "").toLowerCase().includes(q) ||
+      p.categoria.toLowerCase().includes(q)
+    );
 
-      lista.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ""}</p>
-          <span class="price">$${p.precio}</span>`;
-        productList.appendChild(div);
-      });
+    if (res.length === 0) {
+      productList.innerHTML = `<div class="msg">🔍 No se encontraron resultados.</div>`;
+      return;
     }
 
-    function buscar() {
-      const q = searchInput.value.toLowerCase().trim();
-      const res = productos.filter(p =>
-        p.nombre.toLowerCase().includes(q) ||
-        (p.descripcion || "").toLowerCase().includes(q) ||
-        p.categoria.toLowerCase().includes(q)
-      );
-
-      if (res.length === 0) {
-        productList.innerHTML = '<div class="msg">🔍 No se encontraron resultados.</div>';
-        return;
-      }
-
-      productList.innerHTML = "";
-      res.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ""}</p>
-          <span class="price">$${p.precio}</span>`;
-        productList.appendChild(div);
-      });
-
-      scrollToProducts();
-    }
-
-    btnEs.addEventListener("click", () => { idiomaActual = "es"; localStorage.setItem("idioma", "es"); load(); });
-    btnEn.addEventListener("click", () => { idiomaActual = "en"; localStorage.setItem("idioma", "en"); load(); });
-    btnPt.addEventListener("click", () => { idiomaActual = "pt"; localStorage.setItem("idioma", "pt"); load(); });
-
-    btnSearch.addEventListener("click", buscar);
-    searchInput.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
-
-    window.addEventListener("scroll", () => {
-      btnUp.style.display = window.scrollY > 300 ? "block" : "none";
+    productList.innerHTML = "";
+    res.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
     });
 
-    btnUp.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    scrollToProducts();
+  }
 
-    load();
+  btnEs.addEventListener("click", () => { idiomaActual = "es"; localStorage.setItem("idioma", "es"); load(); });
+  btnEn.addEventListener("click", () => { idiomaActual = "en"; localStorage.setItem("idioma", "en"); load(); });
+  btnPt.addEventListener("click", () => { idiomaActual = "pt"; localStorage.setItem("idioma", "pt"); load(); });
+
+  btnSearch.addEventListener("click", buscar);
+  searchInput.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+
+  window.addEventListener("scroll", () => {
+    btnUp.style.display = window.scrollY > 300 ? "block" : "none";
   });
+
+  btnUp.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  load();
+});
 </script>
 
 </body>
